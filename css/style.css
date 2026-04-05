@@ -1,0 +1,1104 @@
+html, body {
+  width: 100%;
+  min-height: 100%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text-dark);
+  scroll-behavior: smooth;
+}
+
+body {
+  background: url("../images/back1.jpg") no-repeat center center fixed;
+  background-size: cover;
+  position: relative;
+}
+
+.overlay {
+  width: 100%;
+  min-height: 100vh;
+  background: rgba(15, 28, 38, 0.26);
+  padding: 40px 20px 30px;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.hero h1 {
+  font-size: clamp(2.8rem, 6vw, 5rem);
+  color: var(--text-light);
+  letter-spacing: 2px;
+  font-weight: 700;
+  text-shadow: 0 3px 10px rgba(0,0,0,0.25);
+}
+
+.subtitle {
+  color: rgba(255,255,255,0.92);
+  font-size: 1.1rem;
+  margin-top: 10px;
+  letter-spacing: 0.5px;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.intro-card,
+.bottom-card {
+  max-width: 1100px;
+  margin: 0 auto 30px auto;
+  background: var(--light-silver-strong);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: 28px 32px;
+  box-shadow: var(--shadow);
+}
+
+.intro-card h2,
+.bottom-card h2 {
+  font-size: 1.8rem;
+  margin-bottom: 14px;
+  color: var(--deep-blue);
+}
+
+.intro-card p,
+.bottom-card p {
+  font-size: 1.08rem;
+  line-height: 1.8;
+}
+
+.split-layout {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 0.9fr 1fr;
+  gap: 30px;
+  align-items: start;
+  margin-bottom: 40px;
+}
+
+.language-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.lang-title h2 {
+  color: var(--text-light);
+  font-size: 2rem;
+  text-align: center;
+  text-shadow: 0 3px 8px rgba(0,0,0,0.25);
+}
+
+.card {
+  background: var(--light-silver);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: 24px 24px 22px;
+  box-shadow: var(--shadow);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.2);
+}
+
+.card h3 {
+  font-size: 1.35rem;
+  color: var(--deep-blue);
+  margin-bottom: 12px;
+}
+
+.card p {
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.btn {
+  display: inline-block;
+  text-align: center;
+  padding: 14px 22px;
+  background: rgba(255,255,255,0.92);
+  color: var(--deep-blue);
+  text-decoration: none;
+  border-radius: 999px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  box-shadow: var(--shadow);
+  transition: all 0.25s ease;
+  border: 1px solid rgba(255,255,255,0.7);
+  margin-top: 8px;
+}
+
+.btn:hover {
+  background: white;
+  transform: translateY(-2px);
+}
+
+.image-column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  width: 100%;
+}
+
+.image-stack img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 26px;
+  box-shadow: var(--shadow);
+  border: 2px solid rgba(255,255,255,0.35);
+}
+
+footer {
+  text-align: center;
+  color: rgba(255,255,255,0.92);
+  font-size: 0.95rem;
+  margin-top: 10px;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+@media (max-width: 1100px) {
+  .split-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .image-stack {
+    flex-direction: row;
+    overflow-x: auto;
+    gap: 16px;
+  }
+
+  .image-stack img {
+    min-width: 280px;
+    height: 220px;
+  }
+}
+
+@media (max-width: 768px) {
+  .overlay {
+    padding: 24px 14px 24px;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .intro-card,
+  .bottom-card,
+  .card {
+    padding: 22px 18px;
+    border-radius: 20px;
+  }
+
+  .intro-card h2,
+  .bottom-card h2 {
+    font-size: 1.45rem;
+  }
+
+  .lang-title h2 {
+    font-size: 1.7rem;
+  }
+
+  .card h3 {
+    font-size: 1.2rem;
+  }
+
+  .card p,
+  .intro-card p,
+  .bottom-card p {
+    font-size: 0.98rem;
+    line-height: 1.7;
+  }
+
+  .image-stack img {
+    min-width: 240px;
+    height: 200px;
+  }
+}
+
+Then click:
+
+Commit new file
+
+Done.
+
+STEP 5 — UPLOAD YOUR IMAGES
+
+Now we need the pictures.
+
+Click:
+
+Add file
+
+→ Upload files
+
+Now upload:
+
+back1.jpg
+resp1.jpg
+resp2.jpg
+resp3.jpg
+
+⚠️ These must go inside a folder called:
+
+images
+
+If GitHub does not let you directly create the folder while uploading, here is the easiest trick:
+
+EASY TRICK TO CREATE images FOLDER
+
+Click:
+
+Add file
+
+→ Create new file
+
+In filename type:
+
+images/test.txt
+
+Then inside just write:
+
+temp
+
+Commit it.
+
+Now your images folder exists.
+
+Then:
+
+click images
+upload your real image files there
+later you can delete test.txt
+
+That’s the easiest GitHub trick.
+
+CHECKPOINT — YOUR REPOSITORY SHOULD NOW LOOK LIKE THIS
+
+You should now have this:
+
+alveoair
+│
+├── index.html
+├── css
+│   └── style.css
+└── images
+    ├── back1.jpg
+    ├── resp1.jpg
+    ├── resp2.jpg
+    └── resp3.jpg
+
+If yes → excellent.
+Now we make it go live.
+
+PART 2 — TURN ON GITHUB PAGES
+
+This is the part that makes the website visible online.
+
+STEP 6 — OPEN SETTINGS
+
+At the top of your repository, click:
+
+Settings
+STEP 7 — CLICK “PAGES”
+
+On the left side menu, click:
+
+Pages
+STEP 8 — TURN THE WEBSITE ON
+
+Inside Pages, look for:
+
+Build and deployment
+
+Under Source, choose:
+
+Deploy from a branch
+
+Then under Branch, choose:
+
+main
+
+And folder:
+
+/ (root)
+
+Then click:
+
+Save
+STEP 9 — WAIT A LITTLE
+
+GitHub now needs a moment to build your website.
+
+After a minute or two, refresh the page.
+
+You should see a message with your website address.
+
+It will look something like:
+
+https://yourusername.github.io/alveoair/
+STEP 10 — OPEN THAT LINK
+
+Click the GitHub Pages link.
+
+If everything was uploaded correctly, you should now see:
+
+Your AlveoAir homepage online 🎉
+
+Even if the domain is not connected yet, this is already your live website.
+
+IF THE PAGE LOOKS BROKEN
+
+If the page opens but:
+
+no background shows
+no pictures show
+no CSS style shows
+
+Then it usually means:
+
+One of these is wrong:
+image filenames don’t match exactly
+images folder is wrong
+css/style.css path is wrong
+
+If that happens, don’t guess.
+
+Just tell me:
+
+“The page opens but the images/CSS are missing”
+
+and I’ll tell you exactly what to fix.
+
+PART 3 — CONNECT ALVEOAIR.COM
+
+Once your GitHub link works, then we connect the real domain.
+
+But don’t do that yet until the GitHub Pages link works first.
+
+That is the correct order.
+
+WHAT YOU SHOULD DO RIGHT NOW
+
+Do exactly these next:
+
+Right now:
+Create index.html
+Create css/style.css
+Create images folder
+Upload:
+back1.jpg
+resp1.jpg
+resp2.jpg
+resp3.jpg
+Go to Settings → Pages
+Turn on GitHub Pages
+Open the GitHub Pages link
+BEST WAY TO DO THIS WITH ME
+
+The easiest thing now is:
+
+Do it step by step and then tell me:
+either:
+
+“I uploaded the files”
+
+or
+
+“I’m at Settings / Pages now”
+
+or
+
+“The page opened but something looks wrong”
+
+And I’ll guide you from that exact point, not with a giant explanation again.
+
+If you want, after you upload the files, I’ll help you do the custom domain connection to AlveoAir.com next.
+
+This shows at the top: https://github.com/Dianacoach/alveoair
+
+Perfect — that means your repository is here:
+
+https://github.com/Dianacoach/alveoair
+
+That also tells us your GitHub username is:
+
+Dianacoach
+
+So your future GitHub website link will most likely be:
+
+https://dianacoach.github.io/alveoair/
+
+Good — now we continue from exactly where you are.
+
+RIGHT NOW, DO THIS NEXT
+
+You are inside your repository:
+
+Dianacoach / alveoair
+
+Now do these steps one by one:
+
+STEP 1 — CREATE index.html
+
+Inside the repository page, click:
+
+Add file
+
+Then click:
+
+Create new file
+
+At the top where it says Name your file, type exactly:
+
+index.html
+
+Then paste this code inside:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AlveoAir</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <div class="overlay">
+    <header class="hero">
+      <h1>AlveoAir</h1>
+      <p class="subtitle">Respiratory Support • Equipment Guidance • Customer Service</p>
+    </header>
+
+    <section class="intro-card">
+      <h2>Professional Respiratory Assistance in English & Español</h2>
+      <p>
+        With over 30 years of respiratory therapy experience, AlveoAir offers practical guidance
+        for home respiratory equipment, customer support needs, and educational assistance for
+        patients, families, and companies.
+      </p>
+    </section>
+
+    <section class="split-layout">
+
+      <div class="language-column">
+        <div class="lang-title">
+          <h2>English</h2>
+        </div>
+
+        <div class="card">
+          <h3>For Patients & Families</h3>
+          <p>Help understanding oxygen equipment, nebulizers, CPAP/BiPAP devices, tubing, masks, humidifiers, alarms, and respiratory supplies.</p>
+        </div>
+
+        <div class="card">
+          <h3>For Home Use Questions</h3>
+          <p>Guidance when equipment is not working properly, needs replacement, or when you need help understanding what to do next.</p>
+        </div>
+
+        <a href="en.html" class="btn">Enter English</a>
+      </div>
+
+      <div class="image-column">
+        <div class="image-stack">
+          <img src="images/resp1.jpg" alt="Respiratory support">
+          <img src="images/resp2.jpg" alt="Respiratory equipment">
+          <img src="images/resp3.jpg" alt="Home care support">
+        </div>
+      </div>
+
+      <div class="language-column">
+        <div class="lang-title">
+          <h2>Español</h2>
+        </div>
+
+        <div class="card">
+          <h3>Para Pacientes y Familias</h3>
+          <p>Ayuda para entender equipos de oxígeno, nebulizadores, CPAP/BiPAP, mangueras, mascarillas y suministros respiratorios.</p>
+        </div>
+
+        <div class="card">
+          <h3>Para Dudas del Equipo</h3>
+          <p>Orientación cuando un equipo no funciona bien, necesita reemplazo o cuando necesita saber qué hacer después.</p>
+        </div>
+
+        <a href="es.html" class="btn">Entrar en Español</a>
+      </div>
+
+    </section>
+
+    <footer>
+      <p>© 2026 AlveoAir.com</p>
+    </footer>
+  </div>
+
+</body>
+</html>
+
+Then scroll down and click:
+
+Commit new file
+STEP 2 — CREATE YOUR CSS FILE
+
+Now go back to the repository main page.
+
+Click:
+
+Add file
+
+→ Create new file
+
+At the top, type exactly:
+
+css/style.css
+
+That automatically creates the css folder.
+
+Paste this code:
+
+:root {
+  --deep-blue: #1f3a4a;
+  --light-silver: rgba(255, 255, 255, 0.82);
+  --light-silver-strong: rgba(255, 255, 255, 0.9);
+  --text-dark: #1f2b33;
+  --text-light: #ffffff;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+  --border: rgba(255, 255, 255, 0.45);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  min-height: 100%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text-dark);
+}
+
+body {
+  background: url("../images/back1.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+.overlay {
+  width: 100%;
+  min-height: 100vh;
+  background: rgba(15, 28, 38, 0.25);
+  padding: 40px 20px;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  color: white;
+  letter-spacing: 2px;
+}
+
+.subtitle {
+  color: rgba(255,255,255,0.92);
+  font-size: 1.1rem;
+  margin-top: 10px;
+}
+
+.intro-card {
+  max-width: 1100px;
+  margin: 0 auto 30px auto;
+  background: var(--light-silver-strong);
+  border-radius: 24px;
+  padding: 28px 32px;
+  box-shadow: var(--shadow);
+}
+
+.intro-card h2 {
+  margin-bottom: 12px;
+  color: var(--deep-blue);
+}
+
+.intro-card p {
+  line-height: 1.8;
+}
+
+.split-layout {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 0.9fr 1fr;
+  gap: 30px;
+  align-items: start;
+}
+
+.language-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.lang-title h2 {
+  color: white;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.card {
+  background: var(--light-silver);
+  border-radius: 24px;
+  padding: 24px;
+  box-shadow: var(--shadow);
+}
+
+.card h3 {
+  color: var(--deep-blue);
+  margin-bottom: 12px;
+}
+
+.card p {
+  line-height: 1.8;
+}
+
+.btn {
+  display: inline-block;
+  text-align: center;
+  padding: 14px 22px;
+  background: rgba(255,255,255,0.95);
+  color: var(--deep-blue);
+  text-decoration: none;
+  border-radius: 999px;
+  font-weight: bold;
+  box-shadow: var(--shadow);
+}
+
+.image-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.image-stack img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 24px;
+  box-shadow: var(--shadow);
+}
+
+footer {
+  text-align: center;
+  color: white;
+  margin-top: 40px;
+}
+
+@media (max-width: 1100px) {
+  .split-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .image-stack {
+    flex-direction: row;
+    overflow-x: auto;
+  }
+
+  .image-stack img {
+    min-width: 280px;
+  }
+}
+
+Then click:
+
+Commit new file
+STEP 3 — CREATE THE images FOLDER
+
+Now we need your background and pictures.
+
+GitHub can be annoying here, so do this easy trick:
+
+Click:
+
+Add file
+
+→ Create new file
+
+At the top, type:
+
+images/test.txt
+
+Inside the file, type:
+
+temp
+
+Then click:
+
+Commit new file
+
+That creates the images folder.
+
+STEP 4 — UPLOAD YOUR IMAGES
+
+Now click the images folder.
+
+Then click:
+
+Add file
+
+→ Upload files
+
+Upload these files:
+
+back1.jpg
+resp1.jpg
+resp2.jpg
+resp3.jpg
+
+Then click:
+
+Commit changes
+STEP 5 — TURN ON YOUR WEBSITE
+
+Now go back to the main repository page.
+
+At the top click:
+
+Settings
+
+Then on the left click:
+
+Pages
+
+Under:
+
+Build and deployment
+
+Choose:
+
+Source:
+Deploy from a branch
+Branch:
+main
+Folder:
+/ (root)
+
+Then click:
+
+Save
+STEP 6 — WAIT 1–2 MINUTES
+
+Then refresh the Pages section.
+
+GitHub should give you a live website link like this:
+
+https://dianacoach.github.io/alveoair/
+
+That is your temporary live site before we connect the real domain.
+
+VERY IMPORTANT
+
+Do not worry yet about:
+
+AlveoAir.com
+DNS
+domain settings
+
+First we just want to see the website live on GitHub.
+
+That is the correct order.
+
+YOUR NEXT MOVE
+
+Do these steps now.
+
+Then come back and tell me just one of these:
+
+If you finished uploading:
+
+“Done, files are uploaded”
+
+If you reached Pages:
+
+“I’m in Settings > Pages”
+
+If something went wrong:
+
+“I got stuck at _____”
+
+And I’ll continue from exactly there.
+
+If I want to visualize the index and the World Wide Web, see just that page directly to see how it looks, can I do something in particular? Where am I supposed to do? Where am I supposed to go to a page so I can appear that first index on the web and I can look at it to see how it looks?
+
+Yes — absolutely, and this is exactly what you should do before connecting AlveoAir.com.
+
+You want to preview your first page on the web.
+
+That means you want GitHub to show your index.html in a browser so you can see it live.
+
+That is done through GitHub Pages.
+
+THE SHORT ANSWER
+
+Once your files are uploaded, you should be able to see your page here:
+
+https://dianacoach.github.io/alveoair/
+
+But it will only work after you turn on GitHub Pages.
+
+So yes — there is a specific place to go.
+
+WHAT YOU NEED TO DO TO SEE YOUR FIRST PAGE
+YOU MUST HAVE THESE THINGS IN THE REPOSITORY FIRST:
+
+At minimum:
+
+index.html
+css/style.css
+images/back1.jpg
+
+And if you want the center pictures to show too:
+
+images/resp1.jpg
+images/resp2.jpg
+images/resp3.jpg
+THEN YOU MUST DO THIS:
+STEP 1 — GO TO YOUR REPOSITORY
+
+Open:
+
+https://github.com/Dianacoach/alveoair
+STEP 2 — CLICK SETTINGS
+
+At the top of the repository, you will see tabs like:
+
+Code
+Issues
+Pull requests
+Actions
+Projects
+Security
+Settings
+
+Click:
+
+Settings
+STEP 3 — CLICK PAGES
+
+On the left side menu, scroll a little if needed, and click:
+
+Pages
+STEP 4 — TURN THE SITE ON
+
+In Pages, look for:
+
+Build and deployment
+
+You will see a setting called:
+
+Source
+
+Choose:
+
+Deploy from a branch
+
+Then below that:
+
+Branch
+
+Choose:
+
+main
+
+and next to it choose:
+
+/ (root)
+
+Then click:
+
+Save
+STEP 5 — WAIT 1 OR 2 MINUTES
+
+GitHub now needs a moment to “publish” your site.
+
+It usually takes:
+
+30 seconds
+1 minute
+sometimes 2–5 minutes
+
+Then refresh the page.
+
+STEP 6 — LOOK FOR YOUR LIVE WEBSITE LINK
+
+After it publishes, GitHub will show a message that says something like:
+
+Your site is live at...
+
+And the link should be:
+
+https://dianacoach.github.io/alveoair/
+
+That is the page you open in your browser to see your first homepage.
+
+VERY IMPORTANT: WHY THIS WORKS
+
+GitHub Pages automatically does this:
+
+If it finds:
+index.html
+
+it shows that as the main homepage.
+
+That means:
+
+this file:
+index.html
+
+becomes this page:
+
+https://dianacoach.github.io/alveoair/
+
+So yes — that is the exact place where you will preview your homepage on the web.
+
+IF YOU WANT TO CHECK WITHOUT SETTINGS (QUICK CHECK)
+
+If GitHub Pages is already turned on, you can simply type this directly into your browser:
+
+https://dianacoach.github.io/alveoair/
+
+If it works, great.
+
+If not, it usually means:
+
+Pages is not turned on yet
+files are not uploaded correctly
+GitHub hasn’t finished publishing yet
+HOW TO KNOW IF YOUR PAGE IS WORKING CORRECTLY
+
+When you open the page, you should see:
+
+Top:
+
+AlveoAir
+
+Under that:
+
+A subtitle
+
+Then:
+
+A nice intro card
+
+Then:
+
+Three columns:
+
+English cards
+center images
+Spanish cards
+Background:
+
+Your back1.jpg
+
+IF THE PAGE OPENS BUT LOOKS UGLY OR BROKEN
+
+That means your HTML loaded, but maybe:
+
+CSS didn’t load
+images didn’t load
+folder names are wrong
+
+For example:
+
+If you see only plain text:
+
+The CSS file is not connecting.
+
+If the background is missing:
+
+The images/back1.jpg path is wrong or the image file is not there.
+
+If center images are missing:
+
+resp1.jpg, resp2.jpg, resp3.jpg are missing or named differently.
+
+That’s normal for first attempts.
+
+THE BEST WAY TO PREVIEW IT
+
+So the exact workflow is:
+
+1.
+
+Upload files to GitHub
+
+2.
+
+Turn on Settings → Pages
+
+3.
+
+Open:
+
+https://dianacoach.github.io/alveoair/
+4.
+
+Look at it in the browser
+
+5.
+
+If you don’t like something:
+
+edit index.html
+edit css/style.css
+commit changes
+refresh browser
+
+That’s how you build it visually.
+
+WHAT I RECOMMEND YOU DO RIGHT NOW
+
+Try this right now:
+
+Open this in your browser:
+https://dianacoach.github.io/alveoair/
+If it works:
+
+Tell me:
+
+“I can see it”
+
+If it doesn’t:
+
+Go to:
+
+Settings → Pages
+
+and turn it on.
+
+Then tell me:
+
+“I’m in Pages now”
+
+or
+
+“It says site not found”
+
+or
+
+“It shows but it looks wrong”
+
+And I’ll tell you exactly what to do next.
