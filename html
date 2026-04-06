@@ -1,130 +1,221 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>AlveoAir | Respiratory Support & Customer Guidance</title>
-  <meta name="description" content="Respiratory support, equipment guidance, and customer service assistance for patients, caregivers, and respiratory equipment providers. English and Spanish support available.">
-  <meta name="keywords" content="respiratory support, oxygen equipment help, CPAP support, nebulizer help, respiratory therapist, customer service, elderly respiratory care, oxygen concentrator support, English Spanish respiratory help">
-  
-  <link rel="stylesheet" href="css/style.css" />
+<title>Respiratory Guidance & Home Support | AlveoAir</title>
+<meta name="description" content="Professional respiratory guidance and home support in English and Spanish. Over 30 years of experience helping individuals and families breathe safer and live better.">
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Lato:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    color: white;
+    background-image: url('back8.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.main-wrapper {
+    min-height: 100vh;
+    padding: 40px 20px 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.top-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.top-title h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.7rem;
+    margin: 0;
+    text-shadow: 1px 1px 8px rgba(0,0,0,0.45);
+}
+
+.content-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.text-block {
+    flex: 1;
+    min-width: 300px;
+    max-width: 420px;
+    text-align: center;
+    padding: 20px;
+}
+
+.text-block h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 6px rgba(0,0,0,0.4);
+}
+
+.text-block p {
+    font-size: 1.08rem;
+    line-height: 1.8;
+    margin-bottom: 18px;
+    text-shadow: 1px 1px 6px rgba(0,0,0,0.4);
+}
+
+.flag-box {
+    margin-top: 25px;
+}
+
+.flag-box a {
+    text-decoration: none;
+    color: white;
+}
+
+.flag-box img {
+    width: 70px;
+    height: auto;
+    display: block;
+    margin: 0 auto 10px;
+    transition: transform 0.3s ease;
+}
+
+.flag-box img:hover {
+    transform: scale(1.08);
+}
+
+.flag-box span {
+    font-size: 1.1rem;
+    font-weight: 600;
+    display: block;
+    text-shadow: 1px 1px 6px rgba(0,0,0,0.4);
+}
+
+.center-image {
+    flex: 0 1 340px;
+    text-align: center;
+}
+
+.center-image img {
+    width: 100%;
+    max-width: 340px;
+    border-radius: 18px;
+    box-shadow: 0 8px 28px rgba(0,0,0,0.25);
+}
+
+@media (max-width: 900px) {
+    .content-row {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .center-image {
+        order: 1;
+    }
+
+    .english-block {
+        order: 2;
+    }
+
+    .spanish-block {
+        order: 3;
+    }
+
+    .top-title h1 {
+        font-size: 2rem;
+    }
+
+    .text-block h2 {
+        font-size: 1.5rem;
+    }
+
+    .text-block p {
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+
+    body {
+        background-attachment: scroll;
+    }
+}
+</style>
 </head>
+
 <body>
 
-  <div class="overlay">
+<div class="main-wrapper">
 
-    <!-- HERO / HEADER -->
-    <header class="hero">
-      <h1>AlveoAir</h1>
-      <p class="subtitle">Respiratory Support • Equipment Guidance • Customer Service</p>
-    </header>
+    <div class="top-title">
+        <h1>Guidance, Support, Maintenace in the use of Respiratory Equipment and the control of Irritants</h1>
+    </div>
 
-    <!-- TOP INTRO -->
-    <section class="intro-card">
-      <h2>Professional Respiratory Assistance in English & Español</h2>
-      <p>
-        With over 30 years of respiratory therapy experience, AlveoAir offers practical guidance
-        for home respiratory equipment, customer support needs, and educational assistance for
-        patients, families, and companies.
-      </p>
-    </section>
+    <div class="content-row">
 
-    <!-- MAIN SPLIT SECTION -->
-    <section class="split-layout">
+        <!-- English Left -->
+        <div class="text-block english-block">
+            <h2>English</h2>
+            <p>
+                Professional  guidance, assessment and maintanace of respiratory equipment in the moment of selection and there after.
+                Improve home safety around your equipment and during its usage. The planing of making your home an irritant free enviroment.
+             
+            </p>
+            <p>
+                With over 30 years of experience as a Respiratory Therapist in hospitals, rehabilitation centers,
+                nursing homes, medical transport, and home-related respiratory support, I offer practical guidance in a
+                clear and compassionate way by phone, video and writen.
+            </p>
 
-      <!-- ENGLISH -->
-      <div class="language-column left-column">
-        <div class="lang-title">
-          <h2>English</h2>
+            <div class="flag-box">
+                <a href="en.html">
+                    <img src="us.png" alt="English respiratory guidance">
+                    <span>English</span>
+                </a>
+            </div>
         </div>
 
-        <div class="card">
-          <h3>For Patients & Families</h3>
-          <p>
-            Help understanding oxygen equipment, nebulizers, CPAP/BiPAP devices, tubing, masks,
-            humidifiers, alarms, and general respiratory supplies.
-          </p>
+        <!-- Center Picture -->
+        <div class="center-image">
+            <img src="yourphoto.jpg" alt="Respiratory Therapist - AlveoAir">
         </div>
 
-        <div class="card">
-          <h3>For Home Use Questions</h3>
-          <p>
-            Guidance when equipment is not working properly, needs replacement, or when you need
-            help understanding what to do next.
-          </p>
+        <!-- Spanish Right -->
+        <div class="text-block spanish-block">
+            <h2>Español</h2>
+            <p>
+                Orientación, asesoramiento y mantenimiento profesional en el momento de elejir un aparato respiratorio y su seguimiento.
+             Mantener un entorno seguro del aparato, en su colocacion y uso. Creacion de un plan para evitar irritantes respiratorios.
+            
+            </p>
+            <p>
+                Con más de 30 años de experiencia como Terapeuta Respiratorio en hospitales, centros de rehabilitación,
+                residencias, transporte medico de pacientes y apoyo respiratorio relacionado con el hogar, ofrezco orientación
+                práctica de manera clara, por telefono, video y por escrito.
+            </p>
+
+            <div class="flag-box">
+                <a href="sp.html">
+                    <img src="es.png" alt="Guía respiratoria en español">
+                    <span>Español</span>
+                </a>
+            </div>
         </div>
 
-        <div class="card">
-          <h3>For Companies</h3>
-          <p>
-            Professional customer support assistance for respiratory and durable medical equipment
-            providers seeking knowledgeable service and communication.
-          </p>
-        </div>
-
-        <a href="en.html" class="btn">Enter English</a>
-      </div>
-
-      <!-- CENTER IMAGES -->
-      <div class="image-column">
-        <div class="image-stack">
-          <img src="images/resp1.jpg" alt="Respiratory support consultation">
-          <img src="images/resp2.jpg" alt="Home respiratory equipment guidance">
-          <img src="images/resp3.jpg" alt="Professional respiratory care support">
-        </div>
-      </div>
-
-      <!-- SPANISH -->
-      <div class="language-column right-column">
-        <div class="lang-title">
-          <h2>Español</h2>
-        </div>
-
-        <div class="card">
-          <h3>Para Pacientes y Familias</h3>
-          <p>
-            Ayuda para entender equipos de oxígeno, nebulizadores, CPAP/BiPAP, mangueras, mascarillas,
-            humidificadores, alarmas y suministros respiratorios en casa.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>Para Dudas del Equipo</h3>
-          <p>
-            Orientación cuando un equipo no funciona bien, necesita reemplazo o cuando usted necesita
-            saber qué hacer después.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>Para Empresas</h3>
-          <p>
-            Asistencia profesional en servicio al cliente para compañías de equipo respiratorio y
-            equipo médico duradero que necesiten apoyo con experiencia.
-          </p>
-        </div>
-
-        <a href="es.html" class="btn">Entrar en Español</a>
-      </div>
-
-    </section>
-
-    <!-- BOTTOM MESSAGE -->
-    <section class="bottom-card">
-      <h2>Experience. Guidance. Confidence.</h2>
-      <p>
-        AlveoAir is designed to provide clear, respectful, and practical respiratory support guidance
-        for everyday home equipment concerns and professional customer service needs.
-      </p>
-    </section>
-
-    <!-- FOOTER -->
-    <footer>
-      <p>© 2026 AlveoAir.com • Respiratory Support Services</p>
-    </footer>
-
-  </div>
+    </div>
+</div>
 
 </body>
 </html>
