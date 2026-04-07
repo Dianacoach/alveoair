@@ -75,14 +75,15 @@ p {
 }
 
 /* =========================
-   CARD STACK
+   CARD GRID
 ========================= */
 .cards-container {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    align-items: start;
 }
 
 .info-card {
@@ -90,17 +91,18 @@ p {
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     border-radius: var(--radius);
-    padding: 28px;
+    padding: 22px;
     box-shadow: var(--shadow);
     border: 1px solid var(--card-border);
+    height: 100%;
 }
 
 .card-image {
     width: 100%;
-    height: 320px;
+    height: 190px;
     border-radius: 18px;
     overflow: hidden;
-    margin-bottom: 28px;
+    margin-bottom: 18px;
 }
 
 .card-image img {
@@ -110,15 +112,15 @@ p {
 }
 
 .info-card h2 {
-    font-size: 2rem;
-    margin-bottom: 18px;
+    font-size: 1.45rem;
+    margin-bottom: 12px;
     text-shadow: 1px 1px 6px rgba(0,0,0,0.35);
 }
 
 .info-card p {
-    font-size: 1.08rem;
-    line-height: 1.9;
-    margin-bottom: 16px;
+    font-size: 0.98rem;
+    line-height: 1.65;
+    margin-bottom: 12px;
     text-shadow: 1px 1px 5px rgba(0,0,0,0.35);
 }
 
@@ -362,6 +364,11 @@ p {
     .hero p {
         font-size: 1.03rem;
         line-height: 1.8;
+    }
+
+    .cards-container {
+        grid-template-columns: 1fr;
+        gap: 24px;
     }
 
     .info-card h2 {
