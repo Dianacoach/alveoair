@@ -1,317 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Respiratory Guidance & Home Support | AlveoAir</title>
+    <meta name="description" content="Professional respiratory guidance, home respiratory safety, equipment guidance, and family support. Over 30 years of experience helping individuals and families breathe safer and live better.">
 
-<title>Respiratory Guidance & Home Support | AlveoAir</title>
-<meta name="description" content="Professional respiratory guidance, home respiratory safety, equipment guidance, and family support. Over 30 years of experience helping individuals and families breathe safer and live better.">
-
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Lato:wght@300;400;600&display=swap" rel="stylesheet">
-
-<style>
-:root {
-    --white: #ffffff;
-    --soft-white: rgba(255,255,255,0.92);
-    --card: rgba(255,255,255,0.08);
-    --card-border: rgba(255,255,255,0.16);
-    --input-bg: rgba(255,255,255,0.10);
-    --shadow: 0 8px 28px rgba(0,0,0,0.18);
-    --radius: 22px;
-    --transition: all 0.3s ease;
-}
-
-* {
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    margin: 0;
-    font-family: 'Lato', sans-serif;
-    color: var(--white);
-    background: url('back8.jpg') center/cover fixed no-repeat;
-    line-height: 1.7;
-}
-
-a {
-    color: inherit;
-    text-decoration: none;
-}
-
-img {
-    max-width: 100%;
-    display: block;
-}
-
-h1, h2, h3 {
-    font-family: 'Playfair Display', serif;
-    margin-top: 0;
-    line-height: 1.25;
-}
-
-p {
-    font-size: 1.05rem;
-}
-
-.main-wrapper {
-    width: 100%;
-    padding: 50px 20px 80px;
-}
-
-/* =========================
-   HERO / TOP SECTION
-========================= */
-.hero {
-    text-align: center;
-    max-width: 1100px;
-    margin: 0 auto 70px;
-    padding: 20px;
-}
-
-.hero h1 {
-    font-size: clamp(2.3rem, 5vw, 3.8rem);
-    margin-bottom: 20px;
-    text-shadow: 1px 1px 8px rgba(0,0,0,0.45);
-}
-
-.hero p {
-    font-size: 1.14rem;
-    line-height: 1.9;
-    max-width: 900px;
-    margin: 0 auto 18px;
-    text-shadow: 1px 1px 6px rgba(0,0,0,0.4);
-}
-
-/* =========================
-   CARD GRID
-========================= */
-.cards-container {
-    max-width: 1400px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 28px;
-    align-items: start;
-}
-
-.info-card {
-    background: var(--card);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    border-radius: var(--radius);
-    padding: 22px;
-    box-shadow: var(--shadow);
-    border: 1px solid var(--card-border);
-    height: 100%;
-}
-
-.card-image {
-    width: 100%;
-    height: 190px;
-    border-radius: 18px;
-    overflow: hidden;
-    margin-bottom: 18px;
-}
-
-.card-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.info-card h2 {
-    font-size: 1.45rem;
-    margin-bottom: 12px;
-    text-shadow: 1px 1px 6px rgba(0,0,0,0.35);
-}
-
-.info-card p {
-    font-size: 0.98rem;
-    line-height: 1.65;
-    margin-bottom: 12px;
-    text-shadow: 1px 1px 5px rgba(0,0,0,0.35);
-}
-
-/* =========================
-   CONTACT SECTION
-========================= */
-.contact-section {
-    max-width: 1200px;
-    margin: 80px auto 0;
-}
-
-.contact-title {
-    text-align: center;
-    margin-bottom: 35px;
-}
-
-.contact-title h2 {
-    font-size: 2.2rem;
-    margin-bottom: 10px;
-    text-shadow: 1px 1px 8px rgba(0,0,0,0.45);
-}
-
-.contact-title p {
-    font-size: 1.08rem;
-    line-height: 1.8;
-    max-width: 800px;
-    margin: 0 auto;
-    text-shadow: 1px 1px 6px rgba(0,0,0,0.4);
-}
-
-.contact-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 25px;
-    margin-top: 35px;
-}
-
-.contact-card {
-    background: var(--card);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    border-radius: 20px;
-    padding: 28px 24px;
-    text-align: center;
-    border: 1px solid var(--card-border);
-    box-shadow: var(--shadow);
-}
-
-.contact-card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 12px;
-}
-
-.contact-card p,
-.contact-card a {
-    font-size: 1.05rem;
-    line-height: 1.8;
-    word-break: break-word;
-}
-
-/* =========================
-   FORM SECTION
-========================= */
-.form-section {
-    max-width: 1000px;
-    margin: 70px auto 0;
-    background: var(--card);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    border-radius: var(--radius);
-    padding: 35px 28px;
-    border: 1px solid var(--card-border);
-    box-shadow: var(--shadow);
-}
-
-.form-section h2 {
-    font-size: 2rem;
-    text-align: center;
-    margin-bottom: 16px;
-}
-
-.form-section p {
-    text-align: center;
-    font-size: 1.05rem;
-    line-height: 1.8;
-    max-width: 760px;
-    margin: 0 auto 30px;
-}
-
-.contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
-}
-
-.contact-form input,
-.contact-form textarea {
-    width: 100%;
-    padding: 16px 18px;
-    border-radius: 14px;
-    border: 1px solid rgba(255,255,255,0.22);
-    background: rgba(255,255,255,0.95);
-    color: #1f1f1f;
-    font-size: 1rem;
-    outline: none;
-    font-family: inherit;
-}
-
-.contact-form input::placeholder,
-.contact-form textarea::placeholder {
-    color: #7d7d7d;
-}
-
-.contact-form textarea {
-    min-height: 160px;
-    resize: vertical;
-}
-
-.contact-form button {
-    padding: 16px 24px;
-    border: none;
-    border-radius: 14px;
-    background: rgba(255,255,255,0.18);
-    color: white;
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: var(--transition);
-}
-
-.contact-form button:hover {
-    background: rgba(255,255,255,0.28);
-    transform: translateY(-2px);
-}
-
-/* =========================
-   BACK LINK
-========================= */
-.back-home {
-    text-align: center;
-    margin-top: 45px;
-    font-size: 1.05rem;
-}
-
-.back-home a {
-    font-weight: 600;
-}
-
-/* =========================
-   MOBILE
-========================= */
-@media (max-width: 900px) {
-    body {
-        background-attachment: scroll;
-    }
-
-    .hero h1 {
-        font-size: 2.2rem;
-    }
-
-    .hero p {
-        font-size: 1.03rem;
-        line-height: 1.8;
-    }
-
-    .cards-container {
-        grid-template-columns: 1fr;
-        gap: 24px;
-    }
-
-    .info-card h2 {
-        font-size: 1.7rem;
-    }
-
-    .card-image {
-        height: 230px;
-    }
-}
-</style>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Lato:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -338,17 +34,9 @@ p {
                 <img src="julio.jpg" alt="Respiratory therapist experience">
             </div>
             <h2>About Me</h2>
-            <p>
-                I am a Respiratory Therapist with over 30 years of experience helping people in a wide variety of care settings.
-            </p>
-            <p>
-                Throughout my career, I have worked in critical care, patient transport, hospitals, rehabilitation centers,
-                and nursing homes in different states across the United States, including Hawaii.
-            </p>
-            <p>
-                I have also provided respiratory equipment guidance and support in Madrid, Spain, assisting both English-
-                and Spanish-speaking individuals and families.
-            </p>
+            <p>I am a Respiratory Therapist with over 30 years of experience helping people in a wide variety of care settings.</p>
+            <p>Throughout my career, I have worked in critical care, patient transport, hospitals, rehabilitation centers, and nursing homes in different states across the United States, including Hawaii.</p>
+            <p>I have also provided respiratory equipment guidance and support in Madrid, Spain, assisting both English- and Spanish-speaking individuals and families.</p>
         </div>
 
         <div class="info-card">
@@ -356,14 +44,8 @@ p {
                 <img src="equipment.jpg" alt="Respiratory equipment guidance">
             </div>
             <h2>Respiratory Equipment Guidance</h2>
-            <p>
-                Choosing respiratory equipment can feel overwhelming, especially when there are many devices, accessories,
-                and settings to understand.
-            </p>
-            <p>
-                I can help you better understand the purpose of your equipment and which options may fit your daily needs,
-                routine, and comfort more effectively.
-            </p>
+            <p>Choosing respiratory equipment can feel overwhelming, especially when there are many devices, accessories, and settings to understand.</p>
+            <p>I can help you better understand the purpose of your equipment and which options may fit your daily needs, routine, and comfort more effectively.</p>
         </div>
 
         <div class="info-card">
@@ -371,13 +53,8 @@ p {
                 <img src="budget.jpg" alt="Respiratory equipment options and budget">
             </div>
             <h2>Equipment Options That Fit Your Budget</h2>
-            <p>
-                Respiratory support should also make practical sense financially.
-            </p>
-            <p>
-                I can help you understand equipment options that may offer more comfort, mobility, or convenience while
-                also respecting your budget and personal situation.
-            </p>
+            <p>Respiratory support should also make practical sense financially.</p>
+            <p>I can help you understand equipment options that may offer more comfort, mobility, or convenience while also respecting your budget and personal situation.</p>
         </div>
 
         <div class="info-card">
@@ -385,13 +62,8 @@ p {
                 <img src="fishing.jpg" alt="Independent and safe breathing at home">
             </div>
             <h2>Safe Independence at Home</h2>
-            <p>
-                Independence becomes easier when your home setup is safe and adapted to your respiratory needs.
-            </p>
-            <p>
-                I can guide you on important details such as oxygen tank placement, electrical outlet safety, extension
-                cord awareness, equipment cleaning, and when supplies or parts may need replacement.
-            </p>
+            <p>Independence becomes easier when your home setup is safe and adapted to your respiratory needs.</p>
+            <p>I can guide you on important details such as oxygen tank placement, electrical outlet safety, extension cord awareness, equipment cleaning, and when supplies or parts may need replacement.</p>
         </div>
 
         <div class="info-card">
@@ -399,13 +71,8 @@ p {
                 <img src="homeenvironment.jpg" alt="Healthy home environment for breathing">
             </div>
             <h2>Creating a Healthier Home Environment</h2>
-            <p>
-                Your home environment can strongly affect how comfortably you breathe every day.
-            </p>
-            <p>
-                I can help guide you in understanding factors such as dust, carpets, pets, allergens, ventilation,
-                humidification, and general cleanliness that may influence respiratory well-being.
-            </p>
+            <p>Your home environment can strongly affect how comfortably you breathe every day.</p>
+            <p>I can help guide you in understanding factors such as dust, carpets, pets, allergens, ventilation, humidification, and general cleanliness that may influence respiratory well-being.</p>
         </div>
 
         <div class="info-card">
@@ -413,13 +80,8 @@ p {
                 <img src="familytime.jpg" alt="Breathing freedom and time with loved ones">
             </div>
             <h2>More Freedom, More Time with Loved Ones</h2>
-            <p>
-                The right respiratory support can make it easier to spend more meaningful time outside your home.
-            </p>
-            <p>
-                I can help you better understand equipment options that may allow for safer outings, more flexibility,
-                family visits, and greater confidence when adjusting to different environments or travel situations.
-            </p>
+            <p>The right respiratory support can make it easier to spend more meaningful time outside your home.</p>
+            <p>I can help you better understand equipment options that may allow for safer outings, more flexibility, family visits, and greater confidence when adjusting to different environments or travel situations.</p>
         </div>
 
         <div class="info-card">
@@ -427,13 +89,8 @@ p {
                 <img src="clean.jpg" alt="Safe cleaning products for respiratory health">
             </div>
             <h2>Avoiding Harmful Cleaning Products</h2>
-            <p>
-                Some cleaning products can be irritating not only to the lungs, but also to respiratory equipment.
-            </p>
-            <p>
-                I can help you better understand which products or habits may be too harsh, allergenic, or potentially
-                harmful for your home environment and respiratory comfort.
-            </p>
+            <p>Some cleaning products can be irritating not only to the lungs, but also to respiratory equipment.</p>
+            <p>I can help you better understand which products or habits may be too harsh, allergenic, or potentially harmful for your home environment and respiratory comfort.</p>
         </div>
 
         <div class="info-card">
@@ -441,13 +98,8 @@ p {
                 <img src="caregivers.jpg" alt="Support for caregivers and families">
             </div>
             <h2>Support for Families and Caregivers</h2>
-            <p>
-                Respiratory challenges affect not only the person receiving care, but often the whole family.
-            </p>
-            <p>
-                I can provide practical support and educational guidance for family members or caregivers helping someone
-                at home, in rehabilitation settings, assisted living, or nursing facilities.
-            </p>
+            <p>Respiratory challenges affect not only the person receiving care, but often the whole family.</p>
+            <p>I can provide practical support and educational guidance for family members or caregivers helping someone at home, in rehabilitation settings, assisted living, or nursing facilities.</p>
         </div>
 
         <div class="info-card">
@@ -455,13 +107,8 @@ p {
                 <img src="closing.jpg" alt="Respiratory support and peace of mind">
             </div>
             <h2>You Don’t Have to Figure It Out Alone</h2>
-            <p>
-                Home respiratory care can feel complicated, especially when equipment, safety, and daily routines become overwhelming.
-            </p>
-            <p>
-                My goal is to offer practical information and supportive guidance so you and your loved ones can feel
-                more informed, more prepared, and more at ease.
-            </p>
+            <p>Home respiratory care can feel complicated, especially when equipment, safety, and daily routines become overwhelming.</p>
+            <p>My goal is to offer practical information and supportive guidance so you and your loved ones can feel more informed, more prepared, and more at ease.</p>
         </div>
 
     </section>
@@ -507,7 +154,9 @@ p {
     </section>
 
     <div class="back-home">
-        <a href="index.html"><img src="home.png" alt="Home" style="width:50px; margin:0 auto;"></a>
+        <a href="index.html">
+            <img src="home.png" alt="Home">
+        </a>
     </div>
 
 </div>
