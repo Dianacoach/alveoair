@@ -123,11 +123,6 @@ img {
 /* CARDS */
 .card {
     background: linear-gradient(to bottom right, #f4faf6, #eef5f1);
-    color: var(--text-dark);
-    border-radius: var(--radius);
-    padding: 24px;
-    box-shadow: var(--shadow);
-    border: 1px solid rgba(0,0,0,0.06);
 }
 
 .card h3 {
