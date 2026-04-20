@@ -2,75 +2,104 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Diana Life Coaching</title>
-  <link rel="stylesheet" href="css/style.css">
-    
-<title>Payment | Diana Bautista Coaching</title>
+<title>Payment | AlveoAir Respiratory Coaching</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
+
 body {
     margin: 0;
     font-family: 'Lato', sans-serif;
-    background-image: url('back8.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    color: white;
+
+    /* SAME AS INDEX */
+    background: #eef5f1;
+
+    color: #1f2a24;
 }
 
+/* MAIN WRAPPER */
 .container {
-    background: rgba(0,0,0,0.7);
     padding: 60px 20px;
     text-align: center;
     min-height: 100vh;
 }
 
+/* TITLE */
 h1 {
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
 
+/* INFO TEXT */
+.info-text {
+    max-width: 700px;
+    margin: 0 auto 30px;
+    line-height: 1.6;
+}
+
+/* PAYMENT CARDS */
 .payment-bar {
-    background-color: #dff3e8;
+    background: #e6f2ea; /* soft green card */
     margin: 15px auto;
-    padding: 15px;
+    padding: 18px;
     width: 90%;
     max-width: 500px;
-    border-radius: 8px;
+    border-radius: 16px;
+
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 15px;
-    transition: 0.3s ease;
+    gap: 20px;
+
+    box-shadow: 0 8px 18px rgba(0,0,0,0.10);
+    border: 1px solid rgba(0,0,0,0.06);
+
+    transition: 0.25s ease;
 }
 
 .payment-bar:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 22px rgba(0,0,0,0.15);
 }
 
+/* ICONS */
 .payment-bar img {
-    width: 50px;
+    width: 55px;
 }
 
+/* LINKS */
 .payment-bar a {
     text-decoration: none;
     color: #2e5f4d;
-    font-weight: bold;
+    font-weight: 600;
     font-size: 1.1em;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
+/* HELP */
 .help-section {
     margin-top: 50px;
 }
 
 .help-icon {
-    width: 50px;
-    margin-top: 10px;
+    width: 55px;
 }
+
+/* NAV BUTTONS */
+.bottom-links img {
+    width: 50px;
+    margin: 10px;
+    transition: 0.2s;
+}
+
+.bottom-links img:hover {
+    transform: scale(1.08);
+}
+
 </style>
 </head>
 
@@ -80,32 +109,42 @@ h1 {
 
 <h1>Secure Payment</h1>
 
- <h3>Get Zelle going into your USA online bank account, select SEND/TRANSFER and in that page select Zelle</h3>
- <h3>Get WISE from google-play app and apply. WISE is the best and easiest way to send, transfer or request payments internationally</h3>
+<div class="info-text">
+    <p><strong>Zelle:</strong> Use your U.S. bank app → Select “Send/Transfer” → Choose Zelle.</p>
+    <p><strong>Wise:</strong> Download Wise (recommended) to send or receive international payments quickly and securely.</p>
+</div>
 
+<!-- PAYMENT OPTIONS -->
 <div class="payment-bar">
+
     <a href="zelleqr.jpg" target="_blank">
-        <img src="zelle.jpg" alt="zelle">
+        <img src="zelle.jpg" alt="Zelle payment">
         Pay with Zelle
     </a>
 
-
-<a href="wiseqr.jpg" target="_blank">
-        <img src="wise.jpg" alt="wise">
+    <a href="wiseqr.jpg" target="_blank">
+        <img src="wise.jpg" alt="Wise payment">
         Pay with Wise
     </a>
-</div>
- 
 
+</div>
+
+<!-- HELP -->
 <div class="help-section">
 
-<a href="mailto:alveoair@gmail.com?subject=Help Request">
-    <img src="help.jpg" alt="Help">
-</a>
-<center>
- <p><a href="application.html"><img src="home.jpg" alt="Application"></a>
- <a href="en.html"><img src="home.jpg" alt="Home"></a></p></center></p>
-</center>
-</body>
+    <a href="mailto:alveoair@gmail.com?subject=Help Request">
+        <img src="help.jpg" class="help-icon" alt="Help">
+    </a>
 
+</div>
+
+<!-- NAV -->
+<div class="bottom-links">
+    <a href="application.html"><img src="home.jpg" alt="Application"></a>
+    <a href="en.html"><img src="home.jpg" alt="Home"></a>
+</div>
+
+</div>
+
+</body>
 </html>
