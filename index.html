@@ -9,150 +9,9 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Lato:wght@300;400;600&display=swap" rel="stylesheet">
 
-<style>
-* {
-    box-sizing: border-box;
-}
+<!-- ONLY YOUR MAIN CSS NOW -->
+<link rel="stylesheet" href="css/style.css">
 
-body {
-    margin: 0;
-    font-family: 'Lato', sans-serif;
-    color: white;
-    background-image: url('back8.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-}
-
-.main-wrapper {
-    min-height: 100vh;
-    padding: 40px 20px 60px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.top-title {
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-.top-title h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 2.7rem;
-    margin: 0;
-    text-shadow: 1px 1px 8px rgba(0,0,0,0.45);
-}
-
-.content-row {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 40px;
-    max-width: 1400px;
-    margin: 0 auto;
-    flex-wrap: wrap;
-}
-
-.text-block {
-    flex: 1;
-    min-width: 300px;
-    max-width: 420px;
-    text-align: center;
-    padding: 20px;
-}
-
-.text-block h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.8rem;
-    margin-bottom: 20px;
-    text-shadow: 1px 1px 6px rgba(0,0,0,0.4);
-}
-
-.text-block p {
-    font-size: 1.08rem;
-    line-height: 1.8;
-    margin-bottom: 18px;
-    text-shadow: 1px 1px 6px rgba(0,0,0,0.4);
-}
-
-.flag-box {
-    margin-top: 25px;
-}
-
-.flag-box a {
-    text-decoration: none;
-    color: white;
-}
-
-.flag-box img {
-    width: 70px;
-    height: auto;
-    display: block;
-    margin: 0 auto 10px;
-    transition: transform 0.3s ease;
-}
-
-.flag-box img:hover {
-    transform: scale(1.08);
-}
-
-.flag-box span {
-    font-size: 1.1rem;
-    font-weight: 600;
-    display: block;
-    text-shadow: 1px 1px 6px rgba(0,0,0,0.4);
-}
-
-.center-image {
-    flex: 0 1 340px;
-    text-align: center;
-}
-
-.center-image img {
-    width: 100%;
-    max-width: 340px;
-    border-radius: 18px;
-    box-shadow: 0 8px 28px rgba(0,0,0,0.25);
-}
-
-@media (max-width: 900px) {
-    .content-row {
-        flex-direction: column;
-        gap: 25px;
-    }
-
-    .center-image {
-        order: 1;
-    }
-
-    .english-block {
-        order: 2;
-    }
-
-    .spanish-block {
-        order: 3;
-    }
-
-    .top-title h1 {
-        font-size: 2rem;
-    }
-
-    .text-block h2 {
-        font-size: 1.5rem;
-    }
-
-    .text-block p {
-        font-size: 1rem;
-        line-height: 1.7;
-    }
-
-    body {
-        background-attachment: scroll;
-    }
-}
-</style>
 </head>
 
 <body>
@@ -168,16 +27,21 @@ body {
         <!-- English Left -->
         <div class="text-block english-block">
             <h2>English</h2>
+
             <p>
                 Professional respiratory guidance for individuals and families who need support understanding equipment,
                 improving home safety, and creating a healthier environment for better breathing.
             </p>
+
             <p>
                 With over 30 years of experience as a Respiratory Therapist in hospitals, rehabilitation centers,
                 nursing homes, transport care, and home-related respiratory support, I offer practical guidance in a
-                clear and compassionate way.</p>
-             <p>         </p>
-             <p>“Disclaimer: This information is for educational purposes only and does not replace medical advice from your physician or healthcare provider.”</p>
+                clear and compassionate way.
+            </p>
+
+            <p>
+                “Disclaimer: This information is for educational purposes only and does not replace medical advice from your physician or healthcare provider.”
+            </p>
 
             <div class="flag-box">
                 <a href="en.html">
@@ -187,7 +51,7 @@ body {
             </div>
         </div>
 
-        <!-- Center Picture -->
+        <!-- Center Image -->
         <div class="center-image">
             <img src="julio.jpg" alt="Respiratory Therapist - AlveoAir">
         </div>
@@ -195,10 +59,12 @@ body {
         <!-- Spanish Right -->
         <div class="text-block spanish-block">
             <h2>Español</h2>
+
             <p>
                 Orientación respiratoria profesional para personas y familias que necesitan apoyo para comprender mejor
                 su equipo, mejorar la seguridad en casa y crear un ambiente más saludable para respirar mejor.
             </p>
+
             <p>
                 Con más de 30 años de experiencia como Terapeuta Respiratorio en hospitales, centros de rehabilitación,
                 residencias, transporte de pacientes y apoyo respiratorio relacionado con el hogar, ofrezco orientación
@@ -213,6 +79,11 @@ body {
             </div>
         </div>
 
+    </div>
+</div>
+
+</body>
+</html>
     </div>
 </div>
 
