@@ -122,7 +122,9 @@ img {
 
 /* CARDS */
 .card {
-    background: #eef5f1;
+   .card {
+    background: linear-gradient(to bottom right, #f4faf6, #eef5f1);
+}
     color: var(--text-dark);
     border-radius: var(--radius);
     padding: 24px;
