@@ -122,12 +122,22 @@ img {
 
 /* CARDS */
 .card {
-    background: rgba(255,255,255,0.95);
+    background: linear-gradient(
+        to bottom right,
+        #f3faf6,
+        #dfeee5
+    ); /* soft medical green */
+
     color: var(--text-dark);
     border-radius: var(--radius);
     padding: 24px;
-    box-shadow: var(--shadow);
-    border: 1px solid rgba(0,0,0,0.06);
+
+    /* softer but slightly 3D shadow */
+    box-shadow:
+        0 8px 18px rgba(0,0,0,0.10),
+        0 2px 6px rgba(0,0,0,0.06);
+
+    border: 1px solid rgba(122,168,141,0.25);
 }
 
 .card h3 {
