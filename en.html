@@ -180,14 +180,17 @@ function calculateDuration() {
     return;
   }
 
-  let duration = ((pressure - 200) * factor) / flow;
+  let minutes = ((pressure - 200) * factor) / flow;
+
+  // Convert to hours + minutes
+  let hours = Math.floor(minutes / 60);
+  let remainingMinutes = Math.round(minutes % 60);
 
   document.getElementById("result").innerText =
-    "Duration: " + duration.toFixed(1) + " minutes";
+    "Duration: " + minutes.toFixed(1) + " minutes\n" +
+    "≈ " + hours + " hr " + remainingMinutes + " min";
 }
 </script>
-
-
 
 
   
