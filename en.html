@@ -145,6 +145,52 @@
   <h3>START HERE</h3>
 </center>
 
+<div style="max-width:400px; padding:20px; border:1px solid #ccc; border-radius:10px; font-family:Arial;">
+  <h3>Oxygen Tank Duration Calculator</h3>
+
+  <label>Tank Pressure (PSI)</label><br>
+  <input type="number" id="pressure" placeholder="e.g. 2000"><br><br>
+
+  <label>Cylinder Type</label><br>
+  <select id="cylinder">
+    <option value="">Select Cylinder</option>
+    <option value="0.16">D</option>
+    <option value="0.28">E</option>
+    <option value="1.56">M</option>
+    <option value="2.41">G</option>
+    <option value="3.14">H</option>
+  </select><br><br>
+
+  <label>Flow Rate (LPM)</label><br>
+  <input type="number" id="flow" placeholder="e.g. 2"><br><br>
+
+  <button onclick="calculateDuration()">Calculate</button>
+
+  <h4 id="result" style="margin-top:15px;"></h4>
+</div>
+
+<script>
+function calculateDuration() {
+  let pressure = parseFloat(document.getElementById("pressure").value);
+  let factor = parseFloat(document.getElementById("cylinder").value);
+  let flow = parseFloat(document.getElementById("flow").value);
+
+  if (!pressure || !factor || !flow) {
+    document.getElementById("result").innerText = "Please fill in all fields.";
+    return;
+  }
+
+  let duration = ((pressure - 200) * factor) / flow;
+
+  document.getElementById("result").innerText =
+    "Duration: " + duration.toFixed(1) + " minutes";
+}
+</script>
+
+
+
+
+  
 <!-- CONTACT -->
 <section class="section section-light" id="contact">
   <div class="container">
