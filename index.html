@@ -14,18 +14,43 @@ body {
     margin: 0;
     background-color: #f5f7fa;
     color: #333;
-    text-align: center;
 }
 
+/* TOP BAR */
+.top-bar {
+    display: flex;
+    align-items: center;
+    padding: 15px 30px;
+    background: white;
+    border-bottom: 1px solid #ddd;
+}
+
+/* LOGO */
+.logo {
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.logo span {
+    display: block;
+    font-size: 0.7em;
+    font-weight: normal;
+    color: #777;
+}
+
+/* MAIN */
 .container {
     max-width: 1100px;
     margin: auto;
-    padding: 20px;
+    padding: 30px 20px;
+    text-align: center;
 }
 
 h1 {
-    font-size: 2.5em;
+    font-size: 2.4em;
     margin-bottom: 5px;
+    color: #2c3e50;
 }
 
 h2 {
@@ -34,6 +59,7 @@ h2 {
     margin-bottom: 40px;
 }
 
+/* CONTENT */
 .main-content {
     display: flex;
     align-items: center;
@@ -46,8 +72,10 @@ h2 {
     flex: 1;
     min-width: 280px;
     text-align: left;
+    line-height: 1.6;
 }
 
+/* IMAGE */
 .center-img {
     flex: 0 0 260px;
 }
@@ -55,8 +83,10 @@ h2 {
 .center-img img {
     width: 100%;
     border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
+/* BUTTON */
 .button-container {
     margin-top: 40px;
 }
@@ -66,16 +96,16 @@ h2 {
     color: white;
     padding: 15px 30px;
     font-size: 1.1em;
-    border: none;
     border-radius: 8px;
-    cursor: pointer;
     text-decoration: none;
+    transition: 0.3s;
 }
 
 .cta-button:hover {
     background-color: #005fa3;
 }
 
+/* DISCLAIMER */
 .disclaimer {
     margin-top: 30px;
     font-size: 0.8em;
@@ -90,13 +120,21 @@ h2 {
 
 <body>
 
+<!-- TOP BAR WITH LOGO -->
+<div class="top-bar">
+    <div class="logo">
+        JB
+        <span>Respiratory Home Coach</span>
+    </div>
+</div>
+
 <div class="container">
 
     <!-- TITLE -->
     <h1>Respiratory Home Coach</h1>
     <h2>CPAP, BiPAP & Oxygen Therapy Support for Daily Living</h2>
 
-    <!-- MAIN SECTION -->
+    <!-- CONTENT -->
     <div class="main-content">
 
         <!-- LEFT -->
@@ -106,7 +144,7 @@ h2 {
             <p>Providing clear, practical guidance to help individuals and families better understand and manage their breathing at home.</p>
         </div>
 
-        <!-- CENTER IMAGE -->
+        <!-- IMAGE -->
         <div class="center-img">
             <img src="your-photo.jpg" alt="Respiratory Home Coach">
         </div>
