@@ -24,6 +24,35 @@ body {
     padding: 20px;
 }
 
+/* ✅ HEADER FIX */
+.header {
+    display: flex;
+    flex-direction: column; /* mobile */
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.logo {
+    max-width: 180px;
+    height: auto;
+}
+
+.title-group {
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .header {
+        flex-direction: row; /* desktop */
+        justify-content: center;
+    }
+
+    .title-group {
+        text-align: left;
+    }
+}
+
 h1 {
     font-size: 2.5em;
     margin-bottom: 5px;
@@ -85,17 +114,23 @@ h2 {
     margin-left: auto;
     margin-right: auto;
 }
-</style>
 
+</style>
 </head>
 
 <body>
-<img src="logo.png" alt="Respiratory Home Coach Logo & Title">
+
 <div class="container">
 
-    <!-- TITLE -->
-    <h1><strong>Respiratory Home Coach</strong></h1>
-    <h2><strong>CPAP, BiPAP & Oxygen Therapy Support for Daily Living</strong></h2>
+    <!-- ✅ HEADER -->
+    <div class="header">
+        <img src="logo.png" alt="Respiratory Home Coach Logo" class="logo">
+
+        <div class="title-group">
+            <h1><strong>Respiratory Home Coach</strong></h1>
+            <h2><strong>CPAP, BiPAP & Oxygen Therapy Support for Daily Living</strong></h2>
+        </div>
+    </div>
 
     <!-- MAIN SECTION -->
     <div class="main-content">
@@ -109,7 +144,7 @@ h2 {
 
         <!-- CENTER IMAGE -->
         <div class="center-img">
-           <p> <img src="julio1.png" alt="Respiratory Home Coach1"></p>
+            <img src="julio1.png" alt="Respiratory Home Coach">
         </div>
 
         <!-- RIGHT -->
@@ -121,9 +156,21 @@ h2 {
             <p>Support for CPAP, BiPAP, oxygen therapy, mask fit, and adapting treatment safely into everyday life.</p>
         </div>
 
-   <center><p><a href="en.html"><img src="enter.png" alt="Main"></a></p>
+    </div>
 
- <p><strong>Disclaimer:</strong> This information is for educational purposes only and does not replace medical advice.</center></p>
-        
+    <!-- BUTTON -->
+    <div class="button-container">
+        <a href="en.html">
+            <img src="enter.png" alt="Enter">
+        </a>
+    </div>
+
+    <!-- DISCLAIMER -->
+    <p class="disclaimer">
+        <strong>Disclaimer:</strong> This information is for educational purposes only and does not replace medical advice.
+    </p>
+
+</div>
+
 </body>
 </html>
