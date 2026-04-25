@@ -9,6 +9,38 @@
 <meta name="description" content="Professional respiratory guidance for CPAP, BiPAP, and oxygen therapy users. Over 30 years of experience helping patients manage breathing at home with confidence.">
 
 <style>
+
+.header {
+    display: flex;
+    flex-direction: column; /* mobile default */
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.logo {
+    max-width: 180px;
+    height: auto;
+}
+
+.title-group {
+    text-align: center;
+}
+
+/* Desktop view */
+@media (min-width: 768px) {
+    .header {
+        flex-direction: row;
+        justify-content: center;
+        text-align: left;
+    }
+
+    .title-group {
+        text-align: left;
+    }
+}
+
+    
 body {
     font-family: Arial, sans-serif;
     margin: 0;
