@@ -6,9 +6,9 @@
 <title>Respiratory Intake Form</title>
 </head>
 
-<body style="font-family: Arial, sans-serif; background:#eaf4f8; margin:0; padding:20px;">
+<body style="font-family: Arial, sans-serif; background:#eef5f7; margin:0; padding:20px;">
 
-<div style="max-width:900px; margin:auto; background:white; padding:25px; border-radius:10px;">
+<div style="max-width:950px; margin:auto; background:white; padding:25px; border-radius:10px;">
 
 <h2 style="text-align:center;">Respiratory Intake Application</h2>
 
@@ -16,164 +16,162 @@
 At the best of your knowledge, please complete the following information.
 </p>
 
-<form action="https://formspree.io/f/mpqknnea" method="POST">
+<form id="myForm" action="https://formspree.io/f/mvzwrnel" method="POST">
 
 <input type="hidden" name="_subject" value="Respiratory Patient Intake Report">
 <input type="text" name="_gotcha" style="display:none">
 
-<!-- PATIENT BASICS -->
-<h3>--- Patient Basics ---</h3>
+<!-- IDENTIFICATION -->
+<h3 style="background:#dfe8ec; padding:8px;">--- Patient Identification ---</h3>
 
-Age: <input type="number" name="Patient Age" style="width:60px;">
-Weight: <input type="number" name="Patient Weight" style="width:60px;">
-Height: <input type="number" name="Patient Height" style="width:60px;">
+Name:
+<input type="text" name="Patient Name" style="width:200px; margin-right:20px;">
+
+OR Account Code:
+<input type="text" name="Account Code" style="width:150px;">
+
+<br><br>
+
+<!-- BASICS -->
+<h3 style="background:#dfe8ec; padding:8px;">--- Patient Basics ---</h3>
+
+Age: <input type="number" name="Age" style="width:60px;">
+Weight: <input type="number" name="Weight" style="width:60px;">
+Height: <input type="number" name="Height" style="width:60px;">
 
 <br><br>
 
 Previous diagnosis:<br>
-<input type="text" name="Previous Diagnosis" style="width:100%;">
-
-<br><br>
+<input type="text" name="Previous Diagnosis" style="width:100%;"><br><br>
 
 Most recent diagnosis:<br>
 <input type="text" name="Recent Diagnosis" style="width:100%;">
 
 <!-- SLEEP -->
-<h3>--- Sleep & Symptoms ---</h3>
+<h3 style="background:#dfe8ec; padding:8px;">--- Sleep & Symptoms ---</h3>
 
 Sleep hours:
-<input type="number" name="Sleep Hours" style="width:60px;">
-<br><br>
+<input type="number" name="Sleep Hours" style="width:60px;"><br><br>
 
 Wake up tired:
 <input type="radio" name="Wake Tired" value="Yes"> Yes
-<input type="radio" name="Wake Tired" value="No"> No
-<br><br>
+<input type="radio" name="Wake Tired" value="No"> No<br><br>
 
 Take naps:
 <input type="radio" name="Naps" value="Yes"> Yes
-<input type="radio" name="Naps" value="No"> No
-<br><br>
+<input type="radio" name="Naps" value="No"> No<br><br>
 
 Tired during day:
 <input type="radio" name="Daytime Fatigue" value="Yes"> Yes
 <input type="radio" name="Daytime Fatigue" value="No"> No
 
 <!-- EQUIPMENT -->
-<h3>--- Equipment Use ---</h3>
+<h3 style="background:#dfe8ec; padding:8px;">--- Equipment Use ---</h3>
 
-BiPAP
+<!-- EQUIPMENT BLOCK TEMPLATE -->
+<div style="background:#f7f7f7; padding:10px; margin-bottom:10px;">
+<strong>BiPAP</strong><br>
 <input type="radio" name="BiPAP" value="Yes"> Yes
 <input type="radio" name="BiPAP" value="No"> No
+&nbsp;&nbsp; Brand/Model:
+<input type="text" name="BiPAP Model" style="width:200px;">
+</div>
 
-&nbsp;&nbsp;
-
-CPAP
+<div style="background:#ffffff; padding:10px; margin-bottom:10px;">
+<strong>CPAP</strong><br>
 <input type="radio" name="CPAP" value="Yes"> Yes
 <input type="radio" name="CPAP" value="No"> No
+&nbsp;&nbsp; Brand/Model:
+<input type="text" name="CPAP Model" style="width:200px;">
+</div>
 
-&nbsp;&nbsp;
-
-High Flow
+<div style="background:#f7f7f7; padding:10px; margin-bottom:10px;">
+<strong>High Flow</strong><br>
 <input type="radio" name="High Flow" value="Yes"> Yes
 <input type="radio" name="High Flow" value="No"> No
+&nbsp;&nbsp; Brand/Model:
+<input type="text" name="High Flow Model" style="width:200px;">
+</div>
 
-&nbsp;&nbsp;
+<div style="background:#ffffff; padding:10px; margin-bottom:10px;">
+<strong>Oxygen</strong><br>
+<input type="radio" name="Oxygen" value="Yes"> Yes
+<input type="radio" name="Oxygen" value="No"> No
+&nbsp;&nbsp; Brand/Model:
+<input type="text" name="Oxygen Model" style="width:200px;">
+</div>
 
-Oxygen
-<input type="radio" name="Oxygen Use" value="Yes"> Yes
-<input type="radio" name="Oxygen Use" value="No"> No
-
-&nbsp;&nbsp;
-
-Tracheostomy
+<div style="background:#f7f7f7; padding:10px; margin-bottom:10px;">
+<strong>Tracheostomy</strong><br>
 <input type="radio" name="Tracheostomy" value="Yes"> Yes
 <input type="radio" name="Tracheostomy" value="No"> No
+&nbsp;&nbsp; Type/Model:
+<input type="text" name="Tracheostomy Model" style="width:200px;">
+</div>
 
-<br><br>
+<!-- OXYGEN DETAILS -->
+<h3 style="background:#dfe8ec; padding:8px;">--- Oxygen Details ---</h3>
 
-Oxygen liters:<br>
 Night: <input type="number" name="O2 Night" style="width:60px;">
-Day: <input type="number" name="O2 Day" style="width:60px;">
+Day: <input type="number" name="O2 Day" style="width:60px;"><br><br>
 
-<br><br>
-
-Oxygen type:
-Tank
-<input type="radio" name="Oxygen Tank" value="Yes"> Yes
-<input type="radio" name="Oxygen Tank" value="No"> No
+Tank:
+<input type="radio" name="Tank" value="Yes"> Yes
+<input type="radio" name="Tank" value="No"> No
 
 &nbsp;&nbsp;
 
-Concentrator
-<input type="radio" name="Oxygen Concentrator" value="Yes"> Yes
-<input type="radio" name="Oxygen Concentrator" value="No"> No
+Concentrator:
+<input type="radio" name="Concentrator" value="Yes"> Yes
+<input type="radio" name="Concentrator" value="No"> No
 
 <br><br>
 
-Equipment details (models/settings):<br>
-<textarea name="Equipment Details" style="width:100%; height:100px;"></textarea>
+Additional equipment notes:<br>
+<textarea name="Equipment Notes" style="width:100%; height:100px;"></textarea>
 
 <!-- MEDICATION -->
-<h3>--- Respiratory Medications ---</h3>
+<h3 style="background:#dfe8ec; padding:8px;">--- Medications ---</h3>
 
-SVN (Nebulizer)
+Nebulizer:
 <input type="radio" name="Nebulizer" value="Yes"> Yes
-<input type="radio" name="Nebulizer" value="No"> No
-<br><br>
+<input type="radio" name="Nebulizer" value="No"> No<br><br>
 
-MDI (Inhaler / Puffer)
+MDI:
 <input type="radio" name="MDI" value="Yes"> Yes
-<input type="radio" name="MDI" value="No"> No
-<br><br>
+<input type="radio" name="MDI" value="No"> No<br><br>
 
-Spacer
-<input type="radio" name="Spacer Use" value="Yes"> Yes
-<input type="radio" name="Spacer Use" value="No"> No
+Spacer:
+<input type="radio" name="Spacer" value="Yes"> Yes
+<input type="radio" name="Spacer" value="No"> No
 
-<!-- TRACH -->
-<h3>--- Tracheostomy Details ---</h3>
-
-Cuffed
-<input type="radio" name="Cuffed" value="Yes"> Yes
-<input type="radio" name="Cuffed" value="No"> No
-<br><br>
-
-Fenestrated
-<input type="radio" name="Fenestrated" value="Yes"> Yes
-<input type="radio" name="Fenestrated" value="No"> No
-<br><br>
-
-Humidity
-<input type="radio" name="Humidity Use" value="Yes"> Yes
-<input type="radio" name="Humidity Use" value="No"> No
-<br><br>
-
-Able to eat
-<input type="radio" name="Eating Ability" value="Yes"> Yes
-<input type="radio" name="Eating Ability" value="No"> No
-<br><br>
-
-Feeding tube
-<input type="radio" name="Feeding Tube" value="Yes"> Yes
-<input type="radio" name="Feeding Tube" value="No"> No
-
-<br><br>
-
-Additional notes:<br>
-<textarea name="Additional Notes" style="width:100%; height:120px;"></textarea>
-
+<!-- BUTTONS -->
 <br><br>
 
 <div style="text-align:center;">
-<button type="submit" style="padding:12px 25px; font-size:16px; border-radius:5px; background:#4CAF50; color:white; border:none;">
-Submit Application
+
+<button type="reset" style="background:red; color:white; padding:10px 20px; border:none; border-radius:5px;">
+Reset
 </button>
+
+<button type="submit" id="submitBtn" style="background:gold; padding:10px 20px; border:none; border-radius:5px;">
+Submit
+</button>
+
 </div>
 
 </form>
 
 </div>
+
+<script>
+document.getElementById("myForm").addEventListener("submit", function() {
+    var btn = document.getElementById("submitBtn");
+    btn.innerHTML = "Sent";
+    btn.style.background = "green";
+    btn.disabled = true;
+});
+</script>
 
 </body>
 </html>
