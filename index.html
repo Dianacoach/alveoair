@@ -15,55 +15,116 @@ body {
     margin: 0;
     background-color: #f5f7fa;
     color: #333;
-    text-align: center;
 }
 
+/* CONTAINER */
 .container {
     max-width: 1100px;
     margin: auto;
     padding: 20px;
+    text-align: center;
 }
 
-/* ✅ HEADER FIX */
+/* HEADER */
 .header {
     display: flex;
-    flex-direction: column; /* mobile */
+    flex-direction: column;
     align-items: center;
-    gap: 15px;
-    margin-bottom: 20px;
+    gap: 10px;
 }
 
 .logo {
     max-width: 260px;
-    height: auto;
-}
-
-.title-group {
-    text-align: center;
-}
-
-@media (min-width: 768px) {
-    .header {
-        flex-direction: row; /* desktop */
-        justify-content: center;
-    }
-
-    .title-group {
-        text-align: left;
-    }
 }
 
 h1 {
-    font-size: 2.5em;
-    margin-bottom: 5px;
+    margin: 10px 0 0;
+    font-size: 2.3em;
 }
 
 h2 {
+    margin: 5px 0 20px;
     font-weight: normal;
     color: #555;
-    margin-bottom: 40px;
 }
 
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-button {
+    background-color: #0077cc;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 6px;
+    text-decoration: none;
+    display: inline-block;
+    min-width: 110px;
+}
+
+.nav-button:hover {
+    background-color: #005fa3;
+}
+
+/* DROPDOWN */
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 45px;
+    left: 0;
+    background: white;
+    border-radius: 6px;
+    min-width: 180px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+    text-align: left;
+    z-index: 1000;
+}
+
+.dropdown a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+}
+
+.dropdown a:hover {
+    background-color: #f0f0f0;
+}
+
+.nav-item:hover .dropdown {
+    display: block;
+}
+
+/* SUB DROPDOWN */
+.sub-dropdown {
+    position: relative;
+}
+
+.sub-dropdown-content {
+    display: none;
+    position: absolute;
+    left: 180px;
+    top: 0;
+    background: white;
+    border-radius: 6px;
+    min-width: 180px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+}
+
+.sub-dropdown:hover .sub-dropdown-content {
+    display: block;
+}
+
+/* MAIN SECTION */
 .main-content {
     display: flex;
     align-items: center;
@@ -80,6 +141,7 @@ h2 {
 
 .center-img {
     flex: 0 0 260px;
+    text-align: center;
 }
 
 .center-img img {
@@ -87,25 +149,7 @@ h2 {
     border-radius: 12px;
 }
 
-.button-container {
-    margin-top: 40px;
-}
-
-.cta-button {
-    background-color: #0077cc;
-    color: white;
-    padding: 15px 30px;
-    font-size: 1.1em;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    text-decoration: none;
-}
-
-.cta-button:hover {
-    background-color: #005fa3;
-}
-
+/* DISCLAIMER */
 .disclaimer {
     margin-top: 30px;
     font-size: 0.8em;
@@ -122,33 +166,87 @@ h2 {
 
 <div class="container">
 
-    <!-- ✅ HEADER -->
+    <!-- HEADER -->
     <div class="header">
         <img src="logo.png" alt="Respiratory Home Coach Logo" class="logo">
-
-        <div class="title-group">
-            <h1><strong>Respiratory Home Coach</strong></h1>
-            <h2><strong>CPAP, BiPAP & Oxygen Therapy Support for Daily Living</strong></h2>
-        </div>
+        <h1>Respiratory Home Coach</h1>
+        <h2>CPAP, BiPAP & Oxygen Therapy Support for Daily Living</h2>
     </div>
 
-    <!-- MAIN SECTION -->
+    <!-- NAVIGATION -->
+    <div class="navbar">
+
+        <div class="nav-item">
+            <a href="about.html" class="nav-button">About</a>
+        </div>
+
+        <div class="nav-item">
+            <div class="nav-button">Coaching</div>
+            <div class="dropdown">
+
+                <div class="sub-dropdown">
+                    <a href="#">Equipment ▶</a>
+                    <div class="sub-dropdown-content">
+                        <a href="bipap.html">BiPAP</a>
+                        <a href="cpap.html">CPAP</a>
+                        <a href="masks.html">Masks</a>
+                        <a href="concentrators.html">O2 Units</a>
+                        <a href="trach.html">Trach Tubes</a>
+                        <a href="nebs.html">Nebulizers</a>
+                    </div>
+                </div>
+
+                <div class="sub-dropdown">
+                    <a href="#">Therapy ▶</a>
+                    <div class="sub-dropdown-content">
+                        <a href="useO2.html">Oxygen Use</a>
+                        <a href="SOB.html">Shortness of Breath</a>
+                        <a href="COPD.html">COPD</a>
+                        <a href="PMV.html">Speaking Valve</a>
+                        <a href="breathe.html">Breathing Exercises</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="nav-item">
+            <div class="nav-button">Plans</div>
+            <div class="dropdown">
+                <a href="basic.html">Basic</a>
+                <a href="prevention.html">Prevention</a>
+                <a href="flex.html">Flex</a>
+            </div>
+        </div>
+
+        <div class="nav-item">
+            <a href="freetrial.html" class="nav-button">Trial</a>
+        </div>
+
+        <div class="nav-item">
+            <a href="pay.html" class="nav-button">Pay</a>
+        </div>
+
+        <div class="nav-item">
+            <a href="TNC.html" class="nav-button">Terms</a>
+        </div>
+
+    </div>
+
+    <!-- MAIN CONTENT -->
     <div class="main-content">
 
-        <!-- LEFT -->
         <div class="box">
             <p><strong>I am a Respiratory Therapist with over 30 years of experience</strong> in hospitals, rehabilitation centers, nursing homes, transport care, and home support.</p>
 
             <p>Providing clear, practical guidance to help individuals and families better understand and manage their breathing at home.</p>
         </div>
 
-        <!-- CENTER IMAGE -->
         <div class="center-img">
-        <img src="julio1.png" alt="Respiratory Home Coach">
-        <p><em>Guided by Julio Bautista, Your Coach</em></p>
+            <img src="julio1.png" alt="Respiratory Home Coach">
+            <p><em>Guided by Julio Bautista, Your Coach</em></p>
         </div>
 
-        <!-- RIGHT -->
         <div class="box">
             <p><strong>I help you with</strong></p>
 
@@ -157,13 +255,6 @@ h2 {
             <p>Support for CPAP, BiPAP, oxygen therapy, mask fit, and adapting treatment safely into everyday life.</p>
         </div>
 
-    </div>
-
-    <!-- BUTTON -->
-    <div class="button-container">
-        <a href="en.html">
-            <img src="enter.png" alt="Enter">
-        </a>
     </div>
 
     <!-- DISCLAIMER -->
