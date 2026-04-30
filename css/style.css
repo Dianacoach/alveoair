@@ -249,3 +249,59 @@ input, textarea {
         padding: 60px 0;
     }
 }
+
+
+
+@media (max-width: 768px) {
+
+    /* HEADER FIX */
+    .header {
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center;
+    }
+
+    .header-right {
+        align-items: center !important;
+    }
+
+    h1 {
+        font-size: 1.6rem !important;
+    }
+
+    /* NAV FIX */
+    .navbar {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .nav-button {
+        font-size: 0.85rem;
+        padding: 8px 10px;
+        min-width: auto;
+    }
+
+    /* MAIN CONTENT FIX */
+    .main-content {
+        flex-direction: column !important;
+        text-align: center;
+    }
+
+    .text-section {
+        text-align: left;
+    }
+
+    .image-section {
+        margin-top: 20px;
+    }
+
+    /* DROPDOWN FIX (CRITICAL FOR MOBILE) */
+    .dropdown,
+    .sub-dropdown-content {
+        position: relative !important;
+        left: 0 !important;
+        top: 0 !important;
+        box-shadow: none;
+    }
+
+}
