@@ -9,6 +9,7 @@ Practical home guidance to improve comfort, safety and daily breathing.">
 
 <style>
 
+/* ===== LAYOUT ONLY (keep structure, not design) ===== */
 
 .container {
     max-width: 1100px;
@@ -33,12 +34,7 @@ Practical home guidance to improve comfort, safety and daily breathing.">
     flex-direction: column;
 }
 
-h1 {
-    margin: 0 0 10px 0;
-    font-size: 3em;
-}
-
-/* NAV */
+/* NAV STRUCTURE */
 .navbar {
     display: flex;
     flex-wrap: wrap;
@@ -50,23 +46,14 @@ h1 {
 }
 
 .nav-button {
-    background-color: #66b3ff;
-    color: white;
-    padding: 7px 12px;
-    border-radius: 20px;
-    font-size: 1em;
-    text-decoration: none;
-    cursor: pointer;
     display: inline-block;
     min-width: 85px;
     text-align: center;
+    text-decoration: none;
+    cursor: pointer;
 }
 
-.nav-button:hover {
-    background-color: #4da6ff;
-}
-
-/* DROPDOWN */
+/* DROPDOWN SYSTEM */
 .dropdown {
     display: none;
     position: absolute;
@@ -90,7 +77,6 @@ h1 {
     background-color: #f0f0f0;
 }
 
-/* CLICK ACTIVATION */
 .nav-item.active .dropdown {
     display: block;
 }
@@ -115,7 +101,7 @@ h1 {
     display: block;
 }
 
-/* MAIN */
+/* MAIN LAYOUT */
 .main-content {
     display: flex;
     align-items: center;
@@ -128,8 +114,6 @@ h1 {
 .text-section {
     flex: 1;
     min-width: 280px;
-    font-size: 1.05em;
-    line-height: 1.6;
 }
 
 .image-section {
@@ -145,12 +129,10 @@ h1 {
 /* DISCLAIMER */
 .disclaimer {
     margin-top: 30px;
-    font-size: 0.8em;
-    color: #777;
     max-width: 800px;
 }
 
-
+/* CONTACT */
 .contact-buttons {
     margin-top: 25px;
     display: flex;
@@ -159,19 +141,35 @@ h1 {
 }
 
 .contact-btn {
-    background-color: #006400; /* dark green */
-    color: white;
-    padding: 8px 14px;
-    border-radius: 20px;
-    font-size: 1em;
-    text-decoration: none;
     display: inline-block;
 }
 
-.contact-btn:hover {
-    background-color: #6fcf97;
+/* MOBILE FIXES */
+@media (max-width: 768px) {
+
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .main-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .text-section {
+        text-align: left;
+    }
+
+    .dropdown,
+    .sub-dropdown-content {
+        position: relative;
+        left: 0;
+        top: 0;
+        box-shadow: none;
+    }
 }
-    
+
 </style>
 </head>
 
