@@ -301,20 +301,20 @@ input, textarea {
 /* 🔥 QUICK READABILITY BOOST */
 
 body {
-    font-size: 18px;
+    font-size: 20px;
 }
 
 .text-section p {
-    font-size: 1.25rem;
+    font-size: 1.80rem;
     line-height: 1.9;
 }
 
 .nav-button {
-    font-size: 1rem;
-    padding: 10px 16px;
+    font-size: 1.5rem;
+    padding: 14px 18px;
 }
 
 .contact-btn {
-    font-size: 1rem;
-    padding: 10px 16px;
+    font-size: 1.5rem;
+    padding: 14px 18px;
 }
