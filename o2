@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">    
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+<title>Oxygen Therapy & Safety | Respiratory Home Coach</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- HEADER -->
+    <div class="header" style="display:flex; align-items:center; justify-content:center; gap:20px; flex-wrap:wrap;">
+
+        <img src="logo.png" alt="Respiratory Home Coach Logo" style="width:200px;"> &nbsp;&nbsp;&nbsp;&nbsp; 
+
+        <div style="max-width:600px; text-align:left;">
+            <h1>Oxygen Therapy & Safety Guidelines</h1>
+            <h2>Proper use, benefits, risks, and precautions for safe oxygen use at home</h2>
+        </div>
+
+    </div>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <div class="container hero-grid">
+
+        <!-- LEFT CARD: USE / BENEFITS -->
+        <div class="hero-card">
+
+          <h2>USES & BENEFITS</h2>
+
+          <ul>
+            <li>Provides additional oxygen above normal room air (21%)</li>
+            <li>Improves oxygen levels in the blood and vital organs</li>
+            <li>Reduces shortness of breath (SOB)</li>
+            <li>Supports patients with COPD, lung disease, and heart conditions</li>
+            <li>Helps during recovery from illness, surgery, or respiratory distress</li>
+            <li>Can improve sleep and daily activity tolerance</li>
+            <li>Used during exercise when oxygen demand increases</li>
+            <li>Essential in emergency care, CPR, and resuscitation</li>
+            <li>Delivered through nasal cannula, mask, or tracheostomy collar</li>
+            <li>Can be provided by oxygen tanks or concentrators</li>
+            <li>Higher flows may be needed during activity or illness</li>
+            <li>Tracheostomy oxygen requires humidification</li>
+            <li>Helps maintain brain and organ oxygenation</li>
+            <li>Can improve endurance and quality of life</li>
+            <li>Important support for home care patients and caregivers</li>
+          </ul>
+
+        </div>
+
+        <!-- RIGHT CARD: RISKS / CONTRAINDICATIONS -->
+        <div class="hero-card">
+
+          <h2>RISKS & PRECAUTIONS</h2>
+
+          <ul>
+            <li>Excess oxygen in COPD may cause CO₂ retention</li>
+            <li>Oxygen should be adjusted based on saturation (not fixed liters)</li>
+            <li>Typical COPD target saturation: 88–92%</li>
+            <li>High oxygen levels can reduce breathing drive in some patients</li>
+            <li>Prolonged high oxygen may cause oxygen toxicity</li>
+            <li>May lead to shallow breathing and poor lung expansion</li>
+            <li>Increases risk of mucus retention and pneumonia if not breathing deeply</li>
+            <li>Not a drug, but patients may become psychologically dependent</li>
+            <li>Oxygen supports combustion—serious fire hazard</li>
+            <li>Never smoke or allow flames near oxygen equipment</li>
+            <li>Can cause severe burns to face and airway if exposed to sparks or cigarettes</li>
+            <li>Requires proper storage and handling of oxygen tanks</li>
+            <li>Dry oxygen may irritate airways—humidification needed in some cases</li>
+            <li>Patients must continue deep breathing and movement</li>
+            <li>Improper use can worsen respiratory condition</li>
+          </ul>
+
+          <br>
+
+          <h2>IMPORTANT NOTES</h2>
+
+          <ul>
+            <li>In emergencies, oxygen should NOT be withheld</li>
+            <li>High concentration oxygen (even 100%) may be necessary to save life</li>
+            <li>“No more than 2 liters” is not a strict rule—individualized care is required</li>
+            <li>Always follow professional guidance when adjusting oxygen levels</li>
+          </ul>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- HOME -->
+    <div style="text-align:center; margin-top:80px;">
+        <a href="index.html"><img src="back.png" alt="Home"></a>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+      © 2026 Julio Bautista – International Respiratory Coaching
+    </div>
+
+</div>
+
+</body>
+</html>
