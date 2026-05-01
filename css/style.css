@@ -298,23 +298,23 @@ input, textarea {
     }
 }
 
-/* 🔥 QUICK READABILITY BOOST */
+/* 🔥 FORCE TYPOGRAPHY OVERRIDE */
 
 body {
-    font-size: 20px;
+    font-size: 20px !important;
 }
 
 .text-section p {
-    font-size: 1.80rem;
-    line-height: 1.9;
+    font-size: 1.5rem !important;
+    line-height: 1.9 !important;
 }
 
 .nav-button {
-    font-size: 1.5rem;
-    padding: 14px 18px;
+    font-size: 1.1rem !important;
+    padding: 12px 18px !important;
 }
 
 .contact-btn {
-    font-size: 1.5rem;
-    padding: 14px 18px;
+    font-size: 1.1rem !important;
+    padding: 12px 18px !important;
 }
