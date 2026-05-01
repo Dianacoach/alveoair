@@ -297,3 +297,24 @@ input, textarea {
         box-shadow: none;
     }
 }
+
+/* 🔥 QUICK READABILITY BOOST */
+
+body {
+    font-size: 18px;
+}
+
+.text-section p {
+    font-size: 1.25rem;
+    line-height: 1.9;
+}
+
+.nav-button {
+    font-size: 1rem;
+    padding: 10px 16px;
+}
+
+.contact-btn {
+    font-size: 1rem;
+    padding: 10px 16px;
+}
