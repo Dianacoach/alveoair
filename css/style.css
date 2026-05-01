@@ -23,22 +23,16 @@ html {
 
 body {
     margin: 0;
-    font-family: 'Lato', sans-serif;
+    font-family: Georgia, serif; /* ✅ Main font */
     color: var(--text-dark);
     background: linear-gradient(to bottom, #f8f9f7, #eef5f1);
     line-height: 1.7;
 }
 
 h1, h2, h3 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Playfair Display', serif; /* ✅ Elegant headings */
     line-height: 1.25;
     margin-top: 0;
-}
-
-/* style.css */
-
-body {
-  font-family: Georgia, serif;
 }
 
 p, li {
@@ -132,13 +126,12 @@ img {
         to bottom right,
         #f3faf6,
         #dfeee5
-    ); /* soft medical green */
+    );
 
     color: var(--text-dark);
     border-radius: var(--radius);
     padding: 24px;
 
-    /* softer but slightly 3D shadow */
     box-shadow:
         0 8px 18px rgba(0,0,0,0.10),
         0 2px 6px rgba(0,0,0,0.06);
@@ -256,11 +249,8 @@ input, textarea {
     }
 }
 
-
-
 @media (max-width: 768px) {
 
-    /* HEADER FIX */
     .header {
         flex-direction: column !important;
         align-items: center !important;
@@ -275,7 +265,6 @@ input, textarea {
         font-size: 1.6rem !important;
     }
 
-    /* NAV FIX */
     .navbar {
         justify-content: center;
         flex-wrap: wrap;
@@ -287,7 +276,6 @@ input, textarea {
         min-width: auto;
     }
 
-    /* MAIN CONTENT FIX */
     .main-content {
         flex-direction: column !important;
         text-align: center;
@@ -301,7 +289,6 @@ input, textarea {
         margin-top: 20px;
     }
 
-    /* DROPDOWN FIX (CRITICAL FOR MOBILE) */
     .dropdown,
     .sub-dropdown-content {
         position: relative !important;
@@ -309,5 +296,4 @@ input, textarea {
         top: 0 !important;
         box-shadow: none;
     }
-
 }
