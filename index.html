@@ -9,7 +9,6 @@ Practical home guidance to improve comfort, safety and daily breathing.">
 
 <style>
 
-/* ===== LAYOUT ONLY (keep structure, not design) ===== */
 
 .container {
     max-width: 1100px;
@@ -34,7 +33,12 @@ Practical home guidance to improve comfort, safety and daily breathing.">
     flex-direction: column;
 }
 
-/* NAV STRUCTURE */
+h1 {
+    margin: 0 0 10px 0;
+    font-size: 2.2em;
+}
+
+/* NAV */
 .navbar {
     display: flex;
     flex-wrap: wrap;
@@ -46,14 +50,23 @@ Practical home guidance to improve comfort, safety and daily breathing.">
 }
 
 .nav-button {
+    background-color: #66b3ff;
+    color: white;
+    padding: 7px 12px;
+    border-radius: 20px;
+    font-size: 0.85em;
+    text-decoration: none;
+    cursor: pointer;
     display: inline-block;
     min-width: 85px;
     text-align: center;
-    text-decoration: none;
-    cursor: pointer;
 }
 
-/* DROPDOWN SYSTEM */
+.nav-button:hover {
+    background-color: #4da6ff;
+}
+
+/* DROPDOWN */
 .dropdown {
     display: none;
     position: absolute;
@@ -77,6 +90,7 @@ Practical home guidance to improve comfort, safety and daily breathing.">
     background-color: #f0f0f0;
 }
 
+/* CLICK ACTIVATION */
 .nav-item.active .dropdown {
     display: block;
 }
@@ -101,7 +115,7 @@ Practical home guidance to improve comfort, safety and daily breathing.">
     display: block;
 }
 
-/* MAIN LAYOUT */
+/* MAIN */
 .main-content {
     display: flex;
     align-items: center;
@@ -114,6 +128,8 @@ Practical home guidance to improve comfort, safety and daily breathing.">
 .text-section {
     flex: 1;
     min-width: 280px;
+    font-size: 1.05em;
+    line-height: 1.6;
 }
 
 .image-section {
@@ -129,10 +145,12 @@ Practical home guidance to improve comfort, safety and daily breathing.">
 /* DISCLAIMER */
 .disclaimer {
     margin-top: 30px;
+    font-size: 0.8em;
+    color: #777;
     max-width: 800px;
 }
 
-/* CONTACT */
+
 .contact-buttons {
     margin-top: 25px;
     display: flex;
@@ -141,35 +159,19 @@ Practical home guidance to improve comfort, safety and daily breathing.">
 }
 
 .contact-btn {
+    background-color: #8fd19e; /* light green */
+    color: white;
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-size: 0.85em;
+    text-decoration: none;
     display: inline-block;
 }
 
-/* MOBILE FIXES */
-@media (max-width: 768px) {
-
-    .header {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .main-content {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .text-section {
-        text-align: left;
-    }
-
-    .dropdown,
-    .sub-dropdown-content {
-        position: relative;
-        left: 0;
-        top: 0;
-        box-shadow: none;
-    }
+.contact-btn:hover {
+    background-color: #6fcf97;
 }
-
+    
 </style>
 </head>
 
@@ -182,7 +184,7 @@ Practical home guidance to improve comfort, safety and daily breathing.">
         <img src="logo.png" alt="Logo" class="logo">
 
         <div class="header-right">
-           &nbsp;&nbsp;&nbsp;&nbsp; <h1>Respiratory Home Coach</h1>
+            <h1>Respiratory Home Coach</h1>
 
             <div class="navbar">
 
@@ -253,11 +255,12 @@ Practical home guidance to improve comfort, safety and daily breathing.">
     <div class="main-content">
 
         <div class="text-section">
-          <p><strong>Respiratory therapist guidance for breathing at home.</strong></p> 
+          <H2> <p><strong>Respiratory therapist guidance for breathing at home.</strong></p></H2> 
 
-    <p>Support for people using oxygen therapy, CPAP, BiPAP, and other respiratory equipment—focused on comfort, safety, and real-life use.</p>
-        <p>Clear, practical help to understand your condition, improve breathing, and manage daily challenges with confidence.</p>
-            
+    <H3><p>Support for people using oxygen therapy, CPAP, BiPAP, and other respiratory equipment—focused on comfort, safety, and real-life use.
+       </p>
+        <p>Clear, practical help to understand your condition, improve breathing, and manage daily challenges with confidence.
+         </p></H3>
             <div class="contact-buttons">
        <a href="mailto:alveoair@gmail.com" class="contact-btn">Email</a>
        <a href="https://wa.me/14806767328" class="contact-btn">WhatsApp</a>
