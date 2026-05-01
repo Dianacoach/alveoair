@@ -35,6 +35,12 @@ h1, h2, h3 {
     margin-top: 0;
 }
 
+/* style.css */
+
+body {
+  font-family: Georgia, serif;
+}
+
 p, li {
     font-size: 1.05rem;
     color: var(--text-dark);
