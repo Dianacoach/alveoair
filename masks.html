@@ -27,12 +27,42 @@
 .card-2 { background-color: #e6f7ec; }
 .card-3 { background-color: #eef0ff; }
 
-.full-width {
+/* NEW BOTTOM SECTION */
+.bottom-section {
+    display: flex;
+    gap: 20px;
     margin-top: 25px;
+    align-items: stretch;
+}
+
+/* LEFT LARGE CARD */
+.full-width {
+    flex: 1.5;
     padding: 25px;
     border-radius: 16px;
     background-color: #fff4e6;
     box-shadow: 0px 6px 15px rgba(0,0,0,0.1);
+}
+
+/* RIGHT IMAGE COLUMN */
+.mask-column {
+    flex: 0.8;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.mask-column img {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .bottom-section {
+        flex-direction: column;
+    }
 }
 </style>
 
@@ -45,7 +75,7 @@
     <!-- HEADER -->
     <div class="header" style="display:flex; align-items:center; justify-content:center; gap:20px; flex-wrap:wrap;">
 
-        <img src="logo.png" alt="Respiratory Home Coach Logo" style="width:200px;"> &nbsp;&nbsp;&nbsp;&nbsp; 
+        <img src="logo.png" alt="Respiratory Home Coach Logo" style="width:200px;"> 
 
         <div style="max-width:600px; text-align:left;">
             <h1>Choosing the Right CPAP/BiPAP Mask</h1>
@@ -143,37 +173,52 @@
       </div>
     </section>
 
-    <!-- SAFETY CARD -->
-    <div class="full-width">
+    <!-- BOTTOM SECTION -->
+    <div class="bottom-section">
 
-        <h2>⚠️ CONTRAINDICATIONS & SAFETY</h2>
+        <!-- LEFT CARD -->
+        <div class="full-width">
 
-        <ul>
-            <li>Vomiting or high risk of vomiting (aspiration risk)</li>
-            <li>Not fully alert or unable to remove mask independently</li>
-            <li>Excessive food intake before use (abdominal pressure)</li>
-            <li>Severe claustrophobia (consider alternative masks)</li>
-            <li>Facial trauma or open wounds</li>
-        </ul>
+            <h2>⚠️ CONTRAINDICATIONS & SAFETY</h2>
 
-        <h2>IMPORTANT SAFETY POINTS</h2>
+            <ul>
+                <li>Vomiting or high risk of vomiting (aspiration risk)</li>
+                <li>Not fully alert or unable to remove mask independently</li>
+                <li>Excessive food intake before use (abdominal pressure)</li>
+                <li>Severe claustrophobia (consider alternative masks)</li>
+                <li>Facial trauma or open wounds</li>
+            </ul>
 
-        <ul>
-            <li>Remove mask immediately if vomiting occurs</li>
-            <li>Never leave high-risk patients unattended</li>
-            <li>Ensure proper strap fit—not too tight</li>
-            <li>Use softer masks for long-term therapy when possible</li>
-            <li>Check skin regularly for pressure injury</li>
-            <li>Ensure patient can communicate distress</li>
-        </ul>
+            <h2>IMPORTANT SAFETY POINTS</h2>
 
-        <h2>KEY TAKEAWAY</h2>
+            <ul>
+                <li>Remove mask immediately if vomiting occurs</li>
+                <li>Never leave high-risk patients unattended</li>
+                <li>Ensure proper strap fit—not too tight</li>
+                <li>Use softer masks for long-term therapy when possible</li>
+                <li>Check skin regularly for pressure injury</li>
+                <li>Ensure patient can communicate distress</li>
+            </ul>
 
-        <ul>
-            <li>The right mask can make or break therapy success</li>
-            <li>Comfort = longer use = better outcomes</li>
-            <li>Safety must always come first</li>
-        </ul>
+            <h2>KEY TAKEAWAY</h2>
+
+            <ul>
+                <li>The right mask can make or break therapy success</li>
+                <li>Comfort = longer use = better outcomes</li>
+                <li>Safety must always come first</li>
+            </ul>
+
+        </div>
+
+        <!-- RIGHT IMAGE COLUMN -->
+        <div class="mask-column">
+            <img src="mask1.png" alt="CPAP Mask 1">
+            <img src="mask2.png" alt="CPAP Mask 2">
+            <img src="mask3.png" alt="CPAP Mask 3">
+            <img src="mask4.png" alt="CPAP Mask 4">
+            <img src="mask5.png" alt="CPAP Mask 5">
+            <img src="mask6.png" alt="CPAP Mask 6">
+        </div>
 
     </div>
 
