@@ -2,122 +2,174 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">    
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-<title>Respiratory Therapist Coaching & Home Care Support | Julio Bautista, RRT</title>
-<link rel="stylesheet" href="css/style.css">
+
+<title>MDI vs Nebulizer Therapy | Respiratory Home Coach</title>
 
 <style>
-.hero-grid {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
+
+body {
+    
+    margin: 0;
+    background-color: #f5f7fa;
+    color: #333;
 }
 
-.hero-card {
-  flex: 1;
-  min-width: 300px;
-  padding: 20px;
-  border-radius: 12px;
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
 }
 
-/* LEFT CARD - SOFT MEDICAL BLUE */
-.card-blue {
-  background-color: #e6f4f9;
+/* GRID LAYOUT */
+.grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
-/* RIGHT CARD - SOFT MEDICAL GREEN */
-.card-green {
-  background-color: #e8f5e9;
+/* CARDS */
+.card {
+    flex: 1;
+    min-width: 320px;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0px 6px 15px rgba(0,0,0,0.1);
 }
+
+/* COLORS */
+.mdi-card {
+    background-color: #e6f2ff; /* soft blue */
+}
+
+.svn-card {
+    background-color: #e6f7ec; /* soft green */
+}
+
+/* HEADINGS */
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h2 {
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+h2 img {
+    width: 150px;
+}
+
+/* LIST */
+ul {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .grid {
+        flex-direction: column;
+    }
+}
+
 </style>
-
 </head>
 
 <body>
 
 <div class="container">
 
-    <!-- HEADER -->
-    <div class="header" style="display:flex; align-items:center; justify-content:center; gap:20px; flex-wrap:wrap;">
+<div style="display:flex; align-items:center; justify-content:center; gap:15px; flex-wrap:wrap; margin-bottom:30px;">
+    <img src="logo.png" alt="Respiratory Home Coach Logo" style="width:150px;">
+    <h1 style="margin:0;">MDI Meter Dose Inhaler   &   Nebulizer Therapy Guide</h1>
+</div>
 
-        <img src="logo.png" alt="Respiratory Home Coach Logo" style="width:200px;"> 
+<div class="grid">
 
-        <div style="max-width:600px; text-align:left;">
-            <h1>Respiratory Therapy Guidance & Home Care Support You Can Trust</h1>
-            <h2>Clear, practical help for oxygen therapy, CPAP, BiPAP and breathing conditions at home</h2>
-        </div>
+    <!-- LEFT CARD: MDI -->
+    <div class="card mdi-card">
+
+        <h2><img src="mdi1.png"> Children & Limited Inhalation</h2>
+        <ul>
+            <li>Used with a face mask when patients cannot form a tight seal on a mouthpiece.</li>
+            <li>Ideal for infants, young children, and adults with poor coordination or weakness.</li>
+            <li>Eliminates the need to synchronize inhalation with actuation.</li>
+            <li>Improves medication delivery to the lungs and reduces loss in the mouth/throat.</li>
+            <li>Mask should fit snugly over nose and mouth to avoid medication leakage.</li>
+        </ul>
+
+        <h2><img src="mdi2.png"> Adult Use</h2>
+        <ul>
+            <li>Recommended for most adults to improve inhaler technique and drug delivery.</li>
+            <li>Removes coordination issues between pressing the inhaler and inhaling.</li>
+            <li>Allows slow, deep breathing for better lung deposition.</li>
+            <li>Reduces medication deposition in the oropharynx.</li>
+            <li>Useful during shortness of breath episodes.</li>
+        </ul>
+
+        <h2><img src="mdi3.png"> Tracheostomy Use</h2>
+        <ul>
+            <li>Can be adapted using a trach mask or specialized spacer adapter.</li>
+            <li>Delivers medication directly into the airway bypassing upper airway structures.</li>
+            <li>Useful for patients unable to use standard inhalation techniques.</li>
+            <li>More controlled and efficient delivery compared to open methods.</li>
+            <li>Requires monitoring for proper fit and effectiveness.</li>
+        </ul>
 
     </div>
 
-    <!-- HERO SECTION -->
-    <section class="hero">
-      <div class="container hero-grid">
+    <!-- RIGHT CARD: SVN -->
+    <div class="card svn-card">
 
-        <!-- WHAT I OFFER -->
-        <div class="hero-card card-blue">
+        <h2><img src="svn1.png"> Children & Limited Inhalation</h2>
+        <ul>
+            <li>Delivered via mask when patients cannot use a mouthpiece effectively.</li>
+            <li>Requires minimal coordination—patient breathes normally.</li>
+            <li>Ideal for young children, elderly, or cognitively impaired patients.</li>
+            <li>Provides continuous aerosol over several minutes.</li>
+            <li>Mask fit is important to reduce medication loss.</li>
+        </ul>
 
-          <h2>I OFFER</h2>
+        <h2><img src="svn2.png"> Adult Use</h2>
+        <ul>
+            <li>Can be used with mouthpiece (preferred) or mask.</li>
+            <li>Effective during moderate to severe respiratory distress.</li>
+            <li>Allows delivery of higher medication doses over time.</li>
+            <li>No coordination required—normal breathing is sufficient.</li>
+            <li>Useful when MDI technique is difficult.</li>
+        </ul>
 
-          <ul>
-            <li>Step-by-step guidance to set up and use your equipment</li>
-            <li>Breathing exercises, using simple items you may have at home</li>
-            <li>Proper breathing technique and avoidance of SOB (shortness of breath)</li>
-            <li>Help choosing equipment that improves comfort and breathing</li>
-            <li>How to estimate battery life and oxygen duration when going out</li>
-            <li>Breathing exercises and simple techniques for daily use</li>
-            <li>Support when providers are unavailable or slow to respond</li>
-            <li>Accessories to improve comfort and usability</li>
-            <li>Cleaning and maintenance of respiratory equipment</li>
-            <li>Guidance in urgent (non-emergency) situations</li>
-            <li>Help understanding what to do and who to contact</li>
-            <li>Troubleshooting alarms, noise or malfunction</li>
-            <li>Oxygen safety at home and outdoors</li>
-            <li>Support for caregivers</li>
-            <li>Improving air quality (pets, carpets, ventilation)</li>
-          </ul>
+        <h2><img src="svn3.png"> Tracheostomy Use</h2>
+        <ul>
+            <li>Administered via trach collar or direct connection to tracheostomy tube.</li>
+            <li>Bypasses upper airway for direct lower airway delivery.</li>
+            <li>Used for bronchodilation and secretion management.</li>
+            <li>Provides humidification along with medication when needed.</li>
+            <li>Proper setup is essential for effective delivery.</li>
+        </ul>
 
-        </div>
-
-        <!-- ABOUT ME -->
-        <div class="hero-card card-green">
-
-          <h2>ABOUT ME</h2>
-
-          <p>
-          Hello, my name is Julio Bautista. I am a respiratory therapist with over 30 years of experience working in the United States including New York, New Jersey,
-          Arizona, Hawaii, and Florida, as well as in Madrid, Spain.
-          </p>
-
-          <p>
-          Originally from Seville, Spain, I am fully bilingual in English and Spanish, supporting individuals and families worldwide.
-          </p>
-
-          <p>
-          My focus now is to provide clear, practical guidance for people using respiratory equipment or living with breathing conditions.
-          </p>
-
-          <p>
-          My goal is simple: help you feel confident, prepared, and supported when dealing with your breathing and equipment.
-          </p>
-
-        </div>
-
-      </div>
-    </section>
-
-    <!-- HOME -->
-    <div style="text-align:center; margin-top:80px;">
-        <a href="index.html"><img src="back.png" alt="Home"></a>
-    </div>
-
-    <!-- FOOTER -->
-    <div class="footer">
-      © 2026 Julio Bautista – International Respiratory Coaching
     </div>
 
 </div>
+
+</div>
+<div class="footer">
+  © 2026 Julio Bautista – International Respiratory Coaching
+</div>
+
+<center>
+  <p><a href="index.html"><img src="back.png" alt="Home"></a></p>
+</center>
+
+<br>
 
 </body>
 </html>
