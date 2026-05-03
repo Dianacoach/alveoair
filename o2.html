@@ -7,6 +7,33 @@
     
 <title>Oxygen Therapy & Safety | Respiratory Home Coach</title>
 <link rel="stylesheet" href="css/style.css">
+
+<style>
+.hero-grid {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.hero-card {
+  flex: 1; /* THIS makes them equal width */
+  min-width: 300px;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0px 6px 15px rgba(0,0,0,0.1);
+}
+
+/* LEFT CARD - SOFT MEDICAL BLUE */
+.card-blue {
+  background-color: #e6f4f9;
+}
+
+/* RIGHT CARD - SOFT MEDICAL GREEN */
+.card-green {
+  background-color: #e8f5e9;
+}
+</style>
+
 </head>
 
 <body>
@@ -16,7 +43,7 @@
     <!-- HEADER -->
     <div class="header" style="display:flex; align-items:center; justify-content:center; gap:20px; flex-wrap:wrap;">
 
-        <img src="logo.png" alt="Respiratory Home Coach Logo" style="width:200px;"> &nbsp;&nbsp;&nbsp;&nbsp; 
+        <img src="logo.png" alt="Respiratory Home Coach Logo" style="width:200px;"> 
 
         <div style="max-width:600px; text-align:left;">
             <h1>Oxygen Therapy & Safety Guidelines</h1>
@@ -29,8 +56,8 @@
     <section class="hero">
       <div class="container hero-grid">
 
-        <!-- LEFT CARD: USE / BENEFITS -->
-        <div class="hero-card">
+        <!-- LEFT CARD -->
+        <div class="hero-card card-blue">
 
           <h2>USES & BENEFITS</h2>
 
@@ -54,8 +81,8 @@
 
         </div>
 
-        <!-- RIGHT CARD: RISKS / CONTRAINDICATIONS -->
-        <div class="hero-card">
+        <!-- RIGHT CARD -->
+        <div class="hero-card card-green">
 
           <h2>RISKS & PRECAUTIONS</h2>
 
@@ -81,14 +108,18 @@
 
       </div>
     </section>
-       <P><h2>IMPORTANT NOTES</h2></P>
 
-         <P> <ul>
+    <!-- IMPORTANT NOTES -->
+    <div style="margin-top:40px;">
+        <h2 style="text-align:center;">IMPORTANT NOTES</h2>
+        <ul>
             <li>In emergencies, oxygen should NOT be withheld or limited</li>
             <li>High concentration oxygen (even 100%) may be necessary to save life</li>
             <li>“No more than 2 liters” is not a strict rule. Individualized care is required</li>
             <li>Always follow professional guidance when adjusting oxygen levels</li>
-          </ul></P>
+        </ul>
+    </div>
+
     <!-- HOME -->
     <div style="text-align:center; margin-top:80px;">
         <a href="index.html"><img src="back.png" alt="Home"></a>
