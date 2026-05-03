@@ -38,6 +38,159 @@
 
 <body>
 
+<!-- ================= O2 CALCULATOR BUTTON ================= -->
+<button onclick="openO2Popup()" style="
+  background:#2e86c1;
+  color:white;
+  padding:10px 18px;
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
+  font-weight:bold;
+">
+  O₂ Tank Calculator
+</button>
+
+
+<!-- ================= POPUP ================= -->
+<div id="o2popup" style="
+  display:none;
+  position:fixed;
+  top:0; left:0;
+  width:100%; height:100%;
+  background:rgba(0,0,0,0.5);
+  justify-content:center;
+  align-items:center;
+  z-index:9999;
+">
+
+  <div style="
+    background:#f8fbfd;
+    border-radius:14px;
+    padding:20px;
+    width:95%;
+    max-width:520px;
+    display:flex;
+    gap:15px;
+    box-shadow:0px 8px 25px rgba(0,0,0,0.2);
+    position:relative;
+    font-family:Arial;
+  ">
+
+    <!-- CLOSE -->
+    <button onclick="closeO2Popup()" style="
+      position:absolute;
+      right:12px;
+      top:10px;
+      border:none;
+      background:none;
+      font-size:18px;
+      cursor:pointer;
+    ">✖</button>
+
+    <!-- LEFT PANEL -->
+    <div style="flex:1;">
+
+      <h3 style="color:#1f618d; margin-bottom:10px;">
+        O₂ Tank Duration
+      </h3>
+
+      <label>Pressure (PSI)</label><br>
+      <input type="number" id="pressure" oninput="calculateO2()" style="width:100%; padding:6px;"><br><br>
+
+      <label>Cylinder</label><br>
+      <select id="cylinder" onchange="calculateO2()" style="width:100%; padding:6px;">
+        <option value="">Select</option>
+        <option value="0.16">D</option>
+        <option value="0.28">E</option>
+        <option value="1.56">M</option>
+        <option value="2.41">G</option>
+        <option value="3.14">H</option>
+      </select><br><br>
+
+      <label>Flow (LPM)</label><br>
+      <input type="number" id="flow" oninput="calculateO2()" style="width:100%; padding:6px;"><br><br>
+
+      <!-- RESULT -->
+      <div id="o2result" style="
+        margin-top:10px;
+        font-weight:bold;
+        font-size:16px;
+        color:#145a32;
+      "></div>
+
+      <!-- WARNING -->
+      <div id="o2warning" style="
+        margin-top:8px;
+        font-weight:bold;
+        font-size:14px;
+      "></div>
+
+    </div>
+
+    <!-- RIGHT PANEL IMAGE -->
+    <div style="
+      width:120px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    ">
+      <img src="o2tank.png" alt="O2 Tank" style="width:100%;">
+    </div>
+
+  </div>
+</div>
+
+
+<!-- ================= SCRIPT ================= -->
+<script>
+function openO2Popup() {
+  document.getElementById("o2popup").style.display = "flex";
+}
+
+function closeO2Popup() {
+  document.getElementById("o2popup").style.display = "none";
+}
+
+function calculateO2() {
+  let pressure = parseFloat(document.getElementById("pressure").value);
+  let factor = parseFloat(document.getElementById("cylinder").value);
+  let flow = parseFloat(document.getElementById("flow").value);
+
+  let result = document.getElementById("o2result");
+  let warning = document.getElementById("o2warning");
+
+  if (!pressure || !factor || !flow) {
+    result.innerText = "";
+    warning.innerText = "";
+    return;
+  }
+
+  let minutes = ((pressure - 200) * factor) / flow;
+  let hours = Math.floor(minutes / 60);
+  let mins = Math.round(minutes % 60);
+
+  result.innerText = "≈ " + hours + " hr " + mins + " min";
+
+  // 🚨 LOW TANK WARNING
+  if (minutes < 30) {
+    warning.innerText = "🔴 LOW TANK – Consider replacing soon";
+    warning.style.color = "red";
+  } else if (minutes < 60) {
+    warning.innerText = "🟡 Moderate – Monitor closely";
+    warning.style.color = "#b7950b";
+  } else {
+    warning.innerText = "🟢 Adequate supply";
+    warning.style.color = "green";
+  }
+}
+</script>
+
+
+
+
+
+    
 <div class="container">
 
     <!-- HEADER -->
