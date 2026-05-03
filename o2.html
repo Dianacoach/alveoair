@@ -52,6 +52,108 @@
 
     </div>
 
+      <button onclick="openPopup()">O2 & RSBI Calculator</button>
+
+     <script>
+function openO2Popup() {
+  document.getElementById("o2popup").style.display = "flex";
+}
+
+function closeO2Popup() {
+  document.getElementById("o2popup").style.display = "none";
+}
+
+function calculateO2() {
+  let pressure = parseFloat(document.getElementById("pressure").value);
+  let factor = parseFloat(document.getElementById("cylinder").value);
+  let flow = parseFloat(document.getElementById("flow").value);
+
+  if (!pressure || !factor || !flow) {
+    document.getElementById("o2result").innerText = "Fill all fields.";
+    return;
+  }
+
+  let minutes = ((pressure - 200) * factor) / flow;
+
+  let hours = Math.floor(minutes / 60);
+  let mins = Math.round(minutes % 60);
+
+  document.getElementById("o2result").innerText =
+    "≈ " + hours + " hr " + mins + " min";
+}
+</script>
+
+    
+    <div id="o2popup" style="
+  display:none;
+  position:fixed;
+  top:0; left:0;
+  width:100%; height:100%;
+  background:rgba(0,0,0,0.6);
+  justify-content:center;
+  align-items:center;
+  z-index:9999;
+">
+
+  <div style="
+    background:#ffffff;
+    padding:20px;
+    border-radius:12px;
+    width:90%;
+    max-width:500px;
+    display:flex;
+    gap:15px;
+    position:relative;
+  ">
+
+    <!-- CLOSE BUTTON -->
+    <button onclick="closeO2Popup()" style="
+      position:absolute;
+      top:10px;
+      right:15px;
+      border:none;
+      background:none;
+      font-size:18px;
+      cursor:pointer;
+    ">✖</button>
+
+    <!-- LEFT: CALCULATOR -->
+    <div style="flex:1; font-family:Arial;">
+
+      <h3>O₂ Tank Duration</h3>
+
+      <label>Pressure (PSI)</label><br>
+      <input type="number" id="pressure" placeholder="2000"><br><br>
+
+      <label>Cylinder</label><br>
+      <select id="cylinder">
+        <option value="">Select</option>
+        <option value="0.16">D</option>
+        <option value="0.28">E</option>
+        <option value="1.56">M</option>
+        <option value="2.41">G</option>
+        <option value="3.14">H</option>
+      </select><br><br>
+
+      <label>Flow (LPM)</label><br>
+      <input type="number" id="flow" placeholder="2"><br><br>
+
+      <button onclick="calculateO2()">Calculate</button>
+
+      <h4 id="o2result" style="margin-top:10px;"></h4>
+
+    </div>
+
+    <!-- RIGHT: IMAGE -->
+    <div style="width:120px; display:flex; align-items:center;">
+      <img src="o2tank.png" alt="O2 Tank" style="width:100%;">
+    </div>
+
+  </div>
+</div>
+
+
+    
     <!-- HERO SECTION -->
     <section class="hero">
       <div class="container hero-grid">
@@ -120,6 +222,8 @@
         </ul>
     </div>
 
+        
+    
     <!-- HOME -->
     <div style="text-align:center; margin-top:80px;">
         <a href="index.html"><img src="back.png" alt="Home"></a>
