@@ -27,12 +27,42 @@
 .card-2 { background-color: #e6f7ec; }
 .card-3 { background-color: #eef0ff; }
 
-.full-width {
+/* NEW BOTTOM SECTION */
+.bottom-section {
+    display: flex;
+    gap: 20px;
     margin-top: 25px;
+    align-items: flex-start;
+}
+
+/* LEFT CARD (NOW SMALLER ~1/3) */
+.full-width {
+    flex: 0.9;
     padding: 25px;
     border-radius: 16px;
     background-color: #fff4e6;
     box-shadow: 0px 6px 15px rgba(0,0,0,0.1);
+}
+
+/* RIGHT IMAGE COLUMN */
+.image-column {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.image-column img {
+    width: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+    .bottom-section {
+        flex-direction: column;
+    }
 }
 </style>
 
@@ -45,7 +75,7 @@
     <!-- HEADER -->
     <div class="header" style="display:flex; align-items:center; justify-content:center; gap:20px; flex-wrap:wrap;">
 
-        <img src="logo.png" alt="Respiratory Home Coach Logo" style="width:200px;"> &nbsp;&nbsp;&nbsp;&nbsp; 
+        <img src="logo.png" alt="Respiratory Home Coach Logo" style="width:200px;"> 
 
         <div style="max-width:600px; text-align:left;">
             <h1>Speaking Valve: Not Just for Speaking</h1>
@@ -58,11 +88,8 @@
     <section class="hero">
       <div class="container hero-grid">
 
-        <!-- CARD 1 -->
         <div class="hero-card card-1">
-
           <h2>WHAT IS A SPEAKING VALVE?</h2>
-
           <ul>
             <li>One-way valve placed on a tracheostomy tube</li>
             <li>Allows air IN through the trach</li>
@@ -72,22 +99,17 @@
           </ul>
 
           <h2>WHEN CAN IT BE USED?</h2>
-
           <ul>
             <li>Patient is awake and able to tolerate it</li>
             <li>Cuff is completely deflated (if present)</li>
-            <li>Airway is patent (air can pass around trach)</li>
+            <li>Airway is patent</li>
             <li>Secretions are manageable</li>
-            <li>Patient has some ability to exhale through upper airway</li>
+            <li>Ability to exhale through upper airway</li>
           </ul>
-
         </div>
 
-        <!-- CARD 2 -->
         <div class="hero-card card-2">
-
           <h2>BENEFITS</h2>
-
           <ul>
             <li>Allows speech and communication</li>
             <li>Improves swallowing and reduces aspiration risk</li>
@@ -97,68 +119,73 @@
           </ul>
 
           <h2>MENTAL & DEVELOPMENTAL IMPACT</h2>
-
           <ul>
             <li>Reduces anxiety and frustration</li>
             <li>Encourages communication with family</li>
             <li>Improves motivation and recovery</li>
             <li>Critical for speech development in children</li>
-            <li>Supports emotional connection and confidence</li>
+            <li>Supports emotional connection</li>
           </ul>
-
         </div>
 
-        <!-- CARD 3 -->
         <div class="hero-card card-3">
-
           <h2>TRACH TYPE & SETUP</h2>
-
           <ul>
             <li>Best with cuffless tracheostomy tubes</li>
             <li>Fenestrated tubes improve airflow</li>
             <li>If cuffed → MUST be fully deflated</li>
-            <li>Air must flow around the tube to the upper airway</li>
+            <li>Air must flow around the tube</li>
           </ul>
 
           <h2>USE WITH VENTILATOR</h2>
-
           <ul>
-            <li>Can be used with ventilators (with proper setup)</li>
-            <li>Requires trained adjustment of ventilator settings</li>
-            <li>Volumes and alarms must be monitored closely</li>
-            <li>Air leak is expected due to cuff deflation</li>
+            <li>Can be used with ventilators</li>
+            <li>Requires trained adjustment</li>
+            <li>Monitor volumes and alarms</li>
+            <li>Air leak is expected</li>
           </ul>
-
         </div>
 
       </div>
     </section>
 
-    <!-- FULL WIDTH SAFETY CARD -->
-    <div class="full-width">
+    <!-- NEW BOTTOM SECTION -->
+    <div class="bottom-section">
 
-        <h2>⚠️ WHEN NOT TO USE <P> REMOVE IMMEDIATELY </P></h2>
+        <!-- LEFT SMALL CARD -->
+        <div class="full-width">
 
-        <ul>
-            <li>Cuff is inflated (NEVER use in this case)</li>
-            <li>Severe shortness of breath or distress</li>
-            <li>Excessive, thick or unmanageable secretions</li>
-            <li>Weak or ineffective cough</li>
-            <li>Airway obstruction or swelling</li>
-            <li>Active respiratory infection (e.g., pneumonia)</li>
-            <li>Patient unable to tolerate or becomes anxious</li>
-            <li>No airflow through mouth/nose when valve is placed</li>
-        </ul>
+            <h2>⚠️ WHEN NOT TO USE</h2>
 
-        <h2>IMPORTANT SAFETY POINTS</h2>
+            <ul>
+                <li>Cuff is inflated (NEVER use)</li>
+                <li>Severe shortness of breath</li>
+                <li>Excessive secretions</li>
+                <li>Weak cough</li>
+                <li>Airway obstruction</li>
+                <li>Active infection</li>
+                <li>Patient intolerance</li>
+                <li>No airflow through mouth/nose</li>
+            </ul>
 
-        <ul>
-            <li>Always monitor the patient during use</li>
-            <li>Start with short sessions and increase gradually</li>
-            <li>Remove immediately if distress occurs</li>
-            <li>Proper training is essential before use</li>
-            <li>Never leave patient unattended initially</li>
-        </ul>
+            <h2>IMPORTANT SAFETY</h2>
+
+            <ul>
+                <li>Monitor during use</li>
+                <li>Start short sessions</li>
+                <li>Remove if distress</li>
+                <li>Training required</li>
+                <li>Do not leave unattended</li>
+            </ul>
+
+        </div>
+
+        <!-- RIGHT IMAGES -->
+        <div class="image-column">
+            <img src="pmv1.png" alt="Speaking Valve 1">
+            <img src="pmv2.png" alt="Speaking Valve 2">
+            <img src="pmv3.png" alt="Speaking Valve 3">
+        </div>
 
     </div>
 
