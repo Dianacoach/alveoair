@@ -104,6 +104,34 @@ h1 {
 </style>
 </head>
 
+.form-card {
+    background: #eaf6fb; /* same as body */
+    padding: 25px;
+    border-radius: 12px;
+    max-width: 500px;
+    margin: 40px auto;
+}
+.form-card input,
+.form-card textarea {
+    background: white;   /* ✅ stays white */
+    color: black;
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+.form-card button {
+    background-color: #8fd19e; /* same green */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+    
 <body>
 
 <div class="container">
@@ -118,6 +146,29 @@ h1 {
 <!-- PAYMENT OPTIONS -->
     
    <center><img src="paypal.png" alt="Respiratory Home Coach Logo"</center> 
+
+       
+    <!-- CONTACT FORM -->
+    <div class="form-card">
+       <p><strong><h2>Start your FREE 30 minutes trial now</h2></strong></p>
+        
+            <form action="https://formspree.io/f/mpqknnea" method="POST">
+            <input type="hidden" name="_subject" value="Message from AlveoAir website">
+            <input type="text" name="_gotcha" style="display:none">
+
+            <label><H3>Your E-mail</H3></label>
+            <input type="text" name="subject" maxlength="40" required>
+
+            <label><H3>How can I help you?</H3></label>
+            <textarea name="message" rows="6" required></textarea>
+
+            <div style="text-align:center;">
+                <button type="submit">Send Message</button>
+            </div>
+        </form>
+    </div>
+
+       
    <p> <a href="index.html"><img src="back.png" alt="Home"></a></p>
     <BR><BR>
 </body>
