@@ -167,24 +167,33 @@ h1 {
 
 /* FORM */
 .form-card {
-    background: white;
+    background: #eaf6fb; /* same as body */
     padding: 25px;
     border-radius: 12px;
     max-width: 500px;
     margin: 40px auto;
+    border: 1px solid #d6eaf5; /* very soft outline */
 }
 
 .form-card input,
 .form-card textarea {
+    background: white;   /* ✅ stays white */
+    color: black;
     width: 100%;
     padding: 10px;
     margin-top: 5px;
     margin-bottom: 15px;
     border-radius: 6px;
     border: 1px solid #ccc;
-    color: black;
 }
 
+    .form-card input:focus,
+.form-card textarea:focus {
+    outline: none;
+    border: 1px solid #66b3ff;
+    box-shadow: 0 0 4px rgba(102,179,255,0.4);
+}
+    
 .form-card button {
     background-color: #8fd19e;
     color: white;
