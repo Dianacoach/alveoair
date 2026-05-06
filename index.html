@@ -305,32 +305,27 @@ h1 {
 
     </div>
 
-    <!-- CONTACT FORM -->
-    <div class="form-card">
-       <p><strong><h2>Start your FREE 30 minutes trial now</h2></strong></p>
+    <h2>Start your FREE 30 minutes trial now</h2>
+
+    <form action="https://formspree.io/f/mpqknnea" method="POST">
         
-            <form action="https://formspree.io/f/mpqknnea" method="POST">
-            <input type="hidden" name="_subject" value="Message from AlveoAir website">
-            <input type="text" name="_gotcha" style="display:none">
+        <input type="hidden" name="_subject" value="New message from AlveoAir website">
+        <input type="hidden" name="_template" value="table">
+        <input type="text" name="_gotcha" style="display:none">
 
-            <label><H3>Your E-mail</H3></label>
-            <input type="text" name="subject" maxlength="40" required>
+        <label>Your Email:</label>
+        <input type="email" name="email" maxlength="50" required>
 
-            <label><H3>How can I help you?</H3></label>
-            <textarea name="message" rows="6" required></textarea>
+        <label>How can I help you?</label>
+        <textarea name="message" rows="6" required></textarea>
 
-            <div style="text-align:center;">
-                <button type="submit">Send Message</button>
-            </div>
-        </form>
-    </div>
+        <div style="text-align:center;">
+            <button type="submit">Send Message</button>
+        </div>
 
-    <p class="disclaimer">
-        <strong>Disclaimer:</strong> This information is for educational purposes only and does not replace medical advice.
-    </p>
+    </form>
 
 </div>
-
 <!-- SCRIPT -->
 <script>
 document.querySelectorAll('.nav-button').forEach(button => {
