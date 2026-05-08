@@ -2,22 +2,21 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">     
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Payment | AlveoAir Respiratory Coaching</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
 
+/* BODY */
 body {
     margin: 0;
     font-family: 'Lato', sans-serif;
-
-    /* SAME AS INDEX */
     background: #eef5f1;
-
     color: #1f2a24;
 }
 
@@ -31,6 +30,7 @@ body {
 /* TITLE */
 h1 {
     margin-bottom: 30px;
+    font-family: 'Playfair Display', serif;
 }
 
 /* INFO TEXT */
@@ -40,9 +40,9 @@ h1 {
     line-height: 1.6;
 }
 
-/* PAYMENT CARDS */
+/* PAYMENT CARD */
 .payment-bar {
-    background: #e6f2ea; /* soft green card */
+    background: #e6f2ea;
     margin: 15px auto;
     padding: 18px;
     width: 90%;
@@ -65,55 +65,26 @@ h1 {
     box-shadow: 0 12px 22px rgba(0,0,0,0.15);
 }
 
-/* ICONS */
-.payment-bar img {
-    width: 55px;
+/* PAYMENT IMAGE */
+.payment-logo img {
+    width: 220px;
+    max-width: 90%;
 }
 
-/* LINKS */
-.payment-bar a {
-    text-decoration: none;
-    color: #2e5f4d;
-    font-weight: 600;
-    font-size: 1.1em;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-/* HELP */
-.help-section {
-    margin-top: 50px;
-}
-
-.help-icon {
-    width: 55px;
-}
-
-/* NAV BUTTONS */
-.bottom-links img {
-    width: 50px;
-    margin: 10px;
-    transition: 0.2s;
-}
-
-.bottom-links img:hover {
-    transform: scale(1.08);
-}
-
-</style>
-</head>
-
+/* FORM CARD */
 .form-card {
-    background: #eaf6fb; /* same as body */
+    background: #eaf6fb;
     padding: 25px;
     border-radius: 12px;
     max-width: 500px;
     margin: 40px auto;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
+
+/* FORM INPUTS */
 .form-card input,
 .form-card textarea {
-    background: white;   /* ✅ stays white */
+    background: white;
     color: black;
     width: 100%;
     padding: 10px;
@@ -121,53 +92,97 @@ h1 {
     margin-bottom: 15px;
     border-radius: 6px;
     border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
 }
+
+/* BUTTON */
 .form-card button {
-    background-color: #8fd19e; /* same green */
+    background-color: #8fd19e;
     color: white;
     padding: 10px 20px;
     border: none;
     border-radius: 6px;
     cursor: pointer;
+    font-size: 1em;
 }
 
-    
+.form-card button:hover {
+    background-color: #6fcf97;
+}
+
+/* BACK BUTTON */
+.back-button img {
+    width: 50px;
+    transition: 0.2s;
+}
+
+.back-button img:hover {
+    transform: scale(1.08);
+}
+
+</style>
+</head>
+
 <body>
 
 <div class="container">
 
-<h1>Secure Payment</h1>
+    <h1>Secure Payment</h1>
 
-<div class="info-text">
-    <p><strong>PayPal:</strong> Download PayPal to send or receive international payments quickly and securely.</p>
-   
+    <div class="info-text">
+        <p>
+            <strong>PayPal:</strong> Download PayPal to send or receive international payments quickly and securely.
+        </p>
+    </div>
+
+    <!-- PAYPAL IMAGE -->
+    <div class="payment-logo">
+        <img src="paypal.png" alt="PayPal">
+    </div>
+
+    <!-- CONTACT FORM -->
+    <div class="form-card">
+
+        <h2>Any Questions About Payments?</h2>
+
+        <h3>Please include your contact information inside the message.</h3>
+
+        <form action="https://formspree.io/f/mvzwrnel" method="POST">
+
+            <input type="hidden" name="_subject" value="Message from AlveoAir website">
+
+            <input type="text" name="_gotcha" style="display:none">
+
+            <label><strong>Your Message:</strong></label>
+
+            <textarea 
+                name="message"
+                rows="8"
+                required
+                placeholder="Write your message and contact information here..."
+            ></textarea>
+
+            <div style="text-align:center; margin-top:15px;">
+                <button type="submit">Send Message</button>
+            </div>
+
+        </form>
+
+    </div>
+
+    <br><br>
+
+    <!-- BACK BUTTON -->
+    <div class="back-button">
+        <a href="index.html">
+            <img src="back.png" alt="Back to Home">
+        </a>
+    </div>
+
+    <br><br>
+
 </div>
 
-<!-- PAYMENT OPTIONS -->
-    
-   <center><img src="paypal.png" alt="Respiratory Home Coach Logo"</center> 
-
-       <BR><BR>
-   <!-- CONTACT FORM -->
-<div class="form-card">
-    <h2>Any Questions about payments</h2>
-    <h3>Please include your contact information inside the message.</h3>
-
-    <form action="https://formspree.io/f/mvzwrnel" method="POST">
-        <input type="hidden" name="_subject" value="Message from AlveoAir website">
-        <input type="text" name="_gotcha" style="display:none">
-
-        <label><h3>Your message:</h3></label>
-        <textarea name="message" rows="8" required placeholder="Write your message and contact information here..."></textarea>
-
-        <div style="text-align:center; margin-top:15px;">
-            <button type="submit">Send Message</button>
-        </div>
-    </form>
-</div>
-
-    <BR><BR><BR>
-   <p> <a href="index.html"><img src="back.png" alt="Home"></a></p>
-    <BR><BR>
 </body>
 </html>
