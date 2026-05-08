@@ -195,6 +195,32 @@ h1 {
     cursor: pointer;
 }
 
+/* CONTACT + PHOTO LAYOUT */
+.contact-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
+
+.contact-photo {
+    flex: 0 0 320px;
+    text-align: center;
+}
+
+.contact-photo img {
+    width: 100%;
+    max-width: 320px;
+    border-radius: 14px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.contact-wrapper .form-card {
+    margin: 0;
+}
+    
 /* DISCLAIMER */
 .disclaimer {
     margin-top: 30px;
@@ -303,22 +329,32 @@ h1 {
             </div>
         </div>
       
-    <!-- CONTACT FORM -->
-<div class="form-card">
-    <h2>Start your FREE 30 minutes trial now</h2>
-    <h3>Please include your contact information inside the message.</h3>
+   <!-- CONTACT + PHOTO SECTION -->
+<div class="contact-wrapper">
 
-    <form action="https://formspree.io/f/mvzwrnel" method="POST">
-        <input type="hidden" name="_subject" value="Message from AlveoAir website">
-        <input type="text" name="_gotcha" style="display:none">
+    <!-- LEFT PHOTO -->
+    <div class="contact-photo">
+        <img src="julio2.png" alt="Julio Bautista">
+    </div>
 
-        <label>Your message:</label>
-        <textarea name="message" rows="8" required placeholder="Write your message and contact information here..."></textarea>
+    <!-- RIGHT FORM -->
+    <div class="form-card">
+        <h2>Start your FREE 30 minutes trial now</h2>
+        <h3>Please include your contact information inside the message.</h3>
 
-        <div style="text-align:center; margin-top:15px;">
-            <button type="submit">Send Message</button>
-        </div>
-    </form>
+        <form action="https://formspree.io/f/mvzwrnel" method="POST">
+            <input type="hidden" name="_subject" value="Message from AlveoAir website">
+            <input type="text" name="_gotcha" style="display:none">
+
+            <label>Your message:</label>
+            <textarea name="message" rows="8" required placeholder="Write your message and contact information here..."></textarea>
+
+            <div style="text-align:center; margin-top:15px;">
+                <button type="submit">Send Message</button>
+            </div>
+        </form>
+    </div>
+
 </div>
 <!-- SCRIPT -->
 <script>
