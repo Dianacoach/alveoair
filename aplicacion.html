@@ -17,8 +17,8 @@
 <h2 style="text-align:center;">Aplicación Informativa Respiratoria Inicial</h2>
 
 <p style="text-align:center;">
-Para mantener una comunicación rápida, efectiva y personalizada en el futuro, necesito respuesta al siguiente questionario contestando a la información que
-no le importe ceder y que conozca.
+Para mantener una comunicación rápida, efectiva y personalizada en el futuro, necesito respuestas al siguiente cuestionario, contestando únicamente la información que
+no le importe compartir y que conozca.
 </p>
 
 <form id="myForm" action="https://formspree.io/f/mpqknnea" method="POST">
@@ -26,8 +26,8 @@ no le importe ceder y que conozca.
 <input type="hidden" name="_subject" value="Aplicación Informativa Respiratoria Inicial">
 <input type="text" name="_gotcha" style="display:none">
 
-<!-- IDENTIFICATION -->
-<h3 style="background:#dfe8ec; padding:8px;">--- Identificador del Cliente ---</h3>
+<!-- IDENTIFICACIÓN -->
+<h3 style="background:#dfe8ec; padding:8px;">--- Identificación del Cliente ---</h3>
 
 Nombre:
 <input type="text" name="Nombre del Cliente" style="width:200px; margin-right:20px;">
@@ -37,66 +37,68 @@ o Código de Cuenta:
 
 <br><br>
 
-<!-- BASICOS -->
-<h3 style="background:#dfe8ec; padding:8px;">--- Información Basicá ---</h3>
+<!-- BÁSICOS -->
+<h3 style="background:#dfe8ec; padding:8px;">--- Información Básica ---</h3>
 
-Edad: <input type="Número" name="Edad" style="width:30px;">
-Peso en Kg: <input type="Número" name="Peso" style="width:30px;"><br><br>
-Altura en Metros + Centimetros: <input type="Número" name="Altura" style="width:30px;">+<input type="Número" name="Altura" style="width:30px;">
+Edad: <input type="number" name="Edad" style="width:30px;">
+Peso en kg: <input type="number" name="Peso" style="width:30px;"><br><br>
+
+Altura en metros + centímetros:
+<input type="number" name="Altura Metros" style="width:30px;"> +
+<input type="number" name="Altura Centímetros" style="width:30px;">
 
 <br><br>
 
-Problemas fisícos del pasado:<br>
-<input type="text" name="Problemas fisícos del pasado" style="width:100%;"><br><br>
+Problemas físicos del pasado:<br>
+<input type="text" name="Problemas físicos del pasado" style="width:100%;"><br><br>
 
-Problemas físicos actuale:<br>
+Problemas físicos actuales:<br>
 <input type="text" name="Problemas físicos actuales" style="width:100%;">
 
-<!-- Dormir -->
-<h3 style="background:#dfe8ec; padding:8px;">--- Sueno y síntomas ---</h3>
+<!-- DORMIR -->
+<h3 style="background:#dfe8ec; padding:8px;">--- Sueño y síntomas ---</h3>
 
 Horas durmiendo:
-<input type="Número" name="Horas de dormir" style="width:30px;"><br><br>
+<input type="number" name="Horas de dormir" style="width:30px;"><br><br>
 
 Se despierta cansado:
-<input type="radio" name="Despierta Cansado" value="Yes"> Yes
-<input type="radio" name="Despierta Cansado" value="No"> No &nbsp;&nbsp;&nbsp;&nbsp;<BR><BR>
+<input type="radio" name="Despierta Cansado" value="Sí"> Sí
+<input type="radio" name="Despierta Cansado" value="No"> No &nbsp;&nbsp;&nbsp;&nbsp;<br><br>
 
 Cansado durante el día:
-<input type="radio" name="Agotado en el día " value="Yes"> Yes
-<input type="radio" name="Agotado en el día" value="No"> No <BR><BR>
+<input type="radio" name="Agotado en el día" value="Sí"> Sí
+<input type="radio" name="Agotado en el día" value="No"> No <br><br>
     
-Toma Siestas:
-<input type="radio" name="Siesta" value="Yes"> Yes
-<input type="radio" name="Siesta" value="No"> No <BR><BR>
+Toma siestas:
+<input type="radio" name="Siesta" value="Sí"> Sí
+<input type="radio" name="Siesta" value="No"> No <br><br>
 
 <!-- EQUIPO -->
 <h3 style="background:#dfe8ec; padding:8px;">--- Equipo Utilizado ---</h3>
 
-<!-- EQUIPMENT BLOCK TEMPLATE -->
 <div style="background:#f7f7f7; padding:10px; margin-bottom:10px;">
 <strong>BiPAP</strong><br>
-<input type="radio" name="BiPAP" value="Yes"> Yes
+<input type="radio" name="BiPAP" value="Sí"> Sí
 <input type="radio" name="BiPAP" value="No"> No
-&nbsp;&nbsp; Brand/Model:
+&nbsp;&nbsp; Marca/Modelo:
 <input type="text" name="BiPAP Model" style="width:200px;">
 </div>
 
 <div style="background:#ffffff; padding:10px; margin-bottom:10px;">
 <strong>CPAP</strong><br>
-<input type="radio" name="CPAP" value="Yes"> Yes
+<input type="radio" name="CPAP" value="Sí"> Sí
 <input type="radio" name="CPAP" value="No"> No
 &nbsp;&nbsp;
-Brand/Model:
+Marca/Modelo:
 <input type="text" name="CPAP Model" style="width:200px;">
 </div>
 
 <div style="background:#f7f7f7; padding:10px; margin-bottom:10px;">
 <strong>High Flow:</strong><br>
-<input type="radio" name="High Flow" value="Yes"> Yes
+<input type="radio" name="High Flow" value="Sí"> Sí
 <input type="radio" name="High Flow" value="No"> No
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-Oxygen%:
+Oxígeno %:
 <input type="text" name="Oxígeno%" style="width:20px;">
 &nbsp;&nbsp;
 Litros:
@@ -104,95 +106,102 @@ Litros:
 </div>
 
 <div style="background:#ffffff; padding:10px; margin-bottom:10px;">
-<strong>Oxygen:</strong><br>
-<input type="radio" name="Oxígeno" value="Yes"> Yes  
+<strong>Oxígeno:</strong><br>
+<input type="radio" name="Oxígeno" value="Sí"> Sí  
 <input type="radio" name="Oxígeno" value="No"> No
 &nbsp;&nbsp;&nbsp; 
 Litros:&nbsp; 
-Noche:<input type="Número" name="O2 noche" style="width:20px;">
+Noche:<input type="number" name="O2 noche" style="width:20px;">
 &nbsp;&nbsp;   
-Día:<input type="Número" name="O2 día" style="width:20px;"> <BR><BR>
+Día:<input type="number" name="O2 día" style="width:20px;"> <br><br>
 
-<strong>Tanque:</strong><BR>
-<input type="radio" name="Tanque" value="Yes"> Yes
+<strong>Tanque:</strong><br>
+<input type="radio" name="Tanque" value="Sí"> Sí
 <input type="radio" name="Tanque" value="No"> No <br><br>
 
 <div style="background:#f7f7f7; padding:10px; margin-bottom:10px;">
     
 <strong>Concentrador:</strong>
-<input type="radio" name="Concentrador" value="Yes"> Yes
+<input type="radio" name="Concentrador" value="Sí"> Sí
 <input type="radio" name="Concentrador" value="No"> No
 &nbsp;&nbsp;&nbsp;&nbsp; 
-<STRONG>Portable:</STRONG>
-<input type="radio" name="Portable" value="Yes"> Yes
-<input type="radio" name="Portable" value="No"> No 
+
+<strong>Portátil:</strong>
+<input type="radio" name="Portátil" value="Sí"> Sí
+<input type="radio" name="Portátil" value="No"> No 
 
 &nbsp;&nbsp;&nbsp;&nbsp; 
+
 Modelo Concentrador:
-<input type="text" name="Modelo de Concentraor" style="width:140px;">
+<input type="text" name="Modelo de Concentrador" style="width:140px;">
 </div>
 
 <div style="background:#f7f7f7; padding:10px; margin-bottom:10px;">
 
-<!-- Traqueostomía -->
+<!-- TRAQUEOSTOMÍA -->
 <h3 style="background:#dfe8ec; padding:8px;">--- Traqueostomía ---</h3>
 
 Traqueostomía:
-<input type="radio" name="Traqueostomía" value="Yes"> Yes
+<input type="radio" name="Traqueostomía" value="Sí"> Sí
 <input type="radio" name="Traqueostomía" value="No"> No 
 &nbsp;&nbsp;&nbsp;&nbsp;   
+
 Tipo/Modelo:
 <input type="text" name="Modelo Traqueostomía" style="width:200px;">
-&nbsp;&nbsp;&nbsp;&nbsp; 
-Con Balón:
-<input type="radio" name="Con Balón" value="Yes"> Yes
-<input type="radio" name="Con Balón" value="No"> No <BR><BR>
 
-Fenestratedo:
-<input type="radio" name="Fenestrado" value="Yes"> Yes
+&nbsp;&nbsp;&nbsp;&nbsp; 
+
+Con balón:
+<input type="radio" name="Con Balón" value="Sí"> Sí
+<input type="radio" name="Con Balón" value="No"> No <br><br>
+
+Fenestrado:
+<input type="radio" name="Fenestrado" value="Sí"> Sí
 <input type="radio" name="Fenestrado" value="No"> No 
 
 &nbsp;&nbsp;&nbsp;&nbsp;     
-Canula interna
-<input type="radio" name="Canula interna" value="Yes"> Yes
-<input type="radio" name="Canula interna" value="No"> No <BR><BR>
 
+Cánula interna:
+<input type="radio" name="Cánula interna" value="Sí"> Sí
+<input type="radio" name="Cánula interna" value="No"> No <br><br>
 
-Valvula Fonatoria:
-<input type="radio" name="Valvula Fonatoria" value="Yes"> Yes
-&nbsp;&nbsp;&nbsp; <input type="radio" name="Valvula Fonatoria" value="No"> No 
+Válvula fonatoria:
+<input type="radio" name="Válvula Fonatoria" value="Sí"> Sí
+&nbsp;&nbsp;&nbsp; 
+<input type="radio" name="Válvula Fonatoria" value="No"> No 
 &nbsp;
+
 Tapón:
-<input type="radio" name="Tapón" value="Yes"> Yes
-<input type="radio" name="Tapón" value="No"> No <BR><BR>
+<input type="radio" name="Tapón" value="Sí"> Sí
+<input type="radio" name="Tapón" value="No"> No <br><br>
 
 <strong>Notas para equipos adicionales:</strong><br>
 <textarea name="Notas de Equipamiento" style="width:100%; height:100px;"></textarea>
 
 </div>
     
-<!-- Medicación -->
+<!-- MEDICACIÓN -->
 <h3 style="background:#dfe8ec; padding:8px;">--- Medicación ---</h3>
 
 Nebulizador:
-<input type="radio" name="Nebulizador" value="Yes"> Yes
+<input type="radio" name="Nebulizador" value="Sí"> Sí
 <input type="radio" name="Nebulizador" value="No"> No <br><br>
 
 MDI:
-<input type="radio" name="MDI" value="Yes"> Yes
+<input type="radio" name="MDI" value="Sí"> Sí
 <input type="radio" name="MDI" value="No"> No <br><br>
 
 Cámara espaciadora:
-<input type="radio" name="Cámara" value="Yes"> Yes
+<input type="radio" name="Cámara" value="Sí"> Sí
 <input type="radio" name="Cámara" value="No"> No <br><br>
 
-Bronquiodilatador:
-<input type="radio" name="Bronquiodilatador" value="Yes"> Yes
-<input type="radio" name="Bronquiodilatador" value="No"> No <br><br>
+Broncodilatador:
+<input type="radio" name="Broncodilatador" value="Sí"> Sí
+<input type="radio" name="Broncodilatador" value="No"> No <br><br>
 
-Steroides:
-<input type="radio" name="Steroides" value="Yes"> Yes
-<input type="radio" name="Steroides" value="No"> No
+Esteroides:
+<input type="radio" name="Esteroides" value="Sí"> Sí
+<input type="radio" name="Esteroides" value="No"> No
 
 <!-- BOTONES -->
 <br><br>
@@ -200,11 +209,13 @@ Steroides:
 <div style="text-align:center;">
 
 <button type="reset" style="background:red; color:white; padding:10px 20px; border:none; border-radius:5px;">
-<H2>Borrar</H2>
+<h2>Borrar</h2>
 </button>
+
 &nbsp;&nbsp;&nbsp;&nbsp; 
+
 <button type="submit" id="submitBtn" style="background:gold; padding:10px 20px; border:none; border-radius:5px;">
-<H2>Enviar</H2>
+<h2>Enviar</h2>
 </button>
 
 </div>
@@ -212,7 +223,6 @@ Steroides:
 </form>
 
 </div>
-
 <script>
 document.getElementById("myForm").addEventListener("submit", function() {
     var btn = document.getElementById("submitBtn");
