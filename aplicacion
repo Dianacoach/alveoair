@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">     
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+<title>Respiratory Intake Form</title>
+</head>
+
+<body style="font-family: Arial, sans-serif; background:#eef5f7; margin:0; padding:20px;">
+
+<div style="max-width:950px; margin:auto; background:white; padding:25px; border-radius:10px;">
+
+<img src="logo.png" alt="Respiratory Home Coach Logo" style="width:200px;">
+    
+<h2 style="text-align:center;">Respiratory Intake Application</h2>
+
+<p style="text-align:center;">
+To provide you with fast, effective and personalized support, please share any information you feel comfortable providing.
+</p>
+
+<form id="myForm" action="https://formspree.io/f/mpqknnea" method="POST">
+
+<input type="hidden" name="_subject" value="Respiratory Client Intake Report">
+<input type="text" name="_gotcha" style="display:none">
+
+<!-- IDENTIFICATION -->
+<h3 style="background:#dfe8ec; padding:8px;">--- Client Identification ---</h3>
+
+Name:
+<input type="text" name="Client First Name" style="width:200px; margin-right:20px;">
+
+OR Account Code:
+<input type="text" name="Account Code" style="width:150px;">
+
+<br><br>
+
+<!-- BASICS -->
+<h3 style="background:#dfe8ec; padding:8px;">--- Patient Basics ---</h3>
+
+Age: <input type="number" name="Age" style="width:30px;">
+Weight in Lbs: <input type="number" name="Weight" style="width:30px;"><br><br>
+Height in Feet + Inches: <input type="number" name="Height" style="width:30px;">+<input type="number" name="Height" style="width:30px;">
+
+<br><br>
+
+Previous Health Concerns:<br>
+<input type="text" name="Past Health Problems" style="width:100%;"><br><br>
+
+Current Health Concerns:<br>
+<input type="text" name="Current Health Problems" style="width:100%;">
+
+<!-- SLEEP -->
+<h3 style="background:#dfe8ec; padding:8px;">--- Sleep & Symptoms ---</h3>
+
+Sleep hours:
+<input type="number" name="Sleep Hours" style="width:30px;"><br><br>
+
+Wake up tired:
+<input type="radio" name="Wake Tired" value="Yes"> Yes
+<input type="radio" name="Wake Tired" value="No"> No &nbsp;&nbsp;&nbsp;&nbsp;<BR><BR>
+
+Tired during day:
+<input type="radio" name="Daytime Fatigue" value="Yes"> Yes
+<input type="radio" name="Daytime Fatigue" value="No"> No <BR><BR>
+    
+Take naps:
+<input type="radio" name="Naps" value="Yes"> Yes
+<input type="radio" name="Naps" value="No"> No <BR><BR>
+
+<!-- EQUIPMENT -->
+<h3 style="background:#dfe8ec; padding:8px;">--- Equipment Use ---</h3>
+
+<!-- EQUIPMENT BLOCK TEMPLATE -->
+<div style="background:#f7f7f7; padding:10px; margin-bottom:10px;">
+<strong>BiPAP</strong><br>
+<input type="radio" name="BiPAP" value="Yes"> Yes
+<input type="radio" name="BiPAP" value="No"> No
+&nbsp;&nbsp; Brand/Model:
+<input type="text" name="BiPAP Model" style="width:200px;">
+</div>
+
+<div style="background:#ffffff; padding:10px; margin-bottom:10px;">
+<strong>CPAP</strong><br>
+<input type="radio" name="CPAP" value="Yes"> Yes
+<input type="radio" name="CPAP" value="No"> No
+&nbsp;&nbsp;
+Brand/Model:
+<input type="text" name="CPAP Model" style="width:200px;">
+</div>
+
+<div style="background:#f7f7f7; padding:10px; margin-bottom:10px;">
+<strong>High Flow:</strong><br>
+<input type="radio" name="High Flow" value="Yes"> Yes
+<input type="radio" name="High Flow" value="No"> No
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Oxygen%:
+<input type="text" name="Oxygen%" style="width:20px;">
+&nbsp;&nbsp;
+Liters:
+<input type="text" name="Flow Liters" style="width:20px;">
+</div>
+
+<div style="background:#ffffff; padding:10px; margin-bottom:10px;">
+<strong>Oxygen:</strong><br>
+<input type="radio" name="Oxygen" value="Yes"> Yes  
+<input type="radio" name="Oxygen" value="No"> No
+&nbsp;&nbsp;&nbsp; 
+Litters:&nbsp; 
+Night:<input type="number" name="O2 Night" style="width:20px;">
+&nbsp;&nbsp;   
+Day:<input type="number" name="O2 Day" style="width:20px;"> <BR><BR>
+
+<strong>Tank:</strong><BR>
+<input type="radio" name="Tank" value="Yes"> Yes
+<input type="radio" name="Tank" value="No"> No <br><br>
+
+<div style="background:#f7f7f7; padding:10px; margin-bottom:10px;">
+    
+<strong>Concentrator:</strong>
+<input type="radio" name="Concentrator" value="Yes"> Yes
+<input type="radio" name="Concentrator" value="No"> No
+&nbsp;&nbsp;&nbsp;&nbsp; 
+<STRONG>Portable:</STRONG>
+<input type="radio" name="Portable" value="Yes"> Yes
+<input type="radio" name="Portable" value="No"> No 
+
+&nbsp;&nbsp;&nbsp;&nbsp; 
+Concentrator Model:
+<input type="text" name="Concentrator Model" style="width:140px;">
+</div>
+
+<div style="background:#f7f7f7; padding:10px; margin-bottom:10px;">
+
+<!-- Tracheostomy -->
+<h3 style="background:#dfe8ec; padding:8px;">--- Tracheostomy ---</h3>
+
+Tracheostomy:
+<input type="radio" name="Tracheostomy" value="Yes"> Yes
+<input type="radio" name="Tracheostomy" value="No"> No 
+&nbsp;&nbsp;&nbsp;&nbsp;   
+Type/Model:
+<input type="text" name="Tracheostomy Model" style="width:200px;">
+&nbsp;&nbsp;&nbsp;&nbsp; 
+Cuffed:
+<input type="radio" name="Cuffed" value="Yes"> Yes
+<input type="radio" name="Cuffed" value="No"> No <BR><BR>
+
+Fenestrated:
+<input type="radio" name="Fenestrated" value="Yes"> Yes
+<input type="radio" name="Fenestrated" value="No"> No 
+
+&nbsp;&nbsp;&nbsp;&nbsp;     
+Inner Cannula
+<input type="radio" name="Inner Cannula" value="Yes"> Yes
+<input type="radio" name="Inner Cannula" value="No"> No <BR><BR>
+
+
+Speaking Valve:
+<input type="radio" name="Speaking Valve" value="Yes"> Yes
+&nbsp;&nbsp;&nbsp; <input type="radio" name="Speaking Valve" value="No"> No 
+&nbsp;
+Capped:
+<input type="radio" name="Capped" value="Yes"> Yes
+<input type="radio" name="Capped" value="No"> No <BR><BR>
+
+<strong>Additional equipment notes:</strong><br>
+<textarea name="Equipment Notes" style="width:100%; height:100px;"></textarea>
+
+</div>
+    
+<!-- MEDICATION -->
+<h3 style="background:#dfe8ec; padding:8px;">--- Medications ---</h3>
+
+Nebulizer:
+<input type="radio" name="Nebulizer" value="Yes"> Yes
+<input type="radio" name="Nebulizer" value="No"> No <br><br>
+
+MDI:
+<input type="radio" name="MDI" value="Yes"> Yes
+<input type="radio" name="MDI" value="No"> No <br><br>
+
+Spacer:
+<input type="radio" name="Spacer" value="Yes"> Yes
+<input type="radio" name="Spacer" value="No"> No <br><br>
+
+Brochodilator:
+<input type="radio" name="Brochodilator" value="Yes"> Yes
+<input type="radio" name="Brochodilator" value="No"> No <br><br>
+
+Steroids:
+<input type="radio" name="Steroids" value="Yes"> Yes
+<input type="radio" name="Steroids" value="No"> No
+
+<!-- BUTTONS -->
+<br><br>
+
+<div style="text-align:center;">
+
+<button type="reset" style="background:red; color:white; padding:10px 20px; border:none; border-radius:5px;">
+<H2>Reset</H2>
+</button>
+&nbsp;&nbsp;&nbsp;&nbsp; 
+<button type="submit" id="submitBtn" style="background:gold; padding:10px 20px; border:none; border-radius:5px;">
+<H2>Submit</H2>
+</button>
+
+</div>
+
+</form>
+
+</div>
+
+<script>
+document.getElementById("myForm").addEventListener("submit", function() {
+    var btn = document.getElementById("submitBtn");
+    btn.innerHTML = "Sent";
+    btn.style.background = "green";
+    btn.disabled = true;
+});
+</script>
+
+    <!-- HOME -->
+    <div style="text-align:center; margin-top:80px;">
+        <a href="indexes.html"><img src="atras.png" alt="Home"></a>
+    </div>
+</body>
+</html>
