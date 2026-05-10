@@ -1,10 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
 <head>
 <meta charset="UTF-8">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">     
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <meta name="description" content="Respiratory therapist coaching for CPAP, BiPAP, oxygen therapy and breathing conditions.
 Practical home guidance to improve comfort, safety and daily breathing.">
 
@@ -12,11 +9,6 @@ Practical home guidance to improve comfort, safety and daily breathing.">
 
 <style>
 
-/* BODY BACKGROUND */
-body {
-    background-color: #eaf6fb;
-    font-family: 'Playfair Display', serif;
-}
 
 .container {
     max-width: 1100px;
@@ -59,7 +51,7 @@ h1 {
 
 .nav-button {
     background-color: #66b3ff;
-    color: black; /* changed */
+    color: white;
     padding: 7px 12px;
     border-radius: 20px;
     font-size: 0.85em;
@@ -150,9 +142,24 @@ h1 {
     border-radius: 12px;
 }
 
-/* BUTTON STYLE */
+/* DISCLAIMER */
+.disclaimer {
+    margin-top: 30px;
+    font-size: 0.8em;
+    color: #777;
+    max-width: 800px;
+}
+
+
+.contact-buttons {
+    margin-top: 25px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
 .contact-btn {
-    background-color: #8fd19e;
+    background-color: #8fd19e; /* light green */
     color: white;
     padding: 8px 14px;
     border-radius: 20px;
@@ -164,71 +171,7 @@ h1 {
 .contact-btn:hover {
     background-color: #6fcf97;
 }
-
-/* FORM */
-.form-card {
-    background: #eaf6fb; /* same as body */
-    padding: 25px;
-    border-radius: 12px;
-    max-width: 500px;
-    margin: 40px auto;
-}
-
-.form-card input,
-.form-card textarea {
-    background: white;   /* ✅ stays white */
-    color: black;
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    margin-bottom: 15px;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-}
     
-.form-card button {
-    background-color: #8fd19e;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-}
-
-/* CONTACT + PHOTO LAYOUT */
-.contact-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 35px;
-    margin-top: 50px;
-    flex-wrap: wrap;
-}
-
-.contact-photo {
-    flex: 0 0 220px;
-    text-align: center;
-}
-
-.contact-photo img {
-    width: 100%;
-    max-width: 320px;
-    border-radius: 14px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-}
-
-.contact-wrapper .form-card {
-    margin: 0;
-}
-    
-/* DISCLAIMER */
-.disclaimer {
-    margin-top: 30px;
-    font-size: 0.8em;
-    color: #777;
-    max-width: 800px;
-}
-
 </style>
 </head>
 
@@ -240,13 +183,10 @@ h1 {
     <div class="header">
         <img src="logo.png" alt="Logo" class="logo">
      
-         <div class="header-right">
-          <p style="font-size: 3rem; line-height: 2; color: #555555;">
-                      <strong>Respiratory Home Coach </strong></p>
-         <BR> <a href="indexes.html" style="color: darkgreen;"> Versión en español.</a>
+        <div class="header-right">
+     <p style="font-size: 3rem; line-height: 2; color: #555555;">
+            <strong>Respiratory Home Coach </strong></p>
 
-        
-                 </div>
             <div class="navbar">
 
                 <div class="nav-item">
@@ -299,7 +239,7 @@ h1 {
                 </div>
 
                 <div class="nav-item">
-                    <a href="pay.html" class="nav-button">Payments</a>
+                    <a href="pay.html" class="nav-button">Pay</a>
                 </div>
 
                 <div class="nav-item">
@@ -315,52 +255,31 @@ h1 {
 
         <div class="text-section">
             <p style="font-size: 1.3rem; line-height: 1.8; color: #3f6f8f;">
-        Providing remote respiratory coaching to help you confidently manage oxygen therapy, CPAP/BiPAP, tracheostomy care, proper medication
-        delivery techniques, early recognition of respiratory distress and respiratory equipment decisions through video, phone and email
-        support. The goal is to reduce confusion, delays and unnecessary readmissions while improving comfort and confidence at home. Services
-        include a Basic Plan (35euros/month, 60 minutes), a Prevention Plan (80euros/month, 120 minutes plus ongoing monitoring and early support 
-        guidance) and flexible options as needed. This service works alongside your existing healthcare provider, offering you, your
-        companion or your healthcare professional fast, experienced respiratory support when you need it most and on a daily basis.
-            </p>
-        </div>
+            Providing remote respiratory coaching to you. With confidently manage oxygen therapy, CPAP/BiPAP, tracheostomy care and equipment
+           decisions through video, phone and email support, reducing confusion, delays and unnecessary readmissions. Services include a Basic plan 
+           ($40/month, 60 minutes), a Prevention plan ($85/month, 120 minutes plus ongoing monitoring and early warning guidance) and flexible options
+           as needed. This service works alongside your existing providers, giving patients fast, expert support when they need it most</p>
+                  
+            <div class="contact-buttons">
+       <a href="mailto:alveoair@gmail.com" class="contact-btn">Email</a>
+       <a href="https://wa.me/14806767328" class="contact-btn">WhatsApp</a>
+      </div>
+     </div>
 
         <div class="image-section">
             <img src="julio1.png" alt="Respiratory Coach">
             <p><em>Julio Bautista, RRT — Respiratory Coach</em></p>
-
-            <div style="margin-top:15px;">
-                <a href="https://wa.me/34644810639" class="contact-btn">WhatsApp</a>
-            </div>
         </div>
-      
-   <!-- CONTACT + PHOTO SECTION -->
-<div class="contact-wrapper">
 
-    <!-- LEFT PHOTO -->
-    <div class="contact-photo">
-        <img src="julio2.png" alt="Julio Bautista">
     </div>
 
-    <!-- RIGHT FORM -->
-    <div class="form-card">
-        <h2>Start your FREE 30 minutes trial now</h2>
-        <h3>Please include your contact information inside the message.</h3>
-
-        <form action="https://formspree.io/f/mvzwrnel" method="POST">
-            <input type="hidden" name="_subject" value="Message from AlveoAir website">
-            <input type="text" name="_gotcha" style="display:none">
-
-            <label>Your message:</label>
-            <textarea name="message" rows="8" required placeholder="Write your message and contact information here..."></textarea>
-
-            <div style="text-align:center; margin-top:15px;">
-                <button type="submit">Send Message</button>
-            </div>
-        </form>
-    </div>
+    <p class="disclaimer">
+        <strong>Disclaimer:</strong> This information is for educational purposes only and does not replace medical advice. </p>
+   
 
 </div>
-<!-- SCRIPT -->
+
+<!-- CLICK MENU SCRIPT -->
 <script>
 document.querySelectorAll('.nav-button').forEach(button => {
     button.addEventListener('click', function(e) {
