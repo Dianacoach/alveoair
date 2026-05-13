@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">     
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description" content="Respiratory therapist coaching for CPAP, BiPAP, oxygen therapy and breathing conditions.
+Practical home guidance to improve comfort, safety and daily breathing.">
+
+<title>Respiratory Home Coach | CPAP, BiPAP, Oxygen, Trach Care & Home Breathing Support</title>
+
+<style>
+
+/* BODY BACKGROUND */
+body {
+    background-color: #eaf6fb;
+    font-family: 'Playfair Display', serif;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* HEADER */
+.header {
+    display: flex;
+    align-items: left;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.logo {
+    max-width: 250px;
+}
+
+.header-right {
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    margin: 0 0 10px 0;
+    font-size: 2.2em;
+}
+
+/* NAV */
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-button {
+    background-color: #66b3ff;
+    color: black; /* changed */
+    padding: 7px 12px;
+    border-radius: 20px;
+    font-size: 0.85em;
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-block;
+    min-width: 85px;
+    text-align: center;
+}
+
+.nav-button:hover {
+    background-color: #4da6ff;
+}
+
+/* DROPDOWN */
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 36px;
+    left: 0;
+    background: white;
+    border-radius: 6px;
+    min-width: 180px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+.dropdown a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+}
+
+.dropdown a:hover {
+    background-color: #f0f0f0;
+}
+
+/* CLICK ACTIVATION */
+.nav-item.active .dropdown {
+    display: block;
+}
+
+/* SUB DROPDOWN */
+.sub-dropdown {
+    position: relative;
+}
+
+.sub-dropdown-content {
+    display: none;
+    position: absolute;
+    left: 180px;
+    top: 0;
+    background: white;
+    border-radius: 6px;
+    min-width: 180px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+}
+
+.sub-dropdown.active .sub-dropdown-content {
+    display: block;
+}
+
+/* MAIN */
+.main-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 40px;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.text-section {
+    flex: 1;
+    min-width: 280px;
+    font-size: 1.05em;
+    line-height: 1.6;
+}
+
+.image-section {
+    flex: 0 0 260px;
+    text-align: center;
+}
+
+.image-section img {
+    width: 100%;
+    border-radius: 12px;
+}
+
+/* BUTTON STYLE */
+.contact-btn {
+    background-color: #8fd19e;
+    color: black;
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-size: 0.85em;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.contact-btn:hover {
+    background-color: #6fcf97;
+}
+
+/* FORM */
+.form-card {
+    background: #eaf6fb; /* same as body */
+    padding: 25px;
+    border-radius: 12px;
+    max-width: 500px;
+    margin: 40px auto;
+}
+
+.form-card input,
+.form-card textarea {
+    background: white;   /* ✅ stays white */
+    color: black;
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+    
+.form-card button {
+    background-color: #8fd19e;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* CONTACT + PHOTO LAYOUT */
+.contact-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
+
+.contact-photo {
+    flex: 0 0 220px;
+    text-align: center;
+}
+
+.contact-photo img {
+    width: 100%;
+    max-width: 320px;
+    border-radius: 14px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.contact-wrapper .form-card {
+    margin: 0;
+}
+    
+/* DISCLAIMER */
+.disclaimer {
+    margin-top: 30px;
+    font-size: 0.8em;
+    color: #777;
+    max-width: 800px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- HEADER -->
+    <div class="header">
+        <img src="logo.png" alt="Logo" class="logo">
+        
+        <div class="header-right">
+            <p style="font-size: 3rem; line-height: 2; color: #555555;">
+                <strong>Respiratory Home Coach</strong>
+        
+            <div class="navbar">
+
+                <div class="nav-item">
+                    <a href="about.html" class="nav-button">About</a>
+                </div>
+
+                <div class="nav-item">
+                    <div class="nav-button">Coaching</div>
+                    <div class="dropdown">
+
+                        <div class="sub-dropdown">
+                            <a href="#">Equipment ▶</a>
+                            <div class="sub-dropdown-content">
+                                <a href="bipap.html">BiPAP</a>
+                                <a href="cpap.html">CPAP</a>
+                                <a href="masks.html">Masks</a>
+                                <a href="concentrators.html">Concentrators</a>
+                                <a href="trachtube.html">Trach Tubes</a>
+                                <a href="nebs.html">Med.Nebulizers</a>
+                            </div>
+                        </div>
+
+                        <div class="sub-dropdown">
+                            <a href="#">Therapy ▶</a>
+                            <div class="sub-dropdown-content">
+                                <a href="o2.html">Oxygen Use</a>
+                                <a href="copd.html">COPD</a>
+                                <a href="pmv.html">Speaking Valve</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="nav-item">
+                    <div class="nav-button">Plans</div>
+                    <div class="dropdown">
+                        <a href="basicusa.html">Basic</a>
+                        <a href="preventusaen.html">Prevention</a>
+                        <a href="flexusaen.html">Flex</a>
+                    </div>
+                </div>
+
+                <div class="nav-item">
+                    <a href="application.html" class="nav-button">Apply</a>
+                </div>
+
+                <div class="nav-item">
+                    <a href="freetrial.html" class="nav-button">Trial</a>
+                </div>
+
+                <div class="nav-item">
+                    <a href="pay.html" class="nav-button">Payments</a>
+                </div>
+
+                <div class="nav-item">
+                    <a href="t&c.html" class="nav-button">Terms</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+      <a href="usaes.html" class="contact-btn"><H2>Español </H2></a>
+    
+    <!-- MAIN -->
+    <div class="main-content">
+
+        <div class="text-section">
+            <p style="font-size: 1.3rem; line-height: 1.8; color: #3f6f8f;">
+    Focused on helping prevent respiratory setbacks and ineffective therapy management through structured weekly improvement plans with realistic
+    and achievable short-term goals. These plans are designed to promote better respiratory habits, safer therapy management and measurable day-to-day progress.
+    Services focus not only on improving comfort and safety at home, but also on helping individuals feel more confident and independent during daily activities
+    outside the home, including understanding oxygen duration, portable oxygen systems, respiratory equipment use and better day-to-day respiratory planning.
+    Support and guidance are provided through video, telephone calls and email, offering remote respiratory coaching designed to improve understanding and
+    confidence in the management of oxygen therapy, CPAP/BiPAP, tracheostomy care, inhaled medications and respiratory equipment. Services are aimed at helping
+    reduce confusion, errors, delays, stress and potential respiratory-related complications while promoting safer and more effective respiratory habits. 
+    Guidance is also available for decisions related to purchasing or renting respiratory equipment.
+    Available services include the Basic, Preventive, and Flexible plans. These services are designed to complement your physician’s care by providing patients,
+    caregivers, family members, or daily support personnel with access to professional and specialized respiratory guidance whenever it is needed most or as
+    part of daily respiratory support.
+            </p>
+        </div>
+
+        <div class="image-section">
+            <img src="julio1.png" alt="Respiratory Coach">
+            <p><em>Julio Bautista, RRT — Respiratory Coach</em></p>
+
+            <div style="margin-top:15px;">
+                <a href="https://wa.me/34644810639" class="contact-btn">WhatsApp</a>
+               
+                <a href="mailto:alveoair@gmail.com" class="contact-btn">alveoair@gmail.com </a>
+                
+            </div>
+        </div>
+
+ <!-- CONTACT + PHOTO SECTION -->
+<div class="contact-wrapper">
+
+    <!-- LEFT PHOTO -->
+    <div class="contact-photo">
+        <img src="julio2.png" alt="Julio Bautista">
+    </div>
+
+    <!-- RIGHT FORM -->
+    <div class="form-card">
+        <h2>Start your FREE 30 minutes trial now</h2>
+        <h3>Please include your contact information inside the message.</h3>
+
+        <form action="https://formspree.io/f/mvzwrnel" method="POST">
+            <input type="hidden" name="_subject" value="Mensaje de la web Alveoair">
+            <input type="text" name="_gotcha" style="display:none">
+
+            <label>Your message:</label>
+            <textarea name="mensaje" rows="8" required placeholder="Write your message and contact information here..."></textarea>
+
+            <div style="text-align:center; margin-top:15px;">
+                <button type="submit">Send Message</button>
+            </div>
+        </form>
+    </div>
+
+</div>
+<!-- SCRIPT -->
+<script>
+document.querySelectorAll('.nav-button').forEach(button => {
+    button.addEventListener('click', function(e) {
+        let parent = this.parentElement;
+
+        document.querySelectorAll('.nav-item').forEach(item => {
+            if (item !== parent) {
+                item.classList.remove('active');
+            }
+        });
+
+        parent.classList.toggle('active');
+        e.stopPropagation();
+    });
+});
+
+document.addEventListener('click', function() {
+    document.querySelectorAll('.nav-item').forEach(item => {
+        item.classList.remove('active');
+    });
+});
+
+
+document.querySelectorAll('.sub-dropdown > a').forEach(item => {
+    item.addEventListener('click', function(e) {
+        let parent = this.parentElement;
+
+        document.querySelectorAll('.sub-dropdown').forEach(el => {
+            if (el !== parent) {
+                el.classList.remove('active');
+            }
+        });
+
+        parent.classList.toggle('active');
+        e.stopPropagation();
+        e.preventDefault();
+    });
+});
+</script>
+</body>
+</html>
