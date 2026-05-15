@@ -22,63 +22,90 @@ body {
 
 /* MAIN WRAPPER */
 .container {
-    padding: 60px 20px;
+    padding: 40px 20px 60px;
     text-align: center;
     min-height: 100vh;
 }
 
+/* HEADER */
+.header {
+    margin-bottom: 35px;
+}
+
+/* LOGO */
+.logo img {
+    width: 250px;
+    max-width: 90%;
+}
+
 /* TITLE */
 h1 {
-    margin-bottom: 30px;
+    margin-bottom: 15px;
     font-family: 'Playfair Display', serif;
+    font-size: 2.4rem;
 }
 
 /* INFO TEXT */
 .info-text {
-    max-width: 700px;
+    max-width: 720px;
     margin: 0 auto 30px;
-    line-height: 1.6;
+    line-height: 1.7;
+    font-size: 1.05rem;
 }
 
-/* PAYMENT CARD */
+/* PAYPAL CARD */
 .payment-bar {
     background: #e6f2ea;
-    margin: 15px auto;
-    padding: 18px;
+    margin: 25px auto;
+    padding: 25px;
     width: 90%;
-    max-width: 500px;
-    border-radius: 16px;
+    max-width: 520px;
+    border-radius: 18px;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-
-    box-shadow: 0 8px 18px rgba(0,0,0,0.10);
-    border: 1px solid rgba(0,0,0,0.06);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.10);
+    border: 1px solid rgba(0,0,0,0.05);
 
     transition: 0.25s ease;
 }
 
 .payment-bar:hover {
     transform: translateY(-4px);
-    box-shadow: 0 12px 22px rgba(0,0,0,0.15);
+    box-shadow: 0 14px 24px rgba(0,0,0,0.14);
 }
 
 /* PAYMENT IMAGE */
 .payment-logo img {
     width: 220px;
     max-width: 90%;
+    margin-bottom: 15px;
+}
+
+/* PAYPAL BUTTON */
+.paypal-button {
+    display:inline-block;
+    margin-top:15px;
+    background:#0070ba;
+    color:white;
+    padding:12px 24px;
+    border-radius:10px;
+    text-decoration:none;
+    font-weight:bold;
+    transition:0.25s ease;
+}
+
+.paypal-button:hover {
+    background:#005f9e;
+    transform:scale(1.03);
 }
 
 /* FORM CARD */
 .form-card {
     background: #eaf6fb;
-    padding: 25px;
-    border-radius: 12px;
-    max-width: 500px;
-    margin: 40px auto;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    padding: 28px;
+    border-radius: 16px;
+    max-width: 550px;
+    margin: 45px auto;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.08);
 }
 
 /* FORM INPUTS */
@@ -87,33 +114,37 @@ h1 {
     background: white;
     color: black;
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     margin-top: 5px;
     margin-bottom: 15px;
-    border-radius: 6px;
+    border-radius: 8px;
     border: 1px solid #ccc;
     box-sizing: border-box;
     font-family: 'Lato', sans-serif;
+    font-size: 1rem;
 }
 
 /* BUTTON */
 .form-card button {
     background-color: #8fd19e;
     color: black;
-    padding: 10px 20px;
+    padding: 12px 24px;
     border: none;
-    border-radius: 6px;
+    border-radius: 8px;
     cursor: pointer;
-    font-size: 1em;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: 0.25s ease;
 }
 
 .form-card button:hover {
     background-color: #6fcf97;
+    transform: translateY(-2px);
 }
 
 /* BACK BUTTON */
 .back-button img {
-    width: 200px;
+    width: 160px;
     transition: 0.2s;
 }
 
@@ -121,40 +152,88 @@ h1 {
     transform: scale(1.08);
 }
 
- 
+/* FOOTER */
+.footer {
+    text-align:center;
+    padding:20px;
+    background:#dfece5;
+    font-size:0.95rem;
+    margin-top:40px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .container {
+        padding-top: 25px;
+    }
+
+    .form-card {
+        padding: 20px;
+    }
+}
+
 </style>
 </head>
- <BR><BR><left> <img src="logo.png" alt="Respiratory Home Coach Logo" style="width:250px;">  </left> 
+
 <body>
 
-       
 <div class="container">
 
-    <h1>Secure Payment</h1>
+    <!-- HEADER -->
+    <div class="header">
 
-    <div class="info-text">
-        <p>
-            <strong>PayPal:</strong> Download PayPal to send or receive international payments quickly and securely.
+        <div class="logo">
+            <img src="logo.png" alt="Respiratory Home Coach Logo">
+        </div>
 
-        <p>
-            <a href="https://www.paypal.com/us/webapps/mpp/account-selection" target="_blank" 
-           style="display:inline-block; margin-top:15px; background:#0070ba; color:white; padding:12px 22px; border-radius:8px; text-decoration:none; font-weight:bold;">
-               Install / Open PayPal
-               </a>
-      </p>
+        <h1>Secure Payment</h1>
+
     </div>
 
-    <!-- PAYPAL IMAGE -->
-    <div class="payment-logo">
-        <img src="paypal.png" alt="PayPal">
+    <!-- INFO -->
+    <div class="info-text">
+
+        <p>
+            International payments can be made securely through PayPal.
+            It allows fast and reliable transfers worldwide for respiratory coaching services.
+        </p>
+
+        <p>
+            If you do not already have PayPal installed, you can download or open it below.
+        </p>
+
+    </div>
+
+    <!-- PAYPAL CARD -->
+    <div class="payment-bar">
+
+        <div class="payment-logo">
+            <img src="paypal.png" alt="PayPal">
+        </div>
+
+        <div>
+            <a href="https://www.paypal.com/us/webapps/mpp/account-selection"
+               target="_blank"
+               class="paypal-button">
+               Install / Open PayPal
+            </a>
+        </div>
+
     </div>
 
     <!-- CONTACT FORM -->
     <div class="form-card">
 
-        <h2>Any Questions About Payments?</h2>
+        <h2>Questions About Payments?</h2>
 
-        <h3>Please include your contact information inside the message.</h3>
+        <p>
+            Please include your contact information inside the message.
+        </p>
 
         <form action="https://formspree.io/f/mvzwrnel" method="POST">
 
@@ -164,7 +243,7 @@ h1 {
 
             <label><strong>Your Message:</strong></label>
 
-            <textarea 
+            <textarea
                 name="message"
                 rows="8"
                 required
@@ -179,16 +258,19 @@ h1 {
 
     </div>
 
- <!-- BACK BUTTON -->
-    
-<a href="javascript:history.back()"><CENTER><img src="back.png" width="150"></CENTER></a>
+    <!-- BACK BUTTON -->
+    <div class="back-button">
+        <a href="javascript:history.back()">
+            <img src="back.png" alt="Back">
+        </a>
     </div>
-   </div>
- 
-    <!-- FOOTER -->
-    <div class="footer">
-      © 2026 Julio Bautista – International Respiratory Coaching
-    </div>
-    <br><br>
+
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+    © 2026 Julio Bautista – International Respiratory Coaching
+</div>
+
 </body>
 </html>
