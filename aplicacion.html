@@ -203,45 +203,51 @@ Esteroides:
 <input type="radio" name="Esteroides" value="Sí"> Sí
 <input type="radio" name="Esteroides" value="No"> No
 
-<!-- BOTONES -->
-<br><br>
+</div>
+    
+<!-- BUTTONS -->
+<div class="button-row">
 
-<div style="text-align:center;">
-
-<button type="reset" style="background:red; color:white; padding:10px 20px; border:none; border-radius:5px;">
-<h2>Borrar</h2>
+<button type="reset" class="reset-btn">
+Reset
 </button>
 
-&nbsp;&nbsp;&nbsp;&nbsp; 
+&nbsp;&nbsp;&nbsp;&nbsp;
 
-<button type="submit" id="submitBtn" style="background:gold; padding:10px 20px; border:none; border-radius:5px;">
-<h2>Enviar</h2>
+<button type="submit" id="submitBtn" class="submit-btn">
+Submit
 </button>
 
 </div>
 
 </form>
 
+<div class="back-btn">
+<a href="javascript:history.back()">
+<img src="back.png" width="150" alt="Back Button">
+</a>
 </div>
+
+<div class="footer">
+© 2026 Julio Bautista – International Respiratory Coaching
+</div>
+
+</div>
+
 <script>
+
 document.getElementById("myForm").addEventListener("submit", function() {
+
     var btn = document.getElementById("submitBtn");
+
     btn.innerHTML = "Sent";
     btn.style.background = "green";
+    btn.style.color = "white";
     btn.disabled = true;
+
 });
+
 </script>
 
- <!-- BACK BUTTON -->
-<a href="javascript:history.back()"> <CENTER> <img src="atras.png" width="150"> </CENTER> </a>
-
-    </div>
-   </div>
- 
-    <!-- FOOTER -->
-    <div class="footer">
-      © 2026 Julio Bautista – International Respiratory Coaching
-    </div>
-    <br><br>
 </body>
 </html>
