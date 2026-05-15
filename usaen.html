@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AlveoAir Floating Ocean Interface</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    overflow:hidden;
+    background:#02070d;
+    font-family:'Lato',sans-serif;
+    color:white;
+}
+
+/* DARK OCEAN */
+.ocean{
+    position:fixed;
+    width:100%;
+    height:100%;
+    background:
+    radial-gradient(circle at top,#0c1d2e 0%,#04070d 55%,#000 100%);
+}
+
+/* MOVING WATER */
+.wave{
+    position:absolute;
+    width:300%;
+    height:300px;
+    left:-100%;
+    bottom:-80px;
+    background:rgba(0,120,255,0.08);
+    border-radius:43%;
+    animation:waveMove 18s linear infinite;
+    filter:blur(6px);
+}
+
+.wave2{
+    animation-duration:26s;
+    bottom:-120px;
+    opacity:0.4;
+}
+
+@keyframes waveMove{
+    from{transform:rotate(0deg);}
+    to{transform:rotate(360deg);}
+}
+
+/* MAIN AREA */
+.scene{
+    position:relative;
+    width:100%;
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+</html>
