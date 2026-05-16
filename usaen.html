@@ -145,49 +145,49 @@ body{
     position:absolute;
     width:100%;
     height:100%;
-
     transform-style:preserve-3d;
 
-    transition:transform 1.2s ease;
+    display:flex;
+    align-items:center;
+    justify-content:center;
 }
-
 /* CARD */
 .card{
     position:absolute;
 
-    width:290px;
-    height:410px;
+    width:260px;
+    height:360px;
 
     left:50%;
-    top:50%;
+    top:46%;
 
-    margin-left:-145px;
-    margin-top:-205px;
+    margin-left:-130px;
+    margin-top:-180px;
 
-    border-radius:26px;
+    border-radius:24px;
 
     background:
     linear-gradient(to bottom,
-    rgba(20,40,65,0.90),
-    rgba(10,18,30,0.96));
+    rgba(20,40,65,0.88),
+    rgba(10,20,35,0.96));
 
-    border:
-    1px solid rgba(120,180,255,0.20);
+    border:1px solid rgba(120,180,255,0.18);
 
     backdrop-filter:blur(8px);
 
     box-shadow:
-    0 0 28px rgba(90,160,255,0.12),
-    0 25px 60px rgba(0,0,0,0.65);
+    0 0 30px rgba(80,140,255,0.10),
+    0 20px 60px rgba(0,0,0,0.65);
 
     overflow:hidden;
 
     transition:
-    transform 1.1s ease,
-    opacity 1.1s ease,
-    box-shadow 0.4s ease;
-}
+    transform 1s ease,
+    opacity 1s ease,
+    box-shadow 0.5s ease;
 
+    backface-visibility:hidden;
+}
 /* CARD HOVER */
 .card:hover{
 
@@ -348,23 +348,24 @@ body{
     z-index:9999;
 }
 
-/* ARROWS */
+/* NAVIGATION BUTTONS */
 .nav{
+    position:absolute;
 
-    width:72px;
-    height:72px;
+    bottom:38px;
+
+    width:62px;
+    height:62px;
 
     border-radius:50%;
 
-    background:
-    rgba(15,30,50,0.78);
+    border:1px solid rgba(120,180,255,0.28);
 
-    border:
-    1px solid rgba(120,180,255,0.25);
+    background:rgba(15,30,50,0.82);
 
     color:white;
 
-    font-size:34px;
+    font-size:32px;
 
     display:flex;
     align-items:center;
@@ -372,22 +373,30 @@ body{
 
     cursor:pointer;
 
-    backdrop-filter:blur(8px);
+    backdrop-filter:blur(6px);
 
     box-shadow:
-    0 0 20px rgba(90,160,255,0.22);
+    0 0 20px rgba(90,160,255,0.25);
 
     transition:0.3s;
+
+    z-index:999;
 }
 
 .nav:hover{
-
     transform:scale(1.08);
 
     box-shadow:
-    0 0 38px rgba(90,160,255,0.45);
+    0 0 35px rgba(90,160,255,0.55);
 }
 
+.left{
+    left:25%;
+}
+
+.right{
+    right:25%;
+}
 /* RETURN BUTTON */
 .return-button{
 
@@ -472,6 +481,40 @@ body{
     }
 }
 
+/* WATER REFLECTION */
+.water::after{
+    content:"";
+
+    position:absolute;
+    width:200%;
+    height:120%;
+
+    left:-50%;
+    bottom:-20px;
+
+    background:
+    repeating-linear-gradient(
+    90deg,
+    rgba(120,180,255,0.05) 0px,
+    rgba(120,180,255,0.12) 40px,
+    rgba(0,0,0,0.02) 80px
+    );
+
+    opacity:0.35;
+
+    animation:waterFlow 18s linear infinite;
+}
+
+@keyframes waterFlow{
+    from{
+        transform:translateX(0px);
+    }
+
+    to{
+        transform:translateX(-300px);
+    }
+}
+    
 </style>
 </head>
 
@@ -705,8 +748,7 @@ function positionCards(){
 
     cards.forEach((card,index)=>{
 
-        const theta =
-        (360 / total) * index + angle;
+        const theta = (360 / total) * index + angle;
 
         card.style.transform =
         `
