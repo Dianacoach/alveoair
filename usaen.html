@@ -619,11 +619,14 @@ body{
 <script>
 
 const carousel = document.getElementById('carousel');
+
 const cards = document.querySelectorAll('.card');
 
 let angle = 0;
+
 const total = cards.length;
-const radius = 1250;
+
+const radius = 650;
 
 function positionCards(){
 
@@ -639,55 +642,17 @@ function positionCards(){
     });
 }
 
+function rotateCarousel(direction){
+
+    angle += direction * -32;
+
+    positionCards();
+}
+
 positionCards();
 
-/* =====================================
-   DRAG ROTATION
-===================================== */
-
-let isDragging = false;
-let startX = 0;
-
-/* MOUSE */
-document.addEventListener('mousedown', e=>{
-    isDragging = true;
-    startX = e.clientX;
-});
-
-document.addEventListener('mouseup', ()=>{
-    isDragging = false;
-});
-
-document.addEventListener('mousemove', e=>{
-
-    if(!isDragging) return;
-
-    let delta = e.clientX - startX;
-
-    angle += delta * 0.08;
-
-    positionCards();
-
-    startX = e.clientX;
-});
-
-/* TOUCH */
-document.addEventListener('touchstart', e=>{
-    startX = e.touches[0].clientX;
-});
-
-document.addEventListener('touchmove', e=>{
-
-    let delta = e.touches[0].clientX - startX;
-
-    angle += delta * 0.12;
-
-    positionCards();
-
-    startX = e.touches[0].clientX;
-});
-
 </script>
+
 
 </body>
 </html>
