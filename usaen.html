@@ -2,358 +2,231 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">     
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>AlveoAir | International Respiratory Coaching</title>
+<meta name="description" content="Respiratory therapist coaching for CPAP, BiPAP, oxygen therapy and breathing conditions.
+Practical home guidance to improve comfort, safety and daily breathing.">
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+<title>Respiratory Home Coach | CPAP, BiPAP, Oxygen, Trach Care & Home Breathing Support</title>
 
 <style>
 
-/* RESET */
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+/* BODY BACKGROUND */
+body {
+    background-color: #eaf6fb;
+    font-family: 'Playfair Display', serif;
 }
 
-/* BODY */
-body{
-    overflow:hidden;
-    background:#02070d;
-    font-family:'Lato',sans-serif;
-    height:100vh;
-    color:white;
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
 }
 
-/* OCEAN BACKGROUND */
-.ocean{
-    position:fixed;
-    width:100%;
-    height:100%;
-    overflow:hidden;
-    background:
-    radial-gradient(circle at top,#0c1d31 0%,#040b14 45%,#01050a 100%);
+/* HEADER */
+.header {
+    display: flex;
+    align-items: left;
+    gap: 25px;
+    flex-wrap: wrap;
 }
 
-/* DISTANT LIGHT */
-.light-glow{
-    position:absolute;
-    width:700px;
-    height:700px;
-    background:radial-gradient(circle,
-    rgba(90,160,255,0.18) 0%,
-    rgba(0,0,0,0) 70%);
-    top:-250px;
-    left:50%;
-    transform:translateX(-50%);
-    animation:glowMove 12s ease-in-out infinite alternate;
+.logo {
+    max-width: 250px;
 }
 
-@keyframes glowMove{
-    from{
-        transform:translateX(-50%) translateY(0px);
-    }
-    to{
-        transform:translateX(-48%) translateY(20px);
-    }
+.header-right {
+    display: flex;
+    flex-direction: column;
 }
 
-/* MAIN SCENE */
-.scene{
-    position:relative;
-    width:100%;
-    height:100vh;
-    perspective:1800px;
-    overflow:hidden;
+h1 {
+    margin: 0 0 10px 0;
+    font-size: 2.2em;
 }
 
-/* CAROUSEL */
-.carousel{
-    position:absolute;
-    width:100%;
-    height:100%;
-    transform-style:preserve-3d;
+/* NAV */
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
 }
 
-/* CARD */
-.card{
-    position:absolute;
-    width:320px;
-    height:430px;
-
-    left:50%;
-    top:50%;
-
-    margin-left:-160px;
-    margin-top:-215px;
-
-    border-radius:24px;
-
-    background:
-    linear-gradient(to bottom,
-    rgba(20,40,65,0.92),
-    rgba(10,20,35,0.96));
-
-    border:1px solid rgba(120,180,255,0.22);
-
-    backdrop-filter:blur(6px);
-
-    box-shadow:
-    0 0 25px rgba(80,140,255,0.12),
-    0 20px 50px rgba(0,0,0,0.55);
-
-    overflow:hidden;
-
-    transition:
-    transform 1s ease,
-    opacity 1s ease,
-    box-shadow 0.5s ease;
+.nav-item {
+    position: relative;
 }
 
-/* CARD HOVER */
-.card:hover{
-    box-shadow:
-    0 0 35px rgba(120,180,255,0.28),
-    0 20px 60px rgba(0,0,0,0.7);
-
-    cursor:pointer;
+.nav-button {
+    background-color: #66b3ff;
+    color: black; /* changed */
+    padding: 7px 12px;
+    border-radius: 20px;
+    font-size: 0.85em;
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-block;
+    min-width: 85px;
+    text-align: center;
 }
 
-/* CARD CONTENT */
-.card-content{
-    padding:28px;
-    height:100%;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    text-align:center;
+.nav-button:hover {
+    background-color: #4da6ff;
 }
 
-/* LOGO IMAGE */
-.logo{
-    width:220px;
-    margin:auto;
-    margin-bottom:20px;
+/* DROPDOWN */
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 36px;
+    left: 0;
+    background: white;
+    border-radius: 6px;
+    min-width: 180px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+    z-index: 1000;
 }
 
-/* TITLES */
-.card h1,
-.card h2{
-    font-family:'Playfair Display',serif;
-    margin-bottom:18px;
-    letter-spacing:1px;
+.dropdown a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
 }
 
-.card h1{
-    font-size:34px;
+.dropdown a:hover {
+    background-color: #f0f0f0;
 }
 
-.card h2{
-    font-size:28px;
+/* CLICK ACTIVATION */
+.nav-item.active .dropdown {
+    display: block;
 }
 
-/* TEXT */
-.card p{
-    line-height:1.7;
-    font-size:16px;
-    color:#d9e8ff;
+/* SUB DROPDOWN */
+.sub-dropdown {
+    position: relative;
 }
 
-/* CONTACT LINKS */
-.contact-links{
-    display:flex;
-    flex-direction:column;
-    gap:15px;
-    margin-top:25px;
+.sub-dropdown-content {
+    display: none;
+    position: absolute;
+    left: 180px;
+    top: 0;
+    background: white;
+    border-radius: 6px;
+    min-width: 180px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
 }
 
-.contact-links a{
-    text-decoration:none;
-    color:#9dd0ff;
-    border:1px solid rgba(120,180,255,0.25);
-    padding:12px;
-    border-radius:12px;
-    transition:0.3s;
+.sub-dropdown.active .sub-dropdown-content {
+    display: block;
 }
 
-.contact-links a:hover{
-    background:rgba(120,180,255,0.12);
+/* MAIN */
+.main-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 40px;
+    gap: 30px;
+    flex-wrap: wrap;
 }
 
-/* MESSAGE BOX */
-.message-box{
-    margin-top:20px;
+.text-section {
+    flex: 1;
+    min-width: 280px;
+    font-size: 1.05em;
+    line-height: 1.6;
 }
 
-.message-box textarea{
-    width:100%;
-    height:90px;
-    border:none;
-    border-radius:12px;
-    padding:12px;
-    resize:none;
-    background:rgba(255,255,255,0.08);
-    color:white;
+.image-section {
+    flex: 0 0 260px;
+    text-align: center;
 }
 
-.message-box button{
-    margin-top:12px;
-    padding:12px 20px;
-    border:none;
-    border-radius:12px;
-    background:#2f7dff;
-    color:white;
-    font-weight:bold;
-    cursor:pointer;
-    transition:0.3s;
+.image-section img {
+    width: 100%;
+    border-radius: 12px;
 }
 
-.message-box button:hover{
-    background:#4b93ff;
+/* BUTTON STYLE */
+.contact-btn {
+    background-color: #8fd19e;
+    color: black;
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-size: 0.85em;
+    text-decoration: none;
+    display: inline-block;
 }
 
-/* NAVIGATION BUTTONS */
-.nav{
-    position:absolute;
-    top:50%;
-    transform:translateY(-50%);
-    width:70px;
-    height:70px;
-
-    border-radius:50%;
-    border:1px solid rgba(120,180,255,0.3);
-
-    background:rgba(15,30,50,0.75);
-
-    color:white;
-    font-size:38px;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    cursor:pointer;
-
-    backdrop-filter:blur(6px);
-
-    box-shadow:
-    0 0 20px rgba(90,160,255,0.25);
-
-    transition:0.3s;
-
-    z-index:999;
+.contact-btn:hover {
+    background-color: #6fcf97;
 }
 
-.nav:hover{
-    transform:translateY(-50%) scale(1.08);
-    box-shadow:
-    0 0 35px rgba(90,160,255,0.55);
+/* FORM */
+.form-card {
+    background: #eaf6fb; /* same as body */
+    padding: 25px;
+    border-radius: 12px;
+    max-width: 500px;
+    margin: 40px auto;
 }
 
-.left{
-    left:30px;
+.form-card input,
+.form-card textarea {
+    background: white;   /* ✅ stays white */
+    color: black;
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+    
+.form-card button {
+    background-color: #8fd19e;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
 }
 
-.right{
-    right:30px;
+/* CONTACT + PHOTO LAYOUT */
+.contact-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+    margin-top: 50px;
+    flex-wrap: wrap;
 }
 
-/* RETURN BUTTON */
-.return-button{
-
-    position:absolute;
-
-    bottom:20px;
-    left:20px;
-
-    width:72px;
-    height:72px;
-
-    border-radius:50%;
-
-    background:
-    radial-gradient(circle,
-    rgba(90,170,255,0.95),
-    rgba(20,60,120,0.95));
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    font-size:12px;
-    font-weight:bold;
-
-    letter-spacing:1px;
-
-    color:white;
-
-    box-shadow:
-    0 0 18px rgba(100,180,255,0.7),
-    0 0 45px rgba(100,180,255,0.25);
-
-    animation:pulse 3s infinite ease-in-out;
-
-    z-index:999;
-
-    cursor:pointer;
-
-    transition:0.3s;
+.contact-photo {
+    flex: 0 0 220px;
+    text-align: center;
 }
 
-.return-button:hover{
-
-    transform:scale(1.08);
-
-    box-shadow:
-    0 0 28px rgba(100,180,255,0.95),
-    0 0 60px rgba(100,180,255,0.35);
+.contact-photo img {
+    width: 100%;
+    max-width: 320px;
+    border-radius: 14px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
-    animation:pulse 3s infinite ease-in-out;
-
-    z-index:999;
+.contact-wrapper .form-card {
+    margin: 0;
 }
-
-@keyframes pulse{
-    0%{
-        transform:translateX(-50%) scale(1);
-    }
-
-    50%{
-        transform:translateX(-50%) scale(1.06);
-    }
-
-    100%{
-        transform:translateX(-50%) scale(1);
-    }
-}
-
-/* MOBILE */
-@media(max-width:768px){
-
-    .card{
-        width:270px;
-        height:390px;
-        margin-left:-135px;
-        margin-top:-195px;
-    }
-
-    .card p{
-        font-size:14px;
-    }
-
-    .nav{
-        width:58px;
-        height:58px;
-        font-size:30px;
-    }
-
-    .return-button{
-        width:90px;
-        height:90px;
-        font-size:17px;
-    }
+    
+/* DISCLAIMER */
+.disclaimer {
+    margin-top: 30px;
+    font-size: 0.8em;
+    color: #777;
+    max-width: 800px;
 }
 
 </style>
@@ -361,268 +234,178 @@ body{
 
 <body>
 
-<div class="ocean">
+<div class="container">
 
-    <div class="light-glow"></div>
+    <!-- HEADER -->
+    <div class="header">
+        <img src="logo.png" alt="Logo" class="logo">
+        
+        <div class="header-right">
+            <p style="font-size: 3rem; line-height: 2; color: #555555;">
+                <strong>Respiratory Home Coach</strong>
+        
+            <div class="navbar">
 
-    <div class="scene">
-
-        <!-- RETURN BUTTON -->
-        <div class="return-button">
-            RETURN
-        </div>
-
-        <!-- CAROUSEL -->
-        <div class="carousel" id="carousel">
-
-            <!-- ESPANOL -->
-            <div class="card">
-                <div class="card-content">
-                    <h1>Español</h1>
-                    <p>
-                        Entrar al sitio en Español.
-                    </p>
+                <div class="nav-item">
+                    <a href="about.html" class="nav-button">About</a>
                 </div>
-            </div>
 
-            <!-- LOGO -->
-            <div class="card">
-                <div class="card-content">
+                <div class="nav-item">
+                    <div class="nav-button">Coaching</div>
+                    <div class="dropdown">
 
-                    <img src="logo.png" class="logo">
+                        <div class="sub-dropdown">
+                            <a href="#">Equipment ▶</a>
+                            <div class="sub-dropdown-content">
+                                <a href="bipap.html">BiPAP</a>
+                                <a href="cpap.html">CPAP</a>
+                                <a href="masks.html">Masks</a>
+                                <a href="concentrators.html">Concentrators</a>
+                                <a href="trachtube.html">Trach Tubes</a>
+                                <a href="nebs.html">Med.Nebulizers</a>
+                            </div>
+                        </div>
 
-                    <h2>AlveoAir</h2>
-
-                    <p>
-                        International Respiratory Coaching
-                    </p>
-
-                </div>
-            </div>
-
-            <!-- INTRO -->
-            <div class="card">
-                <div class="card-content">
-
-                    <h2>Welcome</h2>
-
-                    <p>
-                        Registered Respiratory Therapist with over 30 years of experience in Emergency Care, ICU, ventilator management and rehabilitation.
-                        <br><br>
-                        Remote respiratory coaching through video, WhatsApp, phone and email.
-                        <br><br>
-                        Structured improvement plans focused on prevention, support, confidence and quality of life.
-                        <br><br>
-                        Fully bilingual:
-                        English & Spanish.
-                    </p>
-
-                </div>
-            </div>
-
-            <!-- CONTACT -->
-            <div class="card">
-                <div class="card-content">
-
-                    <h2>Contact</h2>
-
-                    <div class="contact-links">
-
-                        <a href="#">
-                            WhatsApp
-                        </a>
-
-                        <a href="#">
-                            Email
-                        </a>
-
-                        <a href="#">
-                            LinkedIn
-                        </a>
+                        <div class="sub-dropdown">
+                            <a href="#">Therapy ▶</a>
+                            <div class="sub-dropdown-content">
+                                <a href="o2.html">Oxygen Use</a>
+                                <a href="copd.html">COPD</a>
+                                <a href="pmv.html">Speaking Valve</a>
+                            </div>
+                        </div>
 
                     </div>
+                </div>
 
-                    <div class="message-box">
-
-                        <textarea placeholder="Send a private message..."></textarea>
-
-                        <button>
-                            Send
-                        </button>
-
+                <div class="nav-item">
+                    <div class="nav-button">Plans</div>
+                    <div class="dropdown">
+                        <a href="basicusa.html">Basic</a>
+                        <a href="preventusaen.html">Prevention</a>
+                        <a href="flexusaen.html">Flex</a>
                     </div>
-
                 </div>
-            </div>
 
-            <!-- ABOUT -->
-            <div class="card">
-                <div class="card-content">
-
-                    <h1>About</h1>
-
-                    <p>
-                        Experience, respiratory coaching philosophy and professional background.
-                    </p>
-
+                <div class="nav-item">
+                    <a href="application.html" class="nav-button">Apply</a>
                 </div>
-            </div>
 
-            <!-- COACHING -->
-            <div class="card">
-                <div class="card-content">
-
-                    <h1>Coaching</h1>
-
-                    <p>
-                        Equipment guidance, therapy support and respiratory education.
-                    </p>
-
+                <div class="nav-item">
+                    <a href="freetrial.html" class="nav-button">Trial</a>
                 </div>
-            </div>
 
-            <!-- PLANS -->
-            <div class="card">
-                <div class="card-content">
-
-                    <h1>Plans</h1>
-
-                    <p>
-                        Basic, Prevention and Flex respiratory coaching plans.
-                    </p>
-
+                <div class="nav-item">
+                    <a href="pay.html" class="nav-button">Payments</a>
                 </div>
-            </div>
 
-            <!-- APPLY -->
-            <div class="card">
-                <div class="card-content">
-
-                    <h1>Apply</h1>
-
-                    <p>
-                        Respiratory intake application and personalized support setup.
-                    </p>
-
+                <div class="nav-item">
+                    <a href="t&c.html" class="nav-button">Terms</a>
                 </div>
+
             </div>
-
-            <!-- TRIAL -->
-            <div class="card">
-                <div class="card-content">
-
-                    <h1>Free Trial</h1>
-
-                    <p>
-                        Experience respiratory coaching free for 20 minutes.
-                    </p>
-
-                </div>
-            </div>
-
-            <!-- PAYMENTS -->
-            <div class="card">
-                <div class="card-content">
-
-                    <h1>Payments</h1>
-
-                    <p>
-                        Secure international payment options and assistance.
-                    </p>
-
-                </div>
-            </div>
-
-            <!-- TERMS -->
-            <div class="card">
-                <div class="card-content">
-
-                    <h1>Terms</h1>
-
-                    <p>
-                        Privacy, support guidelines and service information.
-                    </p>
-
-                </div>
-            </div>
-
         </div>
-
     </div>
 
+      <a href="usaes.html" class="contact-btn"><H2>Español </H2></a>
+    
+    <!-- MAIN -->
+    <div class="main-content">
+
+        <div class="text-section">
+            <p style="font-size: 1.3rem; line-height: 1.8; color: #3f6f8f;">
+    Focused on helping prevent respiratory setbacks and ineffective therapy management through structured weekly improvement plans with realistic
+    and achievable short-term goals. These plans are designed to promote better respiratory habits, safer therapy management and measurable day-to-day progress.
+    Services focus not only on improving comfort and safety at home, but also on helping individuals feel more confident and independent during daily activities
+    outside the home, including understanding oxygen duration, portable oxygen systems, respiratory equipment use and better day-to-day respiratory planning.
+    Support and guidance are provided through video, telephone calls and email, offering remote respiratory coaching designed to improve understanding and
+    confidence in the management of oxygen therapy, CPAP/BiPAP, tracheostomy care, inhaled medications and respiratory equipment. Services are aimed at helping
+    reduce confusion, errors, delays, stress and potential respiratory-related complications while promoting safer and more effective respiratory habits. 
+    Guidance is also available for decisions related to purchasing or renting respiratory equipment.
+    Available services include the Basic, Preventive, and Flexible plans. These services are designed to complement your physician’s care by providing patients,
+    caregivers, family members, or daily support personnel with access to professional and specialized respiratory guidance whenever it is needed most or as
+    part of daily respiratory support.
+            </p>
+        </div>
+
+        <div class="image-section">
+            <img src="julio1.png" alt="Respiratory Coach">
+            <p><em>Julio Bautista, RRT — Respiratory Coach</em></p>
+
+            <div style="margin-top:15px;">
+                <a href="https://wa.me/34644810639" class="contact-btn">WhatsApp</a>
+               
+                <a href="mailto:alveoair@gmail.com" class="contact-btn">alveoair@gmail.com </a>
+                
+            </div>
+        </div>
+
+ <!-- CONTACT + PHOTO SECTION -->
+<div class="contact-wrapper">
+
+    <!-- LEFT PHOTO -->
+    <div class="contact-photo">
+        <img src="julio2.png" alt="Julio Bautista">
+    </div>
+
+    <!-- RIGHT FORM -->
+    <div class="form-card">
+        <h2>Start your FREE 30 minutes trial now</h2>
+        <h3>Please include your contact information inside the message.</h3>
+
+        <form action="https://formspree.io/f/mvzwrnel" method="POST">
+            <input type="hidden" name="_subject" value="Mensaje de la web Alveoair">
+            <input type="text" name="_gotcha" style="display:none">
+
+            <label>Your message:</label>
+            <textarea name="mensaje" rows="8" required placeholder="Write your message and contact information here..."></textarea>
+
+            <div style="text-align:center; margin-top:15px;">
+                <button type="submit">Send Message</button>
+            </div>
+        </form>
+    </div>
+
+</div>
+<!-- SCRIPT -->
 <script>
+document.querySelectorAll('.nav-button').forEach(button => {
+    button.addEventListener('click', function(e) {
+        let parent = this.parentElement;
 
-const carousel = document.getElementById('carousel');
-const cards = document.querySelectorAll('.card');
+        document.querySelectorAll('.nav-item').forEach(item => {
+            if (item !== parent) {
+                item.classList.remove('active');
+            }
+        });
 
-let angle = 0;
-const total = cards.length;
-const radius = 650;
-
-function positionCards(){
-
-    cards.forEach((card,index)=>{
-
-        const theta = (360 / total) * index + angle;
-
-        card.style.transform =
-        `
-        rotateY(${theta}deg)
-        translateZ(${radius}px)
-        `;
+        parent.classList.toggle('active');
+        e.stopPropagation();
     });
-}
-
-positionCards();
-
-/* =====================================
-   DRAG ROTATION
-===================================== */
-
-let isDragging = false;
-let startX = 0;
-
-/* MOUSE */
-document.addEventListener('mousedown', e=>{
-    isDragging = true;
-    startX = e.clientX;
 });
 
-document.addEventListener('mouseup', ()=>{
-    isDragging = false;
+document.addEventListener('click', function() {
+    document.querySelectorAll('.nav-item').forEach(item => {
+        item.classList.remove('active');
+    });
 });
 
-document.addEventListener('mousemove', e=>{
 
-    if(!isDragging) return;
+document.querySelectorAll('.sub-dropdown > a').forEach(item => {
+    item.addEventListener('click', function(e) {
+        let parent = this.parentElement;
 
-    let delta = e.clientX - startX;
+        document.querySelectorAll('.sub-dropdown').forEach(el => {
+            if (el !== parent) {
+                el.classList.remove('active');
+            }
+        });
 
-    angle += delta * 0.08;
-
-    positionCards();
-
-    startX = e.clientX;
+        parent.classList.toggle('active');
+        e.stopPropagation();
+        e.preventDefault();
+    });
 });
-
-/* TOUCH */
-document.addEventListener('touchstart', e=>{
-    startX = e.touches[0].clientX;
-});
-
-document.addEventListener('touchmove', e=>{
-
-    let delta = e.touches[0].clientX - startX;
-
-    angle += delta * 0.12;
-
-    positionCards();
-
-    startX = e.touches[0].clientX;
-});
-
 </script>
-
-
 </body>
 </html>
