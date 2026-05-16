@@ -20,52 +20,40 @@
 /* BODY */
 body{
     overflow:hidden;
-    background:#01060c;
+    background:#02070d;
     font-family:'Lato',sans-serif;
     height:100vh;
     color:white;
 }
 
-/* OCEAN ROOM */
+/* OCEAN BACKGROUND */
 .ocean{
     position:fixed;
     width:100%;
     height:100%;
     overflow:hidden;
-
     background:
-    radial-gradient(circle at top,
-    #102238 0%,
-    #07111d 35%,
-    #02070d 70%,
-    #000204 100%);
+    radial-gradient(circle at top,#0c1d31 0%,#040b14 45%,#01050a 100%);
 }
 
-/* SOFT DISTANT LIGHT */
+/* DISTANT LIGHT */
 .light-glow{
     position:absolute;
-    width:900px;
-    height:900px;
-
-    top:-350px;
-    left:50%;
-
-    transform:translateX(-50%);
-
-    background:
-    radial-gradient(circle,
-    rgba(80,140,255,0.18) 0%,
+    width:700px;
+    height:700px;
+    background:radial-gradient(circle,
+    rgba(90,160,255,0.18) 0%,
     rgba(0,0,0,0) 70%);
-
-    animation:glowMove 14s ease-in-out infinite alternate;
+    top:-250px;
+    left:50%;
+    transform:translateX(-50%);
+    animation:glowMove 12s ease-in-out infinite alternate;
 }
 
 @keyframes glowMove{
-
     from{
-        transform:translateX(-52%) translateY(0px);
+        transform:translateX(-50%) translateY(0px);
     }
-
     to{
         transform:translateX(-48%) translateY(20px);
     }
@@ -76,67 +64,52 @@ body{
     position:absolute;
     bottom:0;
     width:100%;
-    height:38%;
-    overflow:hidden;
-
+    height:35%;
     background:
     linear-gradient(to bottom,
-    rgba(20,40,60,0.04),
-    rgba(0,0,0,0.95));
+    rgba(20,40,60,0.15),
+    rgba(0,0,0,0.9));
+
+    overflow:hidden;
 }
 
 /* WATER WAVES */
 .wave{
     position:absolute;
-
-    width:250%;
-    height:220%;
-
-    left:-50%;
-    bottom:-72%;
-
-    border-radius:42%;
-
-    background:
-    rgba(30,90,160,0.10);
-
-    animation:waveMove 24s linear infinite;
+    width:200%;
+    height:100%;
+    background:rgba(40,90,150,0.08);
+    border-radius:45%;
+    animation:waveMove 18s linear infinite;
 }
 
 .wave:nth-child(2){
-    animation-duration:36s;
-    opacity:0.55;
-    bottom:-75%;
+    top:15px;
+    animation-duration:25s;
+    opacity:0.6;
 }
 
 .wave:nth-child(3){
-    animation-duration:48s;
-    opacity:0.3;
-    bottom:-78%;
+    top:30px;
+    animation-duration:32s;
+    opacity:0.4;
 }
 
 @keyframes waveMove{
-
     from{
-        transform:
-        rotate(0deg)
-        translateX(0);
+        transform:translateX(0);
     }
-
     to{
-        transform:
-        rotate(360deg)
-        translateX(-8%);
+        transform:translateX(-25%);
     }
 }
 
-/* SCENE */
+/* MAIN SCENE */
 .scene{
     position:relative;
     width:100%;
     height:100vh;
-
-    perspective:2800px;
+    perspective:1800px;
     overflow:hidden;
 }
 
@@ -146,38 +119,34 @@ body{
     width:100%;
     height:100%;
     transform-style:preserve-3d;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
 }
+
 /* CARD */
 .card{
     position:absolute;
-
-    width:260px;
-    height:360px;
+    width:320px;
+    height:430px;
 
     left:50%;
-    top:46%;
+    top:50%;
 
-    margin-left:-130px;
-    margin-top:-180px;
+    margin-left:-160px;
+    margin-top:-215px;
 
     border-radius:24px;
 
     background:
     linear-gradient(to bottom,
-    rgba(20,40,65,0.88),
+    rgba(20,40,65,0.92),
     rgba(10,20,35,0.96));
 
-    border:1px solid rgba(120,180,255,0.18);
+    border:1px solid rgba(120,180,255,0.22);
 
-    backdrop-filter:blur(8px);
+    backdrop-filter:blur(6px);
 
     box-shadow:
-    0 0 30px rgba(80,140,255,0.10),
-    0 20px 60px rgba(0,0,0,0.65);
+    0 0 25px rgba(80,140,255,0.12),
+    0 20px 50px rgba(0,0,0,0.55);
 
     overflow:hidden;
 
@@ -185,47 +154,39 @@ body{
     transform 1s ease,
     opacity 1s ease,
     box-shadow 0.5s ease;
-
-    backface-visibility:hidden;
 }
+
 /* CARD HOVER */
 .card:hover{
-
     box-shadow:
-    0 0 45px rgba(120,180,255,0.35),
-    0 35px 80px rgba(0,0,0,0.82);
+    0 0 35px rgba(120,180,255,0.28),
+    0 20px 60px rgba(0,0,0,0.7);
 
     cursor:pointer;
 }
 
-/* CONTENT */
+/* CARD CONTENT */
 .card-content{
-
-    height:100%;
-
     padding:28px;
-
+    height:100%;
     display:flex;
     flex-direction:column;
     justify-content:center;
     text-align:center;
 }
 
-/* LOGO */
+/* LOGO IMAGE */
 .logo{
-    width:210px;
+    width:220px;
     margin:auto;
-    margin-bottom:22px;
+    margin-bottom:20px;
 }
 
 /* TITLES */
 .card h1,
 .card h2{
-
     font-family:'Playfair Display',serif;
-
     margin-bottom:18px;
-
     letter-spacing:1px;
 }
 
@@ -239,44 +200,30 @@ body{
 
 /* TEXT */
 .card p{
-
-    line-height:1.8;
-    font-size:15px;
-
-    color:#d7e7ff;
+    line-height:1.7;
+    font-size:16px;
+    color:#d9e8ff;
 }
 
-/* CONTACTS */
+/* CONTACT LINKS */
 .contact-links{
-
     display:flex;
     flex-direction:column;
-
-    gap:14px;
-
-    margin-top:22px;
+    gap:15px;
+    margin-top:25px;
 }
 
 .contact-links a{
-
     text-decoration:none;
-
-    color:#9fd4ff;
-
+    color:#9dd0ff;
+    border:1px solid rgba(120,180,255,0.25);
     padding:12px;
-
     border-radius:12px;
-
-    border:
-    1px solid rgba(120,180,255,0.22);
-
     transition:0.3s;
 }
 
 .contact-links a:hover{
-
-    background:
-    rgba(120,180,255,0.10);
+    background:rgba(120,180,255,0.12);
 }
 
 /* MESSAGE BOX */
@@ -285,87 +232,47 @@ body{
 }
 
 .message-box textarea{
-
     width:100%;
-    height:88px;
-
+    height:90px;
     border:none;
-    outline:none;
-
-    resize:none;
-
     border-radius:12px;
-
     padding:12px;
-
-    background:
-    rgba(255,255,255,0.08);
-
+    resize:none;
+    background:rgba(255,255,255,0.08);
     color:white;
 }
 
 .message-box button{
-
     margin-top:12px;
-
-    padding:12px 18px;
-
+    padding:12px 20px;
     border:none;
-
     border-radius:12px;
-
     background:#2f7dff;
-
     color:white;
-
     font-weight:bold;
-
     cursor:pointer;
-
     transition:0.3s;
 }
 
 .message-box button:hover{
-    background:#4c96ff;
-}
-
-/* BOTTOM NAVIGATION */
-.bottom-controls{
-
-    position:absolute;
-
-    bottom:18px;
-
-    width:100%;
-
-    display:flex;
-
-    justify-content:center;
-    align-items:center;
-
-    gap:45px;
-
-    z-index:9999;
+    background:#4b93ff;
 }
 
 /* NAVIGATION BUTTONS */
 .nav{
     position:absolute;
-
-    bottom:38px;
-
-    width:62px;
-    height:62px;
+    top:50%;
+    transform:translateY(-50%);
+    width:70px;
+    height:70px;
 
     border-radius:50%;
+    border:1px solid rgba(120,180,255,0.3);
 
-    border:1px solid rgba(120,180,255,0.28);
-
-    background:rgba(15,30,50,0.82);
+    background:rgba(15,30,50,0.75);
 
     color:white;
-
-    font-size:32px;
+    font-size:38px;
 
     display:flex;
     align-items:center;
@@ -384,62 +291,65 @@ body{
 }
 
 .nav:hover{
-    transform:scale(1.08);
-
+    transform:translateY(-50%) scale(1.08);
     box-shadow:
     0 0 35px rgba(90,160,255,0.55);
 }
 
 .left{
-    left:25%;
+    left:30px;
 }
 
 .right{
-    right:25%;
+    right:30px;
 }
+
 /* RETURN BUTTON */
 .return-button{
+    position:absolute;
+    bottom:28px;
+    left:50%;
+    transform:translateX(-50%);
 
-    width:105px;
-    height:105px;
+    width:110px;
+    height:110px;
 
     border-radius:50%;
 
     background:
     radial-gradient(circle,
-    rgba(110,190,255,0.98),
-    rgba(15,55,120,0.98));
+    rgba(90,170,255,0.95),
+    rgba(20,60,120,0.95));
 
     display:flex;
     align-items:center;
     justify-content:center;
 
-    text-align:center;
-
-    font-size:18px;
+    font-size:20px;
     font-weight:bold;
 
     color:white;
 
     box-shadow:
-    0 0 28px rgba(120,190,255,0.75),
-    0 0 80px rgba(120,190,255,0.35);
+    0 0 25px rgba(100,180,255,0.7),
+    0 0 70px rgba(100,180,255,0.3);
 
-    animation:pulse 3s ease-in-out infinite;
+    animation:pulse 3s infinite ease-in-out;
+
+    z-index:999;
 }
 
 @keyframes pulse{
-
     0%{
-        transform:scale(1);
+        transform:translateX(-50%) scale(1);
     }
 
     50%{
-        transform:scale(1.06);
+        transform:translateX(-50%) scale(1.06);
     }
 
     100%{
-        transform:scale(1);
+        transform:translateX(-50%) scale(1);
     }
 }
 
@@ -447,74 +357,29 @@ body{
 @media(max-width:768px){
 
     .card{
-
-        width:250px;
-        height:380px;
-
-        margin-left:-125px;
-        margin-top:-190px;
+        width:270px;
+        height:390px;
+        margin-left:-135px;
+        margin-top:-195px;
     }
 
     .card p{
         font-size:14px;
     }
 
-    .bottom-controls{
-        gap:22px;
-        bottom:12px;
-    }
-
     .nav{
-
         width:58px;
         height:58px;
-
-        font-size:28px;
+        font-size:30px;
     }
 
     .return-button{
-
-        width:88px;
-        height:88px;
-
-        font-size:15px;
+        width:90px;
+        height:90px;
+        font-size:17px;
     }
 }
 
-/* WATER REFLECTION */
-.water::after{
-    content:"";
-
-    position:absolute;
-    width:200%;
-    height:120%;
-
-    left:-50%;
-    bottom:-20px;
-
-    background:
-    repeating-linear-gradient(
-    90deg,
-    rgba(120,180,255,0.05) 0px,
-    rgba(120,180,255,0.12) 40px,
-    rgba(0,0,0,0.02) 80px
-    );
-
-    opacity:0.35;
-
-    animation:waterFlow 18s linear infinite;
-}
-
-@keyframes waterFlow{
-    from{
-        transform:translateX(0px);
-    }
-
-    to{
-        transform:translateX(-300px);
-    }
-}
-    
 </style>
 </head>
 
@@ -524,8 +389,22 @@ body{
 
     <div class="light-glow"></div>
 
-    <!-- SCENE -->
     <div class="scene">
+
+        <!-- LEFT ARROW -->
+        <div class="nav left" onclick="rotateCarousel(-1)">
+            &#10094;
+        </div>
+
+        <!-- RIGHT ARROW -->
+        <div class="nav right" onclick="rotateCarousel(1)">
+            &#10095;
+        </div>
+
+        <!-- RETURN BUTTON -->
+        <div class="return-button">
+            RETURN
+        </div>
 
         <!-- CAROUSEL -->
         <div class="carousel" id="carousel">
@@ -533,13 +412,10 @@ body{
             <!-- ESPANOL -->
             <div class="card">
                 <div class="card-content">
-
                     <h1>Español</h1>
-
                     <p>
                         Entrar al sitio en Español.
                     </p>
-
                 </div>
             </div>
 
@@ -565,10 +441,13 @@ body{
                     <h2>Welcome</h2>
 
                     <p>
-                        Registered Respiratory Therapist with over 30 years of experience in ICU, Emergency Care, ventilator management and rehabilitation.
+                        Registered Respiratory Therapist with over 30 years of experience in Emergency Care, ICU, ventilator management and rehabilitation.
                         <br><br>
                         Remote respiratory coaching through video, WhatsApp, phone and email.
                         <br><br>
+                        Structured improvement plans focused on prevention, support, confidence and quality of life.
+                        <br><br>
+                        Fully bilingual:
                         English & Spanish.
                     </p>
 
@@ -599,7 +478,7 @@ body{
 
                     <div class="message-box">
 
-                        <textarea placeholder="Private message..."></textarea>
+                        <textarea placeholder="Send a private message..."></textarea>
 
                         <button>
                             Send
@@ -617,7 +496,7 @@ body{
                     <h1>About</h1>
 
                     <p>
-                        Experience, coaching philosophy and respiratory background.
+                        Experience, respiratory coaching philosophy and professional background.
                     </p>
 
                 </div>
@@ -643,7 +522,7 @@ body{
                     <h1>Plans</h1>
 
                     <p>
-                        Basic, Prevention and Flex plans.
+                        Basic, Prevention and Flex respiratory coaching plans.
                     </p>
 
                 </div>
@@ -656,7 +535,7 @@ body{
                     <h1>Apply</h1>
 
                     <p>
-                        Respiratory intake application and personalized setup.
+                        Respiratory intake application and personalized support setup.
                     </p>
 
                 </div>
@@ -682,7 +561,7 @@ body{
                     <h1>Payments</h1>
 
                     <p>
-                        Secure international payment options.
+                        Secure international payment options and assistance.
                     </p>
 
                 </div>
@@ -703,23 +582,6 @@ body{
 
         </div>
 
-        <!-- BOTTOM CONTROLS -->
-        <div class="bottom-controls">
-
-            <div class="nav" onclick="rotateCarousel(-1)">
-                &#10094;
-            </div>
-
-            <div class="return-button">
-                RETURN
-            </div>
-
-            <div class="nav" onclick="rotateCarousel(1)">
-                &#10095;
-            </div>
-
-        </div>
-
     </div>
 
     <!-- WATER -->
@@ -735,14 +597,15 @@ body{
 
 <script>
 
+const carousel = document.getElementById('carousel');
+
 const cards = document.querySelectorAll('.card');
 
 let angle = 0;
 
 const total = cards.length;
 
-/* BIGGER RADIUS = MORE SPACE */
-const radius = 1250;
+const radius = 900;
 
 function positionCards(){
 
