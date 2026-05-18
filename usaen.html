@@ -26,15 +26,7 @@ body{
     color:white;
 }
 
-/* OCEAN BACKGROUND */
-.ocean{
-    position:fixed;
-    width:100%;
-    height:100%;
-    overflow:hidden;
-    background:
-    radial-gradient(circle at top,#0c1d31 0%,#040b14 45%,#01050a 100%);
-}
+
 
 /* DISTANT LIGHT */
 .light-glow{
@@ -56,51 +48,6 @@ body{
     }
     to{
         transform:translateX(-48%) translateY(20px);
-    }
-}
-
-/* WATER */
-.water{
-    position:absolute;
-    bottom:0;
-    width:100%;
-    height:35%;
-    background:
-    linear-gradient(to bottom,
-    rgba(20,40,60,0.15),
-    rgba(0,0,0,0.9));
-
-    overflow:hidden;
-}
-
-/* WATER WAVES */
-.wave{
-    position:absolute;
-    width:200%;
-    height:100%;
-    background:rgba(40,90,150,0.08);
-    border-radius:45%;
-    animation:waveMove 18s linear infinite;
-}
-
-.wave:nth-child(2){
-    top:15px;
-    animation-duration:25s;
-    opacity:0.6;
-}
-
-.wave:nth-child(3){
-    top:30px;
-    animation-duration:32s;
-    opacity:0.4;
-}
-
-@keyframes waveMove{
-    from{
-        transform:translateX(0);
-    }
-    to{
-        transform:translateX(-25%);
     }
 }
 
@@ -605,7 +552,7 @@ let angle = 0;
 
 const total = cards.length;
 
-const radius = 900;
+const radius = 650;
 
 function positionCards(){
 
