@@ -505,28 +505,16 @@ body{
 
     </div>
 
-    <!-- WATER -->
-    <div class="water">
-
-        <div class="wave"></div>
-        <div class="wave"></div>
-        <div class="wave"></div>
-
-    </div>
-
-</div>
+  
 
 <script>
 
 const carousel = document.getElementById('carousel');
-
 const cards = document.querySelectorAll('.card');
 
 let angle = 0;
-
 const total = cards.length;
-
-const radius = 700;
+const radius = 1250;
 
 function positionCards(){
 
@@ -542,14 +530,53 @@ function positionCards(){
     });
 }
 
-function rotateCarousel(direction){
+positionCards();
 
-    angle += direction * -32;
+/* =====================================
+   DRAG ROTATION
+===================================== */
+
+let isDragging = false;
+let startX = 0;
+
+/* MOUSE */
+document.addEventListener('mousedown', e=>{
+    isDragging = true;
+    startX = e.clientX;
+});
+
+document.addEventListener('mouseup', ()=>{
+    isDragging = false;
+});
+
+document.addEventListener('mousemove', e=>{
+
+    if(!isDragging) return;
+
+    let delta = e.clientX - startX;
+
+    angle += delta * 0.08;
 
     positionCards();
-}
 
-positionCards();
+    startX = e.clientX;
+});
+
+/* TOUCH */
+document.addEventListener('touchstart', e=>{
+    startX = e.touches[0].clientX;
+});
+
+document.addEventListener('touchmove', e=>{
+
+    let delta = e.touches[0].clientX - startX;
+
+    angle += delta * 0.12;
+
+    positionCards();
+
+    startX = e.touches[0].clientX;
+});
 
 </script>
 
