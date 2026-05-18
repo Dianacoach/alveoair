@@ -26,6 +26,15 @@ body{
     color:white;
 }
 
+/* OCEAN BACKGROUND */
+.ocean{
+    position:fixed;
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    background:
+    radial-gradient(circle at top,#0c1d31 0%,#040b14 45%,#01050a 100%);
+}
 
 /* DISTANT LIGHT */
 .light-glow{
@@ -50,6 +59,50 @@ body{
     }
 }
 
+/* WATER */
+.water{
+    position:absolute;
+    bottom:0;
+    width:100%;
+    height:35%;
+    background:
+    linear-gradient(to bottom,
+    rgba(20,40,60,0.15),
+    rgba(0,0,0,0.9));
+
+    overflow:hidden;
+}
+
+/* WATER WAVES */
+.wave{
+    position:absolute;
+    width:200%;
+    height:100%;
+    background:rgba(40,90,150,0.08);
+    border-radius:45%;
+    animation:waveMove 18s linear infinite;
+}
+
+.wave:nth-child(2){
+    top:15px;
+    animation-duration:25s;
+    opacity:0.6;
+}
+
+.wave:nth-child(3){
+    top:30px;
+    animation-duration:32s;
+    opacity:0.4;
+}
+
+@keyframes waveMove{
+    from{
+        transform:translateX(0);
+    }
+    to{
+        transform:translateX(-25%);
+    }
+}
 
 /* MAIN SCENE */
 .scene{
@@ -542,566 +595,17 @@ body{
 
 </div>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>AlveoAir | International Respiratory Coaching</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-
-<style>
-
-/* RESET */
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-/* BODY */
-body{
-    overflow:hidden;
-    background:#02070d;
-    font-family:'Lato',sans-serif;
-    height:100vh;
-    color:white;
-}
-
-/* OCEAN BACKGROUND */
-.ocean{
-    position:fixed;
-    width:100%;
-    height:100%;
-    overflow:hidden;
-    background:
-    radial-gradient(circle at top,#0c1d31 0%,#040b14 45%,#01050a 100%);
-}
-
-/* DISTANT LIGHT */
-.light-glow{
-    position:absolute;
-    width:700px;
-    height:700px;
-    background:radial-gradient(circle,
-    rgba(90,160,255,0.18) 0%,
-    rgba(0,0,0,0) 70%);
-    top:-250px;
-    left:50%;
-    transform:translateX(-50%);
-    animation:glowMove 12s ease-in-out infinite alternate;
-}
-
-@keyframes glowMove{
-    from{
-        transform:translateX(-50%) translateY(0px);
-    }
-    to{
-        transform:translateX(-48%) translateY(20px);
-    }
-}
-
-/* MAIN SCENE */
-.scene{
-    position:relative;
-    width:100%;
-    height:100vh;
-    perspective:1800px;
-    overflow:hidden;
-}
-
-/* CAROUSEL */
-.carousel{
-    position:absolute;
-    width:100%;
-    height:100%;
-    transform-style:preserve-3d;
-}
-
-/* CARD */
-.card{
-    position:absolute;
-    width:320px;
-    height:430px;
-
-    left:50%;
-    top:50%;
-
-    margin-left:-160px;
-    margin-top:-215px;
-
-    border-radius:24px;
-
-    background:
-    linear-gradient(to bottom,
-    rgba(20,40,65,0.92),
-    rgba(10,20,35,0.96));
-
-    border:1px solid rgba(120,180,255,0.22);
-
-    backdrop-filter:blur(6px);
-
-    box-shadow:
-    0 0 25px rgba(80,140,255,0.12),
-    0 20px 50px rgba(0,0,0,0.55);
-
-    overflow:hidden;
-
-    transition:
-    transform 1s ease,
-    opacity 1s ease,
-    box-shadow 0.5s ease;
-}
-
-/* CARD HOVER */
-.card:hover{
-    box-shadow:
-    0 0 35px rgba(120,180,255,0.28),
-    0 20px 60px rgba(0,0,0,0.7);
-
-    cursor:pointer;
-}
-
-/* CARD CONTENT */
-.card-content{
-    padding:28px;
-    height:100%;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    text-align:center;
-}
-
-/* LOGO IMAGE */
-.logo{
-    width:220px;
-    margin:auto;
-    margin-bottom:20px;
-}
-
-/* TITLES */
-.card h1,
-.card h2{
-    font-family:'Playfair Display',serif;
-    margin-bottom:18px;
-    letter-spacing:1px;
-}
-
-.card h1{
-    font-size:34px;
-}
-
-.card h2{
-    font-size:28px;
-}
-
-/* TEXT */
-.card p{
-    line-height:1.7;
-    font-size:16px;
-    color:#d9e8ff;
-}
-
-/* CONTACT LINKS */
-.contact-links{
-    display:flex;
-    flex-direction:column;
-    gap:15px;
-    margin-top:25px;
-}
-
-.contact-links a{
-    text-decoration:none;
-    color:#9dd0ff;
-    border:1px solid rgba(120,180,255,0.25);
-    padding:12px;
-    border-radius:12px;
-    transition:0.3s;
-}
-
-.contact-links a:hover{
-    background:rgba(120,180,255,0.12);
-}
-
-/* MESSAGE BOX */
-.message-box{
-    margin-top:20px;
-}
-
-.message-box textarea{
-    width:100%;
-    height:90px;
-    border:none;
-    border-radius:12px;
-    padding:12px;
-    resize:none;
-    background:rgba(255,255,255,0.08);
-    color:white;
-}
-
-.message-box button{
-    margin-top:12px;
-    padding:12px 20px;
-    border:none;
-    border-radius:12px;
-    background:#2f7dff;
-    color:white;
-    font-weight:bold;
-    cursor:pointer;
-    transition:0.3s;
-}
-
-.message-box button:hover{
-    background:#4b93ff;
-}
-
-/* NAVIGATION BUTTONS */
-.nav{
-    position:absolute;
-    top:50%;
-    transform:translateY(-50%);
-    width:70px;
-    height:70px;
-
-    border-radius:50%;
-    border:1px solid rgba(120,180,255,0.3);
-
-    background:rgba(15,30,50,0.75);
-
-    color:white;
-    font-size:38px;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    cursor:pointer;
-
-    backdrop-filter:blur(6px);
-
-    box-shadow:
-    0 0 20px rgba(90,160,255,0.25);
-
-    transition:0.3s;
-
-    z-index:999;
-}
-
-.nav:hover{
-    transform:translateY(-50%) scale(1.08);
-    box-shadow:
-    0 0 35px rgba(90,160,255,0.55);
-}
-
-.left{
-    left:30px;
-}
-
-.right{
-    right:30px;
-}
-
-/* RETURN BUTTON */
-.return-button{
-
-    position:absolute;
-
-    bottom:20px;
-    left:20px;
-
-    width:72px;
-    height:72px;
-
-    border-radius:50%;
-
-    background:
-    radial-gradient(circle,
-    rgba(90,170,255,0.95),
-    rgba(20,60,120,0.95));
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    font-size:12px;
-    font-weight:bold;
-
-    letter-spacing:1px;
-
-    color:white;
-
-    box-shadow:
-    0 0 18px rgba(100,180,255,0.7),
-    0 0 45px rgba(100,180,255,0.25);
-
-    animation:pulse 3s infinite ease-in-out;
-
-    z-index:999;
-
-    cursor:pointer;
-
-    transition:0.3s;
-}
-
-.return-button:hover{
-
-    transform:scale(1.08);
-
-    box-shadow:
-    0 0 28px rgba(100,180,255,0.95),
-    0 0 60px rgba(100,180,255,0.35);
-}
-
-    animation:pulse 3s infinite ease-in-out;
-
-    z-index:999;
-}
-
-@keyframes pulse{
-    0%{
-        transform:translateX(-50%) scale(1);
-    }
-
-    50%{
-        transform:translateX(-50%) scale(1.06);
-    }
-
-    100%{
-        transform:translateX(-50%) scale(1);
-    }
-}
-
-/* MOBILE */
-@media(max-width:768px){
-
-    .card{
-        width:270px;
-        height:390px;
-        margin-left:-135px;
-        margin-top:-195px;
-    }
-
-    .card p{
-        font-size:14px;
-    }
-
-    .nav{
-        width:58px;
-        height:58px;
-        font-size:30px;
-    }
-
-    .return-button{
-        width:90px;
-        height:90px;
-        font-size:17px;
-    }
-}
-
-</style>
-</head>
-
-<body>
-
-<div class="ocean">
-
-    <div class="light-glow"></div>
-
-    <div class="scene">
-
-        <!-- RETURN BUTTON -->
-        <div class="return-button">
-            RETURN
-        </div>
-
-        <!-- CAROUSEL -->
-        <div class="carousel" id="carousel">
-
-            <!-- ESPANOL -->
-            <div class="card">
-                <div class="card-content">
-                    <h1>Español</h1>
-                    <p>
-                        Entrar al sitio en Español.
-                    </p>
-                </div>
-            </div>
-
-            <!-- LOGO -->
-            <div class="card">
-                <div class="card-content">
-
-                    <img src="logo.png" class="logo">
-
-                    <h2>AlveoAir</h2>
-
-                    <p>
-                        International Respiratory Coaching
-                    </p>
-
-                </div>
-            </div>
-
-            <!-- INTRO -->
-            <div class="card">
-                <div class="card-content">
-
-                    <h2>Welcome</h2>
-
-                    <p>
-                        Registered Respiratory Therapist with over 30 years of experience in Emergency Care, ICU, ventilator management and rehabilitation.
-                        <br><br>
-                        Remote respiratory coaching through video, WhatsApp, phone and email.
-                        <br><br>
-                        Structured improvement plans focused on prevention, support, confidence and quality of life.
-                        <br><br>
-                        Fully bilingual:
-                        English & Spanish.
-                    </p>
-
-                </div>
-            </div>
-
-            <!-- CONTACT -->
-            <div class="card">
-                <div class="card-content">
-
-                    <h2>Contact</h2>
-
-                    <div class="contact-links">
-
-                        <a href="#">
-                            WhatsApp
-                        </a>
-
-                        <a href="#">
-                            Email
-                        </a>
-
-                        <a href="#">
-                            LinkedIn
-                        </a>
-
-                    </div>
-
-                    <div class="message-box">
-
-                        <textarea placeholder="Send a private message..."></textarea>
-
-                        <button>
-                            Send
-                        </button>
-
-                    </div>
-
-                </div>
-            </div>
-
-            <!-- ABOUT -->
-            <div class="card">
-                <div class="card-content">
-
-                    <h1>About</h1>
-
-                    <p>
-                        Experience, respiratory coaching philosophy and professional background.
-                    </p>
-
-                </div>
-            </div>
-
-            <!-- COACHING -->
-            <div class="card">
-                <div class="card-content">
-
-                    <h1>Coaching</h1>
-
-                    <p>
-                        Equipment guidance, therapy support and respiratory education.
-                    </p>
-
-                </div>
-            </div>
-
-            <!-- PLANS -->
-            <div class="card">
-                <div class="card-content">
-
-                    <h1>Plans</h1>
-
-                    <p>
-                        Basic, Prevention and Flex respiratory coaching plans.
-                    </p>
-
-                </div>
-            </div>
-
-            <!-- APPLY -->
-            <div class="card">
-                <div class="card-content">
-
-                    <h1>Apply</h1>
-
-                    <p>
-                        Respiratory intake application and personalized support setup.
-                    </p>
-
-                </div>
-            </div>
-
-            <!-- TRIAL -->
-            <div class="card">
-                <div class="card-content">
-
-                    <h1>Free Trial</h1>
-
-                    <p>
-                        Experience respiratory coaching free for 20 minutes.
-                    </p>
-
-                </div>
-            </div>
-
-            <!-- PAYMENTS -->
-            <div class="card">
-                <div class="card-content">
-
-                    <h1>Payments</h1>
-
-                    <p>
-                        Secure international payment options and assistance.
-                    </p>
-
-                </div>
-            </div>
-
-            <!-- TERMS -->
-            <div class="card">
-                <div class="card-content">
-
-                    <h1>Terms</h1>
-
-                    <p>
-                        Privacy, support guidelines and service information.
-                    </p>
-
-                </div>
-            </div>
-
-        </div>
-
-    </div>
-
 <script>
 
 const carousel = document.getElementById('carousel');
+
 const cards = document.querySelectorAll('.card');
 
 let angle = 0;
+
 const total = cards.length;
-const radius = 650;
+
+const radius = 900;
 
 function positionCards(){
 
@@ -1117,58 +621,16 @@ function positionCards(){
     });
 }
 
+function rotateCarousel(direction){
+
+    angle += direction * -32;
+
+    positionCards();
+}
+
 positionCards();
-
-/* =====================================
-   DRAG ROTATION
-===================================== */
-
-let isDragging = false;
-let startX = 0;
-
-/* MOUSE */
-document.addEventListener('mousedown', e=>{
-    isDragging = true;
-    startX = e.clientX;
-});
-
-document.addEventListener('mouseup', ()=>{
-    isDragging = false;
-});
-
-document.addEventListener('mousemove', e=>{
-
-    if(!isDragging) return;
-
-    let delta = e.clientX - startX;
-
-    angle += delta * 0.08;
-
-    positionCards();
-
-    startX = e.clientX;
-});
-
-/* TOUCH */
-document.addEventListener('touchstart', e=>{
-    startX = e.touches[0].clientX;
-});
-
-document.addEventListener('touchmove', e=>{
-
-    let delta = e.touches[0].clientX - startX;
-
-    angle += delta * 0.12;
-
-    positionCards();
-
-    startX = e.touches[0].clientX;
-});
 
 </script>
 
-
-</body>
-</html>
 </body>
 </html>
