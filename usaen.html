@@ -10,8 +10,36 @@ Practical home guidance to improve comfort, safety and daily breathing.">
 
 <title>Respiratory Home Coach | CPAP, BiPAP, Oxygen, Trach Care & Home Breathing Support</title>
 
+ Your logo
+   Your title
+   Your introductory text
+    
 <style>
 
+
+.tip-box{
+    width:80%;
+    margin:auto;
+    padding:20px;
+    border-radius:15px;
+    text-align:center;
+    background:#f4f8fb;
+    margin-top:30px;
+}
+
+.tip-box p{
+    font-size:18px;
+    min-height:60px;
+}
+
+button{
+    padding:10px 15px;
+    margin:5px;
+    cursor:pointer;
+}
+
+
+    
 /* BODY BACKGROUND */
 body {
     background-color: #eaf6fb;
@@ -307,6 +335,23 @@ h1 {
     </div>
 
       <a href="usaes.html" class="contact-btn"><H2>Español </H2></a>
+
+
+<div class="tip-box">
+
+    <h3>Respiratory Insight</h3>
+
+    <p id="dailyTip"></p>
+
+    <button onclick="previousTip()">◀ Previous</button>
+
+    <button onclick="nextTip()">Next ▶</button>
+
+</div>
+
+
+    
+
     
     <!-- MAIN -->
     <div class="main-content">
@@ -419,6 +464,44 @@ document.querySelectorAll('.sub-dropdown > a').forEach(item => {
         e.preventDefault();
     });
 });
+
+
+const tips=[
+
+"Slow, controlled breathing may help improve breathing efficiency.",
+
+"Good posture can support easier chest expansion.",
+
+"Hydration may help keep respiratory secretions thinner.",
+
+"Early changes in breathing patterns can sometimes deserve attention.",
+
+"Walking and movement may help maintain endurance.",
+
+"The heart and lungs work together as one system."
+
+];
+
+let current=Math.floor(Math.random()*tips.length);
+
+function showTip(){
+document.getElementById("dailyTip").innerHTML=tips[current];
+}
+
+function nextTip(){
+current=(current+1)%tips.length;
+showTip();
+}
+
+function previousTip(){
+current=(current-1+tips.length)%tips.length;
+showTip();
+}
+
+showTip();
+
+
+    
 </script>
 </body>
 </html>
