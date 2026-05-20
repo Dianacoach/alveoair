@@ -16,7 +16,49 @@ Practical home guidance to improve comfort, safety and daily breathing.">
     
 <style>
 
+.popup-overlay{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.55);
+display:flex;
+justify-content:center;
+align-items:center;
+z-index:9999;
+}
 
+.popup-box{
+background:white;
+padding:30px;
+border-radius:20px;
+max-width:500px;
+width:80%;
+text-align:center;
+box-shadow:0 0 25px rgba(0,0,0,.3);
+}
+
+.nav-btn{
+background:#4c9aff;
+color:white;
+border:none;
+padding:10px 15px;
+border-radius:10px;
+margin:5px;
+cursor:pointer;
+}
+
+.close-btn{
+background:#e74c3c;
+color:white;
+border:none;
+padding:10px 15px;
+border-radius:10px;
+margin:5px;
+cursor:pointer;
+}
+ 
 .tip-box{
     width:80%;
     margin:auto;
@@ -425,6 +467,35 @@ h1 {
     </div>
 
 </div>
+
+<div id="tipPopup" class="popup-overlay">
+
+<div class="popup-box">
+
+<h2>🫁 Respiratory Insight</h2>
+
+<p id="dailyTip"></p>
+
+<div class="button-group">
+
+<button class="nav-btn" onclick="previousTip()">
+◀ Previous
+</button>
+
+<button class="nav-btn" onclick="nextTip()">
+Next ▶
+</button>
+
+<button class="close-btn" onclick="closePopup()">
+✖ Close
+</button>
+
+</div>
+
+</div>
+
+</div>
+ 
 <!-- SCRIPT -->
 <script>
 document.querySelectorAll('.nav-button').forEach(button => {
@@ -466,6 +537,15 @@ document.querySelectorAll('.sub-dropdown > a').forEach(item => {
 });
 
 
+function closePopup(){
+
+document.getElementById(
+"tipPopup"
+).style.display="none";
+
+}
+
+ 
 const tips=[
 
 "Slow, controlled breathing may help improve breathing efficiency.",
