@@ -1,20 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>MDI vs Nebulizer Therapy | Respiratory Home Coach</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+
 <style>
 
+/* BODY */
+
 body {
-    
     margin: 0;
     background-color: #f5f7fa;
     color: #333;
+    font-family: Arial, sans-serif;
 }
+
+/* CONTAINER */
 
 .container {
     max-width: 1200px;
@@ -22,7 +29,30 @@ body {
     padding: 20px;
 }
 
-/* GRID LAYOUT */
+/* HEADER */
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.header img {
+    width: 250px;
+}
+
+h1 {
+    margin: 0;
+    font-family: 'Playfair Display', serif;
+    font-size: 38px;
+    color: #1f2d3d;
+}
+
+/* GRID */
+
 .grid {
     display: flex;
     gap: 20px;
@@ -30,148 +60,287 @@ body {
 }
 
 /* CARDS */
+
 .card {
     flex: 1;
     min-width: 320px;
     padding: 25px;
-    border-radius: 16px;
+    border-radius: 18px;
     box-shadow: 0px 6px 15px rgba(0,0,0,0.1);
 }
 
-/* COLORS */
+/* CARD COLORS */
+
 .mdi-card {
-    background-color: #e6f2ff; /* soft blue */
+    background-color: #e6f2ff;
 }
 
 .svn-card {
-    background-color: #e6f7ec; /* soft green */
+    background-color: #e6f7ec;
+}
+
+/* SECTIONS */
+
+.therapy-section {
+    margin-bottom: 45px;
+}
+
+/* IMAGES */
+
+.therapy-section img {
+    display: block;
+    margin-bottom: 12px;
+    border-radius: 10px;
 }
 
 /* HEADINGS */
-h1 {
-    text-align: center;
-    margin-bottom: 30px;
-}
 
 h2 {
-    margin-top: 25px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #243447;
+    font-size: 26px;
 }
 
-h2 img {
-    width: 150px;
-}
+/* LISTS */
 
-/* LIST */
 ul {
-    padding-left: 20px;
+    padding-left: 22px;
 }
 
 li {
-    margin-bottom: 8px;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+/* BACK BUTTON */
+
+.back-button {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.back-button img {
+    width: 150px;
+}
+
+/* FOOTER */
+
+.footer {
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+    margin-top: 40px;
+    padding-bottom: 20px;
 }
 
 /* RESPONSIVE */
+
 @media (max-width: 768px) {
+
     .grid {
         flex-direction: column;
     }
+
+    h1 {
+        font-size: 28px;
+    }
+
 }
 
 </style>
+
 </head>
 
 <body>
 
 <div class="container">
 
-<div style="display:flex; align-items:center; justify-content:left; gap:15px; flex-wrap:wrap; margin-bottom:30px;">
-    <img src="logo.png" alt="Respiratory Home Coach Logo" style="width:250px;">
-    <h1 style="margin:0;">MDI Meter Dose Inhaler   &   Nebulizer Therapy Guide</h1>
-</div>
+    <!-- HEADER -->
 
-<div class="grid">
+    <div class="header">
 
-    <!-- LEFT CARD: MDI -->
-    <div class="card mdi-card">
+        <img src="logo.png" alt="Respiratory Home Coach Logo">
 
-        <h2><img src="mdi1.png"> Children & Limited Inhalation</h2>
-        <ul>
-            <li>Used with a face mask when patients cannot form a tight seal on a mouthpiece.</li>
-            <li>Ideal for infants, young children and adults with poor coordination or weakness.</li>
-            <li>Eliminates the need to synchronize inhalation with actuation.</li>
-            <li>Improves medication delivery to the lungs and reduces loss in the mouth/throat.</li>
-            <li>Mask should fit snugly over nose and mouth to avoid medication leakage.</li>
-        </ul>
-
-        <h2><img src="mdi2.png"> Adult Use</h2>
-        <ul>
-            <li>Recommended for most adults to improve inhaler technique and drug delivery.</li>
-            <li>Removes coordination issues between pressing the inhaler and inhaling.</li>
-            <li>Allows slow, deep breathing for better lung deposition.</li>
-            <li>Reduces medication deposition in the oropharynx.</li>
-            <li>Useful during shortness of breath episodes.</li>
-        </ul>
-
-        <h2><img src="mdi3.png"> Tracheostomy Use</h2>
-        <ul>
-            <li>Can be adapted using a trach mask or specialized spacer adapter.</li>
-            <li>Delivers medication directly into the airway bypassing upper airway structures.</li>
-            <li>Useful for patients unable to use standard inhalation techniques.</li>
-            <li>More controlled and efficient delivery compared to open methods.</li>
-            <li>Requires monitoring for proper fit and effectiveness.</li>
-        </ul>
+        <h1>
+            MDI Metered Dose Inhaler & Nebulizer Therapy Guide
+        </h1>
 
     </div>
 
-    <!-- RIGHT CARD: SVN -->
-    <div class="card svn-card">
+    <!-- GRID -->
 
-        <h2><img src="svn1.png"> Children & Limited Inhalation</h2>
-        <ul>
-            <li>Delivered via mask when patients cannot use a mouthpiece effectively.</li>
-            <li>Requires minimal coordination, patient breathes normally.</li>
-            <li>Ideal for young children, elderly or cognitively impaired patients.</li>
-            <li>Provides continuous aerosol over several minutes.</li>
-            <li>Mask fit is important to reduce medication loss.</li>
-        </ul>
+    <div class="grid">
 
-        <h2><img src="svn2.png"> Adult Use</h2>
-        <ul>
-            <li>Can be used with mouthpiece (preferred) or mask.</li>
-            <li>Effective during moderate to severe respiratory distress.</li>
-            <li>Allows delivery of higher medication doses over time.</li>
-            <li>No coordination required, normal breathing is sufficient.</li>
-            <li>Useful when MDI technique is difficult.</li>
-        </ul>
+        <!-- LEFT CARD -->
 
-        <h2><img src="svn3.png"> Tracheostomy Use</h2>
-        <ul>
-            <li>Administered via trach collar or direct connection to tracheostomy tube.</li>
-            <li>Bypasses upper airway for direct lower airway delivery.</li>
-            <li>Used for bronchodilation and secretion management.</li>
-            <li>Provides humidification along with medication when needed.</li>
-            <li>Proper setup is essential for effective delivery.</li>
-        </ul>
+        <div class="card mdi-card">
+
+            <!-- SECTION 1 -->
+
+            <div class="therapy-section">
+
+                <!-- CHANGE SIZE HERE -->
+                <img src="mdi1.png" alt="MDI Child" style="width:220px;">
+
+                <h2>Children & Limited Inhalation</h2>
+
+                <ul>
+                    <li>Used with a face mask when patients cannot form a tight seal on a mouthpiece.</li>
+
+                    <li>Ideal for infants, young children and adults with poor coordination or weakness.</li>
+
+                    <li>Eliminates the need to synchronize inhalation with actuation.</li>
+
+                    <li>Improves medication delivery to the lungs and reduces loss in the mouth/throat.</li>
+
+                    <li>Mask should fit snugly over nose and mouth to avoid medication leakage.</li>
+                </ul>
+
+            </div>
+
+            <!-- SECTION 2 -->
+
+            <div class="therapy-section">
+
+                <!-- CHANGE SIZE HERE -->
+                <img src="mdi2.png" alt="MDI Adult" style="width:240px;">
+
+                <h2>Adult Use</h2>
+
+                <ul>
+                    <li>Recommended for most adults to improve inhaler technique and drug delivery.</li>
+
+                    <li>Removes coordination issues between pressing the inhaler and inhaling.</li>
+
+                    <li>Allows slow, deep breathing for better lung deposition.</li>
+
+                    <li>Reduces medication deposition in the oropharynx.</li>
+
+                    <li>Useful during shortness of breath episodes.</li>
+                </ul>
+
+            </div>
+
+            <!-- SECTION 3 -->
+
+            <div class="therapy-section">
+
+                <!-- CHANGE SIZE HERE -->
+                <img src="mdi3.png" alt="MDI Tracheostomy" style="width:260px;">
+
+                <h2>Tracheostomy Use</h2>
+
+                <ul>
+                    <li>Can be adapted using a trach mask or specialized spacer adapter.</li>
+
+                    <li>Delivers medication directly into the airway bypassing upper airway structures.</li>
+
+                    <li>Useful for patients unable to use standard inhalation techniques.</li>
+
+                    <li>More controlled and efficient delivery compared to open methods.</li>
+
+                    <li>Requires monitoring for proper fit and effectiveness.</li>
+                </ul>
+
+            </div>
+
+        </div>
+
+        <!-- RIGHT CARD -->
+
+        <div class="card svn-card">
+
+            <!-- SECTION 1 -->
+
+            <div class="therapy-section">
+
+                <!-- CHANGE SIZE HERE -->
+                <img src="svn1.png" alt="SVN Child" style="width:220px;">
+
+                <h2>Children & Limited Inhalation</h2>
+
+                <ul>
+                    <li>Delivered via mask when patients cannot use a mouthpiece effectively.</li>
+
+                    <li>Requires minimal coordination, patient breathes normally.</li>
+
+                    <li>Ideal for young children, elderly or cognitively impaired patients.</li>
+
+                    <li>Provides continuous aerosol over several minutes.</li>
+
+                    <li>Mask fit is important to reduce medication loss.</li>
+                </ul>
+
+            </div>
+
+            <!-- SECTION 2 -->
+
+            <div class="therapy-section">
+
+                <!-- CHANGE SIZE HERE -->
+                <img src="svn2.png" alt="SVN Adult" style="width:240px;">
+
+                <h2>Adult Use</h2>
+
+                <ul>
+                    <li>Can be used with mouthpiece (preferred) or mask.</li>
+
+                    <li>Effective during moderate to severe respiratory distress.</li>
+
+                    <li>Allows delivery of higher medication doses over time.</li>
+
+                    <li>No coordination required, normal breathing is sufficient.</li>
+
+                    <li>Useful when MDI technique is difficult.</li>
+                </ul>
+
+            </div>
+
+            <!-- SECTION 3 -->
+
+            <div class="therapy-section">
+
+                <!-- CHANGE SIZE HERE -->
+                <img src="svn3.png" alt="SVN Tracheostomy" style="width:260px;">
+
+                <h2>Tracheostomy Use</h2>
+
+                <ul>
+                    <li>Administered via trach collar or direct connection to tracheostomy tube.</li>
+
+                    <li>Bypasses upper airway for direct lower airway delivery.</li>
+
+                    <li>Used for bronchodilation and secretion management.</li>
+
+                    <li>Provides humidification along with medication when needed.</li>
+
+                    <li>Proper setup is essential for effective delivery.</li>
+                </ul>
+
+            </div>
+
+        </div>
 
     </div>
 
-</div>
+    <!-- BACK BUTTON -->
 
-</div>
+    <div class="back-button">
 
- <!-- BACK BUTTON -->
-    
-<a href="javascript:history.back()"><CENTER><img src="back.png" width="150"></CENTER></a>
+        <a href="javascript:history.back()">
+            <img src="back.png" alt="Back Button">
+        </a>
+
     </div>
-   </div>
- 
+
     <!-- FOOTER -->
+
     <div class="footer">
-      © 2026 Julio Bautista – International Respiratory Coaching
+        © 2026 Julio Bautista – International Respiratory Coaching
     </div>
-    <br><br>
+
+</div>
+
 </body>
 </html>
