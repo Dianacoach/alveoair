@@ -1,20 +1,27 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
 <meta charset="UTF-8">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Terapia MDI vs Nebulizador | Coach Respiratorio en Casa</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+
 <style>
 
+/* BODY */
+
 body {
-    
     margin: 0;
     background-color: #f5f7fa;
     color: #333;
+    font-family: Arial, sans-serif;
 }
+
+/* CONTAINER */
 
 .container {
     max-width: 1200px;
@@ -22,7 +29,30 @@ body {
     padding: 20px;
 }
 
-/* GRID LAYOUT */
+/* HEADER */
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.header img {
+    width: 250px;
+}
+
+h1 {
+    margin: 0;
+    font-family: 'Playfair Display', serif;
+    font-size: 38px;
+    color: #1f2d3d;
+}
+
+/* GRID */
+
 .grid {
     display: flex;
     gap: 20px;
@@ -30,147 +60,287 @@ body {
 }
 
 /* CARDS */
+
 .card {
     flex: 1;
     min-width: 320px;
     padding: 25px;
-    border-radius: 16px;
+    border-radius: 18px;
     box-shadow: 0px 6px 15px rgba(0,0,0,0.1);
 }
 
-/* COLORS */
+/* CARD COLORS */
+
 .mdi-card {
-    background-color: #e6f2ff; /* azul suave */
+    background-color: #e6f2ff;
 }
 
 .svn-card {
-    background-color: #e6f7ec; /* verde suave */
+    background-color: #e6f7ec;
+}
+
+/* SECTIONS */
+
+.therapy-section {
+    margin-bottom: 45px;
+}
+
+/* IMAGES */
+
+.therapy-section img {
+    display: block;
+    margin-bottom: 12px;
+    border-radius: 10px;
 }
 
 /* HEADINGS */
-h1 {
-    text-align: center;
-    margin-bottom: 30px;
-}
 
 h2 {
-    margin-top: 25px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #243447;
+    font-size: 26px;
 }
 
-h2 img {
-    width: 150px;
-}
+/* LISTS */
 
-/* LIST */
 ul {
-    padding-left: 20px;
+    padding-left: 22px;
 }
 
 li {
-    margin-bottom: 8px;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+/* BACK BUTTON */
+
+.back-button {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.back-button img {
+    width: 150px;
+}
+
+/* FOOTER */
+
+.footer {
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+    margin-top: 40px;
+    padding-bottom: 20px;
 }
 
 /* RESPONSIVE */
+
 @media (max-width: 768px) {
+
     .grid {
         flex-direction: column;
     }
+
+    h1 {
+        font-size: 28px;
+    }
+
 }
 
 </style>
+
 </head>
 
 <body>
 
 <div class="container">
 
-<div style="display:flex; align-items:center; justify-content:left; gap:15px; flex-wrap:wrap; margin-bottom:30px;">
-    <img src="logo.png" alt="Logo Coach Respiratorio en Casa" style="width:250px;">
-    <h1 style="margin:0;">Guía de Terapia con Inhalador MDI y Nebulizador</h1>
-</div>
+    <!-- HEADER -->
 
-<div class="grid">
+    <div class="header">
 
-    <!-- LEFT CARD: MDI -->
-    <div class="card mdi-card">
+        <img src="logo.png" alt="Logo Coach Respiratorio en Casa">
 
-        <h2><img src="mdi1.png"> Niños y Capacidad Limitada de Inhalación</h2>
-        <ul>
-            <li>Se utiliza con mascarilla facial cuando los pacientes no pueden formar un sello adecuado en la boquilla.</li>
-            <li>Ideal para bebés, niños pequeños y adultos con mala coordinación o debilidad.</li>
-            <li>Elimina la necesidad de sincronizar la inhalación con la activación del inhalador.</li>
-            <li>Mejora la llegada del medicamento a los pulmones y reduce la pérdida en boca y garganta.</li>
-            <li>La mascarilla debe ajustarse bien sobre nariz y boca para evitar fugas del medicamento.</li>
-        </ul>
-
-        <h2><img src="mdi2.png"> Uso en Adultos</h2>
-        <ul>
-            <li>Recomendado para la mayoría de los adultos para mejorar la técnica del inhalador y la administración del medicamento.</li>
-            <li>Elimina problemas de coordinación entre presionar el inhalador e inhalar.</li>
-            <li>Permite respiraciones lentas y profundas para una mejor distribución pulmonar.</li>
-            <li>Reduce la acumulación de medicamento en la orofaringe.</li>
-            <li>Útil durante episodios de dificultad respiratoria.</li>
-        </ul>
-
-        <h2><img src="mdi3.png"> Uso con Traqueostomía</h2>
-        <ul>
-            <li>Puede adaptarse utilizando una mascarilla de traqueostomía o un adaptador espaciador especializado.</li>
-            <li>Administra el medicamento directamente a la vía respiratoria evitando las estructuras superiores.</li>
-            <li>Útil para pacientes incapaces de utilizar técnicas estándar de inhalación.</li>
-            <li>Proporciona una administración más controlada y eficiente comparada con métodos abiertos.</li>
-            <li>Requiere supervisión para asegurar un ajuste y efectividad adecuados.</li>
-        </ul>
+        <h1>
+            Guía de Terapia con Inhalador MDI y Nebulizador
+        </h1>
 
     </div>
 
-    <!-- RIGHT CARD: SVN -->
-    <div class="card svn-card">
+    <!-- GRID -->
 
-        <h2><img src="svn1.png"> Niños y Capacidad Limitada de Inhalación</h2>
-        <ul>
-            <li>Administrado mediante mascarilla cuando los pacientes no pueden usar eficazmente una boquilla.</li>
-            <li>Requiere mínima coordinación; el paciente respira normalmente.</li>
-            <li>Ideal para niños pequeños, ancianos o pacientes con deterioro cognitivo.</li>
-            <li>Proporciona aerosol continuo durante varios minutos.</li>
-            <li>El ajuste adecuado de la mascarilla es importante para reducir la pérdida de medicamento.</li>
-        </ul>
+    <div class="grid">
 
-        <h2><img src="svn2.png"> Uso en Adultos</h2>
-        <ul>
-            <li>Puede utilizarse con boquilla (preferido) o mascarilla.</li>
-            <li>Efectivo durante dificultad respiratoria moderada o severa.</li>
-            <li>Permite administrar dosis más altas de medicamento durante un periodo prolongado.</li>
-            <li>No requiere coordinación; respirar normalmente es suficiente.</li>
-            <li>Útil cuando la técnica del MDI es difícil.</li>
-        </ul>
+        <!-- LEFT CARD -->
 
-        <h2><img src="svn3.png"> Uso con Traqueostomía</h2>
-        <ul>
-            <li>Administrado mediante collar de traqueostomía o conexión directa al tubo de traqueostomía.</li>
-            <li>Evita la vía respiratoria superior para administrar el medicamento directamente a las vías inferiores.</li>
-            <li>Utilizado para broncodilatación y manejo de secreciones.</li>
-            <li>Proporciona humidificación junto con el medicamento cuando es necesario.</li>
-            <li>Una configuración adecuada es esencial para una administración efectiva.</li>
-        </ul>
+        <div class="card mdi-card">
+
+            <!-- SECTION 1 -->
+
+            <div class="therapy-section">
+
+                <!-- CAMBIAR TAMAÑO AQUÍ -->
+                <img src="mdi1.png" alt="MDI Niño" style="width:220px;">
+
+                <h2>Niños y Capacidad Limitada de Inhalación</h2>
+
+                <ul>
+                    <li>Se utiliza con mascarilla facial cuando los pacientes no pueden formar un sello adecuado en la boquilla.</li>
+
+                    <li>Ideal para bebés, niños pequeños y adultos con mala coordinación o debilidad.</li>
+
+                    <li>Elimina la necesidad de sincronizar la inhalación con la activación del inhalador.</li>
+
+                    <li>Mejora la llegada del medicamento a los pulmones y reduce la pérdida en boca y garganta.</li>
+
+                    <li>La mascarilla debe ajustarse bien sobre nariz y boca para evitar fugas del medicamento.</li>
+                </ul>
+
+            </div>
+
+            <!-- SECTION 2 -->
+
+            <div class="therapy-section">
+
+                <!-- CAMBIAR TAMAÑO AQUÍ -->
+                <img src="mdi2.png" alt="MDI Adulto" style="width:240px;">
+
+                <h2>Uso en Adultos</h2>
+
+                <ul>
+                    <li>Recomendado para la mayoría de los adultos para mejorar la técnica del inhalador y la administración del medicamento.</li>
+
+                    <li>Elimina problemas de coordinación entre presionar el inhalador e inhalar.</li>
+
+                    <li>Permite respiraciones lentas y profundas para una mejor distribución pulmonar.</li>
+
+                    <li>Reduce la acumulación de medicamento en la orofaringe.</li>
+
+                    <li>Útil durante episodios de dificultad respiratoria.</li>
+                </ul>
+
+            </div>
+
+            <!-- SECTION 3 -->
+
+            <div class="therapy-section">
+
+                <!-- CAMBIAR TAMAÑO AQUÍ -->
+                <img src="mdi3.png" alt="MDI Traqueostomía" style="width:260px;">
+
+                <h2>Uso con Traqueostomía</h2>
+
+                <ul>
+                    <li>Puede adaptarse utilizando una mascarilla de traqueostomía o un adaptador espaciador especializado.</li>
+
+                    <li>Administra el medicamento directamente a la vía respiratoria evitando las estructuras superiores.</li>
+
+                    <li>Útil para pacientes incapaces de utilizar técnicas estándar de inhalación.</li>
+
+                    <li>Proporciona una administración más controlada y eficiente comparada con métodos abiertos.</li>
+
+                    <li>Requiere supervisión para asegurar un ajuste y efectividad adecuados.</li>
+                </ul>
+
+            </div>
+
+        </div>
+
+        <!-- RIGHT CARD -->
+
+        <div class="card svn-card">
+
+            <!-- SECTION 1 -->
+
+            <div class="therapy-section">
+
+                <!-- CAMBIAR TAMAÑO AQUÍ -->
+                <img src="svn1.png" alt="SVN Niño" style="width:220px;">
+
+                <h2>Niños y Capacidad Limitada de Inhalación</h2>
+
+                <ul>
+                    <li>Administrado mediante mascarilla cuando los pacientes no pueden usar eficazmente una boquilla.</li>
+
+                    <li>Requiere mínima coordinación; el paciente respira normalmente.</li>
+
+                    <li>Ideal para niños pequeños, ancianos o pacientes con deterioro cognitivo.</li>
+
+                    <li>Proporciona aerosol continuo durante varios minutos.</li>
+
+                    <li>El ajuste adecuado de la mascarilla es importante para reducir la pérdida de medicamento.</li>
+                </ul>
+
+            </div>
+
+            <!-- SECTION 2 -->
+
+            <div class="therapy-section">
+
+                <!-- CAMBIAR TAMAÑO AQUÍ -->
+                <img src="svn2.png" alt="SVN Adulto" style="width:240px;">
+
+                <h2>Uso en Adultos</h2>
+
+                <ul>
+                    <li>Puede utilizarse con boquilla (preferido) o mascarilla.</li>
+
+                    <li>Efectivo durante dificultad respiratoria moderada o severa.</li>
+
+                    <li>Permite administrar dosis más altas de medicamento durante un periodo prolongado.</li>
+
+                    <li>No requiere coordinación; respirar normalmente es suficiente.</li>
+
+                    <li>Útil cuando la técnica del MDI es difícil.</li>
+                </ul>
+
+            </div>
+
+            <!-- SECTION 3 -->
+
+            <div class="therapy-section">
+
+                <!-- CAMBIAR TAMAÑO AQUÍ -->
+                <img src="svn3.png" alt="SVN Traqueostomía" style="width:260px;">
+
+                <h2>Uso con Traqueostomía</h2>
+
+                <ul>
+                    <li>Administrado mediante collar de traqueostomía o conexión directa al tubo de traqueostomía.</li>
+
+                    <li>Evita la vía respiratoria superior para administrar el medicamento directamente a las vías inferiores.</li>
+
+                    <li>Utilizado para broncodilatación y manejo de secreciones.</li>
+
+                    <li>Proporciona humidificación junto con el medicamento cuando es necesario.</li>
+
+                    <li>Una configuración adecuada es esencial para una administración efectiva.</li>
+                </ul>
+
+            </div>
+
+        </div>
 
     </div>
 
-</div>
+    <!-- BACK BUTTON -->
 
-</div>
-<!-- BACK BUTTON -->
-    
-<a href="javascript:history.back()"><CENTER><img src="atras.png" width="150"></CENTER></a>
+    <div class="back-button">
+
+        <a href="javascript:history.back()">
+            <img src="atras.png" alt="Botón Atrás">
+        </a>
+
     </div>
-   </div>
- 
+
     <!-- FOOTER -->
+
     <div class="footer">
-      © 2026 Julio Bautista – International Respiratory Coaching
+        © 2026 Julio Bautista – International Respiratory Coaching
     </div>
-    <br><br>
+
+</div>
+
 </body>
 </html>
