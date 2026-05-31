@@ -460,55 +460,67 @@ h1 {
 </div>
  
 <!-- SCRIPT -->
-<script>
-document.querySelectorAll('.nav-button').forEach(button => {
-    button.addEventListener('click', function(e) {
-        let parent = this.parentElement;
+const facts = [
 
-        document.querySelectorAll('.nav-item').forEach(item => {
-            if (item !== parent) {
-                item.classList.remove('active');
-            }
-        });
+{
+image:"oxygen1.jpg",
+text:"Long oxygen tubing should be kept organized to reduce the risk of tripping."
+},
 
-        parent.classList.toggle('active');
-        e.stopPropagation();
-    });
-});
+{
+image:"oxygen2.jpg",
+text:"Portable oxygen concentrators do not all deliver the same oxygen output at identical settings."
+},
 
-document.addEventListener('click', function() {
-    document.querySelectorAll('.nav-item').forEach(item => {
-        item.classList.remove('active');
-    });
-});
+{
+image:"oxygen3.jpg",
+text:"CPAP improves oxygenation by helping keep the airways open during sleep."
+},
 
+{
+image:"oxygen4.jpg",
+text:"BiPAP provides two pressure levels, one for inhaling and one for exhaling, helping improve ventilation."
+},
 
-document.querySelectorAll('.sub-dropdown > a').forEach(item => {
-    item.addEventListener('click', function(e) {
-        let parent = this.parentElement;
+{
+image:"oxygen5.jpg",
+text:"Patients using oxygen should avoid smoking or open flames near oxygen equipment."
+}
 
-        document.querySelectorAll('.sub-dropdown').forEach(el => {
-            if (el !== parent) {
-                el.classList.remove('active');
-            }
-        });
+];
 
-        parent.classList.toggle('active');
-        e.stopPropagation();
-        e.preventDefault();
-    });
-});
+let popupCount = 0;
 
+function showRandomFact() {
 
+    const fact = facts[Math.floor(Math.random() * facts.length)];
+
+    document.getElementById("popupImage").src = fact.image;
+
+    document.getElementById("popupText").innerHTML = fact.text;
+}
+
+showRandomFact();
 
 document.getElementById("closeBtn").onclick = function() {
+
     document.getElementById("knowledgePopup").style.display = "none";
 };
 
 document.getElementById("nextBtn").onclick = function() {
-    alert("Next button works!");
-};
-    
+
+    popupCount++;
+
+    if (popupCount >= 3) {
+
+        document.getElementById("knowledgePopup").style.display = "none";
+
+    } else {
+
+        showRandomFact();
+
+    }
+}; 
 </script>
 </body>
 </html>
