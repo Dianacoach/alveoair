@@ -231,13 +231,12 @@ h1 {
     transform: translateX(-50%);
     width: 900px;
     max-width: 95%;
-    background: white;
+    background: #FF66CC;
     border-radius: 18px;
     box-shadow: 0 0 30px rgba(0,0,0,.35);
-    z-index: 9999;
+    z-index: 500;
     overflow: hidden;
 }
-
 #popupContent {
     display: flex;
     align-items: center;
@@ -251,10 +250,10 @@ h1 {
     object-fit: contain;
 }
 #popupText {
-    font-size: 22px;
+    font-size: 25px;
     line-height: 1.5;
     color: #222;
-    font-family: Arial, sans-serif;
+    font-family: Gabriola, sans-serif;
 }
 
 #popupButtons {
@@ -305,7 +304,7 @@ h1 {
         <div class="header-right">
             <p style="font-size: 3rem; line-height: 2; color: #555555;">
                 <strong>Respiratory Home Coach</strong>
-        
+        </p>
             <div class="navbar">
 
                 <div class="nav-item">
@@ -462,33 +461,83 @@ h1 {
 <!-- SCRIPT -->
 
   <script>      
-const facts = [
-
+const facts = [ 
 {
-image:"logo.png",
+image:"think.png",
 text:"Long oxygen tubing should be kept organized to reduce the risk of tripping."
 },
 
 {
-image:"logo.png",
+image:"think1.png",
 text:"Portable oxygen concentrators do not all deliver the same oxygen output at identical settings."
+}, 
+
+{
+image:"think2.png",
+text:"CPAP is a therapy providing one constant pressure. Meant to keep the airway open and improve oxygenation."
 },
 
 {
-image:"logo.png",
+image:"think5.png",
+text:"CPAP and BiPAP both improve oxygenation without the need of oxygen."
+},
+
+{
+image:"think2.png",
+text:"BIPAP is a therapy that provides two pressures, helping to increase respiration volumes and the release of CO2 faster."
+},
+
+{
+image:"think3.png",
+text:"Dairy products can thicken respiratory secretions and trigger excess mucus increasing the work of breathing."
+},
+
+{
+image:"think4.png",
+text:"Gas producing vegetables: broccoli, cabbage and beans can cause excess gas and bloating increasing the work of breathing."
+}, 
+   
+    
+{
+image:"think3.png",
+text:"The use of 100% oxygen including: emergency resuscitation, severe hypoxia, carbon monoxide poisoning. Should be carried out by medical supervision."
+},
+
+{
+image:"think4.png",
+text:"Tubing extension in a concentrator could cause: malfunctioning of the equipment, lower oxygen flow output, risk of tripping, risk of tube kinking."
+},
+
+{
+image:"think5.png",
+text:"A solution for a claustrophobic situation wearing a CPAP or BiPAP full mask can be replaced by using a nasal mask, pillows or cradle."
+},
+
+{
+image:"think1.png",
+text:"Fried and greasy foods cause long digestion increasing the work of breathing."
+},
+   
+{
+image:"think2.png",
+text:"Processed and cured meats produce nitrates causing lung inflammation increasing the work of breathing."
+}, 
+    
+{
+image:"think3.png",
 text:"CPAP improves oxygenation by helping keep the airways open during sleep."
-},
+}, 
 
 {
-image:"logo.png",
+image:"think4.png",
 text:"BiPAP provides two pressure levels, one for inhaling and one for exhaling, helping improve ventilation."
 },
 
 {
-image:"logo.png",
+image:"think5.png",
 text:"Patients using oxygen should avoid smoking or open flames near oxygen equipment."
-}
-
+},
+    
 ];
 
 let popupCount = 0;
