@@ -220,67 +220,6 @@ h1 {
 .contact-wrapper .form-card {
     margin: 0;
 }
-
-
-/* KNOWLEDGE POPUP */
-
-#knowledgePopup {
-    position: fixed;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 900px;
-    max-width: 95%;
-    background: #FF66CC;
-    border-radius: 18px;
-    box-shadow: 0 0 30px rgba(0,0,0,.35);
-    z-index: 500;
-    overflow: hidden;
-}
-#popupContent {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    padding: 20px;
-}
-
-#popupImage {
-    width: 220px;
-    max-height: 180px;
-    object-fit: contain;
-}
-#popupText {
-    font-size: 25px;
-    line-height: 1.5;
-    color: #222;
-    font-family: Gabriola, sans-serif;
-}
-
-#popupButtons {
-    text-align: right;
-    padding: 15px;
-    border-top: 1px solid #ddd;
-}
-
-#popupButtons button {
-    padding: 10px 25px;
-    font-size: 18px;
-    cursor: pointer;
-    margin-left: 10px;
-    border: none;
-    border-radius: 8px;
-}
-
-#nextBtn {
-    background: #66b3ff;
-    color: black;
-}
-
-#closeBtn {
-    background: #8fd19e;
-    color: black;
-}
-
     
 /* DISCLAIMER */
 .disclaimer {
@@ -304,7 +243,7 @@ h1 {
         <div class="header-right">
             <p style="font-size: 3rem; line-height: 2; color: #555555;">
                 <strong>Respiratory Home Coach</strong>
-        </p>
+        </P>
             <div class="navbar">
 
                 <div class="nav-item">
@@ -433,145 +372,46 @@ h1 {
     <div class="contact-photo">
         <img src="julio3a.png" alt="Julio Bautista">
     </div>
- </div>
 
-
-<div id="knowledgePopup">
-
-    <div id="popupContent">
-
-        <img id="popupImage" src="oxygen1.jpg" alt="Respiratory Knowledge">
-
-        <div id="popupText">
-            This is a test popup. If you can read this, the popup is working.
-        </div>
-
-    </div>
-
-    <div id="popupButtons">
-
-        <button id="closeBtn">Close</button>
-
-        <button id="nextBtn">Next</button>
-
-    </div>
-
-</div>
- 
 <!-- SCRIPT -->
+<script>
+document.querySelectorAll('.nav-button').forEach(button => {
+    button.addEventListener('click', function(e) {
+        let parent = this.parentElement;
 
-  <script>      
-const facts = [ 
-{
-image:"think.png",
-text:"Long oxygen tubing should be kept organized to reduce the risk of tripping."
-},
+        document.querySelectorAll('.nav-item').forEach(item => {
+            if (item !== parent) {
+                item.classList.remove('active');
+            }
+        });
 
-{
-image:"think1.png",
-text:"Portable oxygen concentrators do not all deliver the same oxygen output at identical settings."
-}, 
+        parent.classList.toggle('active');
+        e.stopPropagation();
+    });
+});
 
-{
-image:"think2.png",
-text:"CPAP is a therapy providing one constant pressure. Meant to keep the airway open and improve oxygenation."
-},
+document.addEventListener('click', function() {
+    document.querySelectorAll('.nav-item').forEach(item => {
+        item.classList.remove('active');
+    });
+});
 
-{
-image:"think5.png",
-text:"CPAP and BiPAP both improve oxygenation without the need of oxygen."
-},
 
-{
-image:"think2.png",
-text:"BIPAP is a therapy that provides two pressures, helping to increase respiration volumes and the release of CO2 faster."
-},
+document.querySelectorAll('.sub-dropdown > a').forEach(item => {
+    item.addEventListener('click', function(e) {
+        let parent = this.parentElement;
 
-{
-image:"think3.png",
-text:"Dairy products can thicken respiratory secretions and trigger excess mucus increasing the work of breathing."
-},
+        document.querySelectorAll('.sub-dropdown').forEach(el => {
+            if (el !== parent) {
+                el.classList.remove('active');
+            }
+        });
 
-{
-image:"think4.png",
-text:"Gas producing vegetables: broccoli, cabbage and beans can cause excess gas and bloating increasing the work of breathing."
-}, 
-   
-    
-{
-image:"think3.png",
-text:"The use of 100% oxygen including: emergency resuscitation, severe hypoxia, carbon monoxide poisoning. Should be carried out by medical supervision."
-},
-
-{
-image:"think4.png",
-text:"Tubing extension in a concentrator could cause: malfunctioning of the equipment, lower oxygen flow output, risk of tripping, risk of tube kinking."
-},
-
-{
-image:"think5.png",
-text:"A solution for a claustrophobic situation wearing a CPAP or BiPAP full mask can be replaced by using a nasal mask, pillows or cradle."
-},
-
-{
-image:"think1.png",
-text:"Fried and greasy foods cause long digestion increasing the work of breathing."
-},
-   
-{
-image:"think2.png",
-text:"Processed and cured meats produce nitrates causing lung inflammation increasing the work of breathing."
-}, 
-    
-{
-image:"think3.png",
-text:"CPAP improves oxygenation by helping keep the airways open during sleep."
-}, 
-
-{
-image:"think4.png",
-text:"BiPAP provides two pressure levels, one for inhaling and one for exhaling, helping improve ventilation."
-},
-
-{
-image:"think5.png",
-text:"Patients using oxygen should avoid smoking or open flames near oxygen equipment."
-},
-    
-];
-
-let popupCount = 0;
-
-function showRandomFact() {
-
-    const fact = facts[Math.floor(Math.random() * facts.length)];
-
-    document.getElementById("popupImage").src = fact.image;
-
-    document.getElementById("popupText").innerHTML = fact.text;
-}
-
-showRandomFact();
-
-document.getElementById("closeBtn").onclick = function() {
-
-    document.getElementById("knowledgePopup").style.display = "none";
-};
-
-document.getElementById("nextBtn").onclick = function() {
-
-    popupCount++;
-
-    if (popupCount >= 3) {
-
-        document.getElementById("knowledgePopup").style.display = "none";
-
-    } else {
-
-        showRandomFact();
-
-    }
-}; 
+        parent.classList.toggle('active');
+        e.stopPropagation();
+        e.preventDefault();
+    });
+});
 </script>
 </body>
 </html>
