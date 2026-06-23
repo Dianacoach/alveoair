@@ -184,18 +184,45 @@
         <!-- RIGHT IMAGES -->
         <div class="image-column">
 
-        <h3>Click on them to Enlarge</h3>
-            <a href="pmv1.png"> <img src="pmv1.png" width="120" alt="Click to enlarge"></a>
-            <a href="pmv2.png"> <img src="pmv2.png" width="120" alt="Click to enlarge"></a>
-            <a href="pmv3.png"> <img src="pmv3.png" width="120" alt="Click to enlarge"></a>
+        
 
- 
-           
+ <img id="slide" src="pmv1.png" width="250" onclick="openImage()">
+
+<div id="popup" style="display:none;">
+  <button onclick="closeImage()">X</button><br>
+  <img id="largeImage" width="900">
+</div>
+
+<script>
+const images = [
+  "pmv1.png",
+  "pmv2.png",
+  "pmv3.png"
+];
+
+let current = 0;
+
+setInterval(function() {
+  current = (current + 1) % images.length;
+  document.getElementById("slide").src = images[current];
+}, 5000);
+
+function openImage() {
+  document.getElementById("largeImage").src = images[current];
+  document.getElementById("popup").style.display = "block";
+}
+
+function closeImage() {
+  document.getElementById("popup").style.display = "none";
+}
+</script>
+         
             
         </div>
 
     </div>
 
+  
  <!-- BACK BUTTON -->
    
 <a href="javascript:history.back()"><CENTER><img src="back.png" width="150"></CENTER></a>
